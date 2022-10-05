@@ -4,21 +4,21 @@ Last updated: Oct. 5, 2022
 
 ## 1.0 Introduction
 
-**Huma is an open protocol for building next-gen decentralized risk-on lending solutions backed by income and receivables.**
+**Huma is an open protocol for building next-gen decentralized lending solutions backed by income and receivables.**
 
-Smart contracts’ transparency and automatic execution played a critical role in DeFi’s success and will continue to do so. At the same time, it lacked the most critical input that all modern risk underwriting depends on, income (cashflow). Moreover, DeFi had to rely solely on over-collateralization of a few digital assets, making adoption by new entrants really difficult. These substantially limited its reach, impact, and opportunities for sustainable high yield. As such limitations become more and more obvious to many in the industry, under-collateralization and lending for real world use cases naturally emerges as the next frontier.
+Smart contracts’ transparency and automatic execution played a critical role in DeFi’s success and will continue to do so. At the same time, it lacked the most critical input that all modern risk underwriting depends on, income (cashflow). Moreover, DeFi had to rely solely on over-collateralization of a few digital assets, making adoption by new entrants really difficult. These substantially limited its reach and impact. As such limitations become more and more obvious to many in the industry, under-collateralization and lending for real world use cases naturally emerges as the next frontier.
 
-**Our Belief **
+**Our Belief**
 
-In the next decade, tens of thousands of institutions and billions of people will onboard onto web3 ecosystems. They won’t have rich crypto asset portfolios initially to collateralize against, however, most of them are going to be creditworthy participants.
+In the next decade, tens of thousands of institutions and billions of people will onboard onto Web3 ecosystems. They won’t have rich crypto asset portfolios initially to collateralize against, however, most of them are going to be creditworthy participants.
 
 The DeFi infrastructure for serving them is mostly missing today, and Huma Protocol is introducing such critical infrastructure elements to enable it.
 
 We believe the future of DeFi is powered by automated underwriting as well as signals about the borrowers’ <span style="text-decoration:underline;">Ability, Willingness, and Commitment</span> to pay.
 
-- **Automated risk underwriting** (ARU): Most successful fintech players serve high volume of credit applications in an automated fashion, utilizing alternative data sources. All the major DeFi protocols are built on AMMs. However, it is a lot more complicated to support ARU in a risk-on world than a risk-off world. The ARUs are intelligent models. By nature, AI will find its role in the ARUs. At the same time, these ARUs will not be possible without additional data (e.g. income, credit scores).
+- **Automated risk underwriting** (ARU): Most successful fintech players serve high volume of credit applications in an automated fashion, utilizing alternative data sources. All the major DeFi protocols are built on AMMs. However, it is a lot more complicated to support ARU in a risk-on world than a risk-off world. The ARUs are intelligent models. By nature, AI will find its role in the ARUs. At the same time, these ARUs will not be possible without additional data (e.g. income, credit worthiness).
 - **Income**: Income is probably the most vital signal in most underwriting scenarios since it offers the best measure against <span style="text-decoration:underline;">one’s ability to pay</span>. The more comprehensive we can understand income, the better we can underwrite.
-- **Credit worthiness**: Credit worthiness is the most critical input for <span style="text-decoration:underline;">one’s willingness to pay</span>. Web2’s credit score plays an important role, however it’s biased, limited, and controlled by a few agencies. We need decentralized credit systems.
+- **Credit worthiness**: Credit worthiness is the most valuable signal for <span style="text-decoration:underline;">one’s willingness to pay</span>. Web2’s credit score plays an important role, however it’s biased, limited, and controlled by a few agencies. We need decentralized credit systems.
 - **Receivables**: Today, <span style="text-decoration:underline;">collateral</span> in DeFi mainly represents a handful of digital assets backing debt. Majority of participants do not have tons of such digital assets idling, but most have <span style="text-decoration:underline;">receivables</span> in the form of future invoices, transactions, subscription income, paychecks, royalties etc. In fact, in structured finance, such receivables are regularly used in securitization of loans. Receivables are the best signal for <span style="text-decoration:underline;">one’s commitment to pay</span>, because once an entity transfers the ownership of their receivables to the lending platform, it acts as a payment guarantee. We actually think collaterals are just special forms of receivables. The only difference is that their cash value is available right now instead of at a future date.
 
 ### 1.1 Protocol Overview
@@ -114,9 +114,9 @@ There are various user roles in the protocol. Some are at protocol-level. The ot
 
 #### 4.2.1 Protocol-level Admin Roles
 
-<span style="text-decoration:underline;">Protocol Owner**: **</span>Protocol Owner is responsible for the administration of the entire protocol. It will be a multisig. After the initial deployment, the ownership will be transferred from the deployer to this multisig protocol owner. It has the following access rights:
+<span style="text-decoration:underline;">**Protocol Owner:**</span> Protocol Owner is responsible for the administration of the entire protocol. It will be a multisig. After the initial deployment, the ownership will be transferred from the deployer to this multisig protocol owner. It has the following access rights:
 
-- The only user who can change various[protocol configurations](#43-protocol-administration)
+- The only user who can change various [protocol configurations](#43-protocol-administration)
 
 - The only user who can add and remove Pool Owners.
 - The only user who can add and remove Pausers.
@@ -125,13 +125,13 @@ There are various user roles in the protocol. Some are at protocol-level. The ot
 - The only user other than the pool owner who can perform admin tasks on a pool.
 - The only user who can transfer protocol income from pool wallet to protocol treasury.
 
-<span style="text-decoration:underline;">Pausers</span>: Pausers can call a pause function to pause the entire protocol. When the protocol is paused, no money moves in or out of the protocol. This is expected to happen in very rare cases, such as major security attacks, or serious security issues discovered. It is expected for the protocol to have multiple pausers, possibly including an external security monitoring firm. The only thing that a pauser can do is to pause the protocol, nothing else. After the protocol is paused, only the Protocol Owner can unpause it.
+<span style="text-decoration:underline;">**Pausers:**</span> Pausers can call a pause function to pause the entire protocol. When the protocol is paused, no money moves in or out of the protocol. This is expected to happen in very rare cases, such as major security attacks, or serious security issues discovered. It is expected for the protocol to have multiple pausers, possibly including an external security monitoring firm. The only thing that a pauser can do is to pause the protocol, nothing else. After the protocol is paused, only the Protocol Owner can unpause it.
 
 <span style="text-decoration:underline;">Protocol Treasury**:**</span> This is technically not a user. It is the wallet to hold treasury for the protocol.
 
 #### 4.2.2 Pool-level User Roles
 
-<span style="text-decoration:underline;">Pool Owners</span>: Pool owners are a list of addresses that are approved by the ProtocolProtocol Owner to create and manage pools. They have the following access rights:
+<span style="text-decoration:underline;">**Pool Owners**</span>: Pool owners are a list of addresses that are approved by the ProtocolProtocol Owner to create and manage pools. They have the following access rights:
 
 - The only user who can set Evaluation Agent for the pool.
 - The only user who can set Fee Manager to be used by the pool and configure the Fee Manager.
