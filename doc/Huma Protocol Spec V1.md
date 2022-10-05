@@ -114,7 +114,7 @@ There are various user roles in the protocol. Some are at protocol-level. The ot
 
 #### 4.2.1 Protocol-level Admin Roles
 
-\***\*Protocol Owner:\*\*** Protocol Owner is responsible for the administration of the entire protocol. It will be a multisig. After the initial deployment, the ownership will be transferred from the deployer to this multisig protocol owner. It has the following access rights:
+**Protocol Owner:** Protocol Owner is responsible for the administration of the entire protocol. It will be a multisig. After the initial deployment, the ownership will be transferred from the deployer to this multisig protocol owner. It has the following access rights:
 
 - The only user who can change various [protocol configurations](#43-protocol-administration)
 
@@ -125,13 +125,13 @@ There are various user roles in the protocol. Some are at protocol-level. The ot
 - The only user other than the pool owner who can perform admin tasks on a pool.
 - The only user who can transfer protocol income from pool wallet to protocol treasury.
 
-\***\*Pausers:\*\*** Pausers can call a pause function to pause the entire protocol. When the protocol is paused, no money moves in or out of the protocol. This is expected to happen in very rare cases, such as major security attacks, or serious security issues discovered. It is expected for the protocol to have multiple pausers, possibly including an external security monitoring firm. The only thing that a pauser can do is to pause the protocol, nothing else. After the protocol is paused, only the Protocol Owner can unpause it.
+**Pausers:** Pausers can call a pause function to pause the entire protocol. When the protocol is paused, no money moves in or out of the protocol. This is expected to happen in very rare cases, such as major security attacks, or serious security issues discovered. It is expected for the protocol to have multiple pausers, possibly including an external security monitoring firm. The only thing that a pauser can do is to pause the protocol, nothing else. After the protocol is paused, only the Protocol Owner can unpause it.
 
 **Protocol Treasury**:\*\*\*\* This is technically not a user. It is the wallet to hold treasury for the protocol.
 
 #### 4.2.2 Pool-level User Roles
 
-\***\*Pool Owners\*\***: Pool owners are a list of addresses that are approved by the ProtocolProtocol Owner to create and manage pools. They have the following access rights:
+**Pool Owners**: Pool owners are a list of addresses that are approved by the ProtocolProtocol Owner to create and manage pools. They have the following access rights:
 
 - The only user who can set Evaluation Agent for the pool.
 - The only user who can set Fee Manager to be used by the pool and configure the Fee Manager.
@@ -139,7 +139,7 @@ There are various user roles in the protocol. Some are at protocol-level. The ot
 
 - The only user who can transfer the Pool Owner’s income from the pool.
 
-\***\*Evaluation Agent:\*\***The Evaluation Agent makes underwriting decisions for a pool. Each pool can only have one Evaluation Agent. They have the following access rights:
+**Evaluation Agent:**The Evaluation Agent makes underwriting decisions for a pool. Each pool can only have one Evaluation Agent. They have the following access rights:
 
 - The only user who can approve credit requests to the pool.
 - The only user who can post a pre-approved credit line to the pool contract.
@@ -150,27 +150,27 @@ After the pool owner has set the evaluation agent for the pool, the EA has to de
 
 Pool owner can choose to change the evaluate agent for the pool. When this happens, all the accrued EA rewards are paid to the old EA immediately. The EA needs to have made the required deposits.
 
-\***\*Liquidity Providers:\*\***: Liquidity Providers (a.k.a. Lenders) provide capital to the pool and expect financial returns for their investment. The only actions that they can do are depositing and withdrawing capital from the pool.
+**Liquidity Providers:**: Liquidity Providers (a.k.a. Lenders) provide capital to the pool and expect financial returns for their investment. The only actions that they can do are depositing and withdrawing capital from the pool.
 
-\***\*Borrowers:\*\*** Borrowers are the party who initiates a credit line with the pool and drawdown against the credit line. They are responsible for paying interest and minimal principal payment per pay period.
+**Borrowers:** Borrowers are the party who initiates a credit line with the pool and drawdown against the credit line. They are responsible for paying interest and minimal principal payment per pay period.
 
 ### 4.3 Protocol Administration
 
-\***\*Pause Protocol:\*\***: At critical time, any of the pausers can pause the protocol. After a protocol is paused, it does not accept any actions that involve money flow in or out, i.e., no deposits, no withdrawals, no drawdowns, no repayments.
+**Pause Protocol:**: At critical time, any of the pausers can pause the protocol. After a protocol is paused, it does not accept any actions that involve money flow in or out, i.e., no deposits, no withdrawals, no drawdowns, no repayments.
 
-\***\*Unpause Protocol:\*\***: Resume the protocol operations. Only the Protocol Owner can unpause the protocol.
+**Unpause Protocol:**: Resume the protocol operations. Only the Protocol Owner can unpause the protocol.
 
-\***\*Add / Remove liquidity assets allowed:** \*\* This is the list of assets to be allowed as the underlying assets for pools in the protocol. We will only support stablecoins in the foreseeable future, starting with USDC.
+**Add / Remove liquidity assets allowed:** \*\* This is the list of assets to be allowed as the underlying assets for pools in the protocol. We will only support stablecoins in the foreseeable future, starting with USDC.
 
-\***\*Change Protocol-level Grace Period for Defaults:\*\***: Protocol offers the default value for the grace period for defaults. Each pool can overwrite this default value.
+**Change Protocol-level Grace Period for Defaults:**: Protocol offers the default value for the grace period for defaults. Each pool can overwrite this default value.
 
-\***\*Change Protocol Treasury:\*\***: This is the wallet address for the protocol treasury. Only pool owner can change this address.
+**Change Protocol Treasury:**: This is the wallet address for the protocol treasury. Only pool owner can change this address.
 
-\***\*Change Protocol Fee:\*\***: Since Huma is a risk-on protocol, it is fair for the protocol to take a share of all the fees and interest generated in the protocol. To keep it simple, the protocol fee will simply be a percentage of all the fees and interest generated in the protocol. Initially, this Protocol Fee percentage will be configured by the protocol owner, later on, Huma DAO will take over the responsibility.
+**Change Protocol Fee:**: Since Huma is a risk-on protocol, it is fair for the protocol to take a share of all the fees and interest generated in the protocol. To keep it simple, the protocol fee will simply be a percentage of all the fees and interest generated in the protocol. Initially, this Protocol Fee percentage will be configured by the protocol owner, later on, Huma DAO will take over the responsibility.
 
-\***\*Add or remove pool owners:\*\***: Add or remove a pool owner.
+**Add or remove pool owners:**: Add or remove a pool owner.
 
-\***\*Add or remove pausers:\*\***: Add or remove a pauser.
+**Add or remove pausers:**: Add or remove a pauser.
 
 ### 4.4 Pool Administration
 
@@ -192,7 +192,7 @@ Both Pool Owner and Evaluation Agent commit to provide a certain percentage of t
 
 **Pool Name**:\*\* Each pool needs to have a name. This name will be listed on the Huma website. We will define an off-chain workflow to make sure of the uniqueness of the pool names.
 
-\***\*Underlying Token**: This is the asset to be used for lending and borrowing in the pool. In v1, we will support USDC only.
+**Underlying Token**: This is the asset to be used for lending and borrowing in the pool. In v1, we will support USDC only.
 
 **Liquidity Cap**:\*\*\*\* the cap of liquidity for the pool in the unit of underlying token. Pool owners can set and change it.
 
