@@ -191,11 +191,7 @@ Under Huma protocol, many pools can be created for specific business opportuniti
 When a pool is initialized, the following information shall we specified:
 
 - Pool name: the name of the pool
-- Pool token (HDT) : the utility token used to track LP’s contribution to the pool. Please see section
-
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "4.5.4"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-[4.5.4](#heading=h.x8q7cdkmho2v) for more detail.
+- Pool token (HDT) : the utility token used to track LP’s contribution to the pool. Please see section [link](#4.5.4 Pool Liquidity Ownership)
 
 - Huma Config: Huma Config hosts all the global configurations.
 - Fee Manager: A FeeManager implements all the core functions around fee calculation. Every pool can have its own FeeManager implementation.
