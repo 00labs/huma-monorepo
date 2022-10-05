@@ -1,0 +1,4 @@
+[submodule "packages/huma-protocol"]
+	path = packages/huma-protocol
+	url = git@github.com:00labs/huma-contracts.git
+	branch = master
