@@ -139,7 +139,7 @@ There are various user roles in the protocol. Some are at protocol-level. The ot
 
 - The only user who can transfer the Pool Owner’s income from the pool.
 
-**Evaluation Agent:**The Evaluation Agent makes underwriting decisions for a pool. Each pool can only have one Evaluation Agent. They have the following access rights:
+**Evaluation Agent:** The Evaluation Agent makes underwriting decisions for a pool. Each pool can only have one Evaluation Agent. They have the following access rights:
 
 - The only user who can approve credit requests to the pool.
 - The only user who can post a pre-approved credit line to the pool contract.
