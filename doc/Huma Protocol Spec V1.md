@@ -127,7 +127,7 @@ There are various user roles in the protocol. Some are at protocol-level. The ot
 
 **Pausers:** Pausers can call a pause function to pause the entire protocol. When the protocol is paused, no money moves in or out of the protocol. This is expected to happen in very rare cases, such as major security attacks, or serious security issues discovered. It is expected for the protocol to have multiple pausers, possibly including an external security monitoring firm. The only thing that a pauser can do is to pause the protocol, nothing else. After the protocol is paused, only the Protocol Owner can unpause it.
 
-**Protocol Treasury**:\*\*\*\* This is technically not a user. It is the wallet to hold treasury for the protocol.
+**Protocol Treasury:** This is technically not a user. It is the wallet to hold treasury for the protocol.
 
 #### 4.2.2 Pool-level User Roles
 
@@ -150,27 +150,27 @@ After the pool owner has set the evaluation agent for the pool, the EA has to de
 
 Pool owner can choose to change the evaluate agent for the pool. When this happens, all the accrued EA rewards are paid to the old EA immediately. The EA needs to have made the required deposits.
 
-**Liquidity Providers:**: Liquidity Providers (a.k.a. Lenders) provide capital to the pool and expect financial returns for their investment. The only actions that they can do are depositing and withdrawing capital from the pool.
+**Liquidity Providers:** Liquidity Providers (a.k.a. Lenders) provide capital to the pool and expect financial returns for their investment. The only actions that they can do are depositing and withdrawing capital from the pool.
 
 **Borrowers:** Borrowers are the party who initiates a credit line with the pool and drawdown against the credit line. They are responsible for paying interest and minimal principal payment per pay period.
 
 ### 4.3 Protocol Administration
 
-**Pause Protocol:**: At critical time, any of the pausers can pause the protocol. After a protocol is paused, it does not accept any actions that involve money flow in or out, i.e., no deposits, no withdrawals, no drawdowns, no repayments.
+**Pause Protocol:** At critical time, any of the pausers can pause the protocol. After a protocol is paused, it does not accept any actions that involve money flow in or out, i.e., no deposits, no withdrawals, no drawdowns, no repayments.
 
-**Unpause Protocol:**: Resume the protocol operations. Only the Protocol Owner can unpause the protocol.
+**Unpause Protocol:** Resume the protocol operations. Only the Protocol Owner can unpause the protocol.
 
-**Add / Remove liquidity assets allowed:** \*\* This is the list of assets to be allowed as the underlying assets for pools in the protocol. We will only support stablecoins in the foreseeable future, starting with USDC.
+**Add / Remove liquidity assets allowed:** This is the list of assets to be allowed as the underlying assets for pools in the protocol. We will only support stablecoins in the foreseeable future, starting with USDC.
 
-**Change Protocol-level Grace Period for Defaults:**: Protocol offers the default value for the grace period for defaults. Each pool can overwrite this default value.
+**Change Protocol-level Grace Period for Defaults:** Protocol offers the default value for the grace period for defaults. Each pool can overwrite this default value.
 
-**Change Protocol Treasury:**: This is the wallet address for the protocol treasury. Only pool owner can change this address.
+**Change Protocol Treasury:** This is the wallet address for the protocol treasury. Only pool owner can change this address.
 
-**Change Protocol Fee:**: Since Huma is a risk-on protocol, it is fair for the protocol to take a share of all the fees and interest generated in the protocol. To keep it simple, the protocol fee will simply be a percentage of all the fees and interest generated in the protocol. Initially, this Protocol Fee percentage will be configured by the protocol owner, later on, Huma DAO will take over the responsibility.
+**Change Protocol Fee:** Since Huma is a risk-on protocol, it is fair for the protocol to take a share of all the fees and interest generated in the protocol. To keep it simple, the protocol fee will simply be a percentage of all the fees and interest generated in the protocol. Initially, this Protocol Fee percentage will be configured by the protocol owner, later on, Huma DAO will take over the responsibility.
 
-**Add or remove pool owners:**: Add or remove a pool owner.
+**Add or remove pool owners:** Add or remove a pool owner.
 
-**Add or remove pausers:**: Add or remove a pauser.
+**Add or remove pausers:** Add or remove a pauser.
 
 ### 4.4 Pool Administration
 
@@ -190,43 +190,41 @@ Both Pool Owner and Evaluation Agent commit to provide a certain percentage of t
 
 #### 4.4.2 Pool Configurations
 
-**Pool Name**:\*\* Each pool needs to have a name. This name will be listed on the Huma website. We will define an off-chain workflow to make sure of the uniqueness of the pool names.
+**Pool Name:** Each pool needs to have a name. This name will be listed on the Huma website. We will define an off-chain workflow to make sure of the uniqueness of the pool names.
 
-**Underlying Token**: This is the asset to be used for lending and borrowing in the pool. In v1, we will support USDC only.
+**Underlying Token:** This is the asset to be used for lending and borrowing in the pool. In v1, we will support USDC only.
 
-**Liquidity Cap**:\*\*\*\* the cap of liquidity for the pool in the unit of underlying token. Pool owners can set and change it.
+**Liquidity Cap:** the cap of liquidity for the pool in the unit of underlying token. Pool owners can set and change it.
 
-**Pool Owner Commitment Rate**: \*\*\*\*the portion of the pool liquidity to be deposited by the pool owner. It will be represented in basis points.
+**Pool Owner Commitment Rate:** the portion of the pool liquidity to be deposited by the pool owner. It will be represented in basis points.
 
-**Evaluation Agent Commitment Rate**: the portion of the pool liquidity to be deposited by the Evaluation Agent. It will be represented in basis points.
+**Evaluation Agent Commitment Rate:** the portion of the pool liquidity to be deposited by the Evaluation Agent. It will be represented in basis points.
 
-**Max Credit Line**: The max credit line allowed by the pool. If the credit limit approved by EA is above this line, the request will be rejected.
+**Max Credit Line:** The max credit line allowed by the pool. If the credit limit approved by EA is above this line, the request will be rejected.
 
-**Pool APR**: Interest rate for the pool. It is represented in basis points.
+**Pool APR:** Interest rate for the pool. It is represented in basis points.
 
-**Origination Fee**: a fee to be charged when the user completes a drawdown. It can be a fixed fee or a percentage of the drawdown amount or a combination of both. In reality, we expect most pools to use a percentage. The percentage will be represented in basis points. What the borrower gets is the net of the drawdown amount and this fee.
+**Origination Fee:** a fee to be charged when the user completes a drawdown. It can be a fixed fee or a percentage of the drawdown amount or a combination of both. In reality, we expect most pools to use a percentage. The percentage will be represented in basis points. What the borrower gets is the net of the drawdown amount and this fee.
 
-**Late Payment Fee**: a fee to be charged when the borrower is late for a payment or the payment is lower than the required due amount. The late fee can be a fixed fee or a percentage of the total outstanding balance or a combination of both. Please note when a percentage is used to calculate the late fee, the percentage is applied to the entire balance instead of the amount due. For example, if the outstanding balance is $5000 and the amount due for this cycle is $500, if the late fee rate is 1% per period, the late fee will be $50 instead of $5. If the user is late for several periods in a row. the late fee will be charged each period.
+**Late Payment Fee:** a fee to be charged when the borrower is late for a payment or the payment is lower than the required due amount. The late fee can be a fixed fee or a percentage of the total outstanding balance or a combination of both. Please note when a percentage is used to calculate the late fee, the percentage is applied to the entire balance instead of the amount due. For example, if the outstanding balance is $5000 and the amount due for this cycle is $500, if the late fee rate is 1% per period, the late fee will be $50 instead of $5. If the user is late for several periods in a row. the late fee will be charged each period.
 
-**Question: **We do not have a grace period for late fees. Shall we add? (it is kind of tricky to support it, I prefer we not to do it. In real life, there is no grace period to late fees in most cases.)
+**Membership Fee:** a fixed fee per pay period.
 
-**Membership Fee**: a fixed fee per pay period.
+**Required receivable rate:** The ratio between the value of the receivables and the credit limit. The ratio will be represented in basis points. There must be enough receivables deposited or making the pool the beneficiary of the receivable before the borrowers can draw down using the approved credit line.
 
-**Required receivable rate**:\*\*\*\* The ratio between the value of the receivables and the credit limit. The ratio will be represented in basis points. There must be enough receivables deposited or making the pool the beneficiary of the receivable before the borrowers can draw down using the approved credit line.
+**withdrawalLockoutPeriod:** this is the period that the lender is prevented from withdrawing since its last deposit to the pool. This will be represented in seconds. The protocol will ensure it is longer than 30 days to guard pool admin from careless mistakes.
 
-**withdrawalLockoutPeriod**: this is the period that the lender is prevented from withdrawing since its last deposit to the pool. This will be represented in seconds. The protocol will ensure it is longer than 30 days to guard pool admin from careless mistakes.
+**poolDefaultGracePeriod:** the grace period between the due date and the moment that a default can be triggered. Late fees will apply during the default grace period.
 
-**poolDefaultGracePeriod**: the grace period between the due date and the moment that a default can be triggered. Late fees will apply during the default grace period.
+**Pay Period Duration:** The duration for each pay period. This can be configured in days. Every borrower follows the pay period duration to calculate its next due.
 
-**Pay Period Duration**: The duration for each pay period. This can be configured in days. Every borrower follows the pay period duration to calculate its next due.
-
-**minPrincipalRateInBps**: Min percentage of the principal due at each pay period. This will be represented in basis points.
+**minPrincipalRateInBps:** Min percentage of the principal due at each pay period. This will be represented in basis points.
 
 #### 4.4.3 Pool Administration
 
-**Enable and Disable Pool**: Pools can be enabled when the essential configurations are setup and the required minimal liquidity has been deposited by the admins.
+**Enable and Disable Pool:** Pools can be enabled when the essential configurations are setup and the required minimal liquidity has been deposited by the admins.
 
-**Set Evaluation Agent**: Set the evaluation agent
+**Set Evaluation Agent:** Set the evaluation agent
 
 Set and update the configurations outlined in[the section above](#442-pool-configurations).
 
@@ -252,7 +250,7 @@ Huma Distribution Token (HDT) is a utility token used to track LP’s contributi
 
 ### 4.6 Borrowing
 
-**Borrowers access capital from specific pools that match their needs. **
+**Borrowers access capital from specific pools that match their needs.**
 
 Institutional or retail borrowers are able to borrow from lending pools, as long as they have active income portfolios and/or receivables supported by the lending pool.
 
@@ -345,7 +343,7 @@ Huma’s governance is going to be managed by its community DAO which will maint
 - Updating protocol configurations
 - Planning tokenomics for HUMA tokens, as well as rewards and distributions
 
-**6.1 Governance Council **
+## 6.1 Governance Council
 
 The Governance Council will represent all major stakeholders of the platform and will be in charge of executing the decisions made by Snapshot votes through a multi-sig.
 
