@@ -2,3 +2,6 @@
 	path = packages/huma-protocol
 	url = git@github.com:00labs/huma-contracts.git
 	branch = master
+[submodule "packages/evaluation-agent"]
+	path = packages/evaluation-agent
+	url = git@github.com:00labs/evaluation-agent.git
