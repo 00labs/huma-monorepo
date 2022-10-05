@@ -23,9 +23,7 @@ We believe the future of DeFi is powered by automated underwriting as well as si
 
 ### 1.1 Protocol Overview
 
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-![drawing](https://docs.google.com/drawings/d/12345/export/png)
+![drawing](./images/protocol-spec/figure1-huma-protocol-overview.png)
 
 Figure 1 shows a high-level overview of Huma Protocol:
 
@@ -118,11 +116,7 @@ There are various user roles in the protocol. Some are at protocol-level. The ot
 
 <span style="text-decoration:underline;">Protocol Owner**: **</span>Protocol Owner is responsible for the administration of the entire protocol. It will be a multisig. After the initial deployment, the ownership will be transferred from the deployer to this multisig protocol owner. It has the following access rights:
 
-- The only user who can change various
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "protocol configurations"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-[protocol configurations](#heading=h.x6h4nfz0ebnv)
+- The only user who can change various[protocol configurations](#43-protocol-administration)
 
 - The only user who can add and remove Pool Owners.
 - The only user who can add and remove Pausers.
@@ -141,11 +135,7 @@ There are various user roles in the protocol. Some are at protocol-level. The ot
 
 - The only user who can set Evaluation Agent for the pool.
 - The only user who can set Fee Manager to be used by the pool and configure the Fee Manager.
-- The only user who can change various
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "pool configurations"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-[pool configurations](#heading=h.kpxs0t2ztpy).
+- The only user who can change various[pool configurations](#442-pool-configurations).
 
 - The only user who can transfer the Pool Owner’s income from the pool.
 
@@ -191,7 +181,7 @@ Under Huma protocol, many pools can be created for specific business opportuniti
 When a pool is initialized, the following information shall we specified:
 
 - Pool name: the name of the pool
-- Pool token (HDT) : the utility token used to track LP’s contribution to the pool. Please see section [link](#4.5.4 Pool Liquidity Ownership)
+- Pool token (HDT) : the utility token used to track LP’s contribution to the pool. Please see section [link](#454-Pool-Liquidity-Ownership) for more detail.
 
 - Huma Config: Huma Config hosts all the global configurations.
 - Fee Manager: A FeeManager implements all the core functions around fee calculation. Every pool can have its own FeeManager implementation.
@@ -238,11 +228,7 @@ Both Pool Owner and Evaluation Agent commit to provide a certain percentage of t
 
 <span style="text-decoration:underline;">Set Evaluation Agent</span>: Set the evaluation agent
 
-Set and update the configurations outlined in
-
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "the section above"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-[the section above](#heading=h.kpxs0t2ztpy).
+Set and update the configurations outlined in[the section above](#442-pool-configurations).
 
 ### 4.5 LP Participations
 
