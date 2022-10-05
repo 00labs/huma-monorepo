@@ -14,12 +14,12 @@ In the next decade, tens of thousands of institutions and billions of people wil
 
 The DeFi infrastructure for serving them is mostly missing today, and Huma Protocol is introducing such critical infrastructure elements to enable it.
 
-We believe the future of DeFi is powered by automated underwriting as well as signals about the borrowers’ <span style="text-decoration:underline;">Ability, Willingness, and Commitment</span> to pay.
+We believe the future of DeFi is powered by automated underwriting as well as signals about the borrowers’ **Ability, Willingness, and Commitment** to pay.
 
 - **Automated risk underwriting** (ARU): Most successful fintech players serve high volume of credit applications in an automated fashion, utilizing alternative data sources. All the major DeFi protocols are built on AMMs. However, it is a lot more complicated to support ARU in a risk-on world than a risk-off world. The ARUs are intelligent models. By nature, AI will find its role in the ARUs. At the same time, these ARUs will not be possible without additional data (e.g. income, credit worthiness).
-- **Income**: Income is probably the most vital signal in most underwriting scenarios since it offers the best measure against <span style="text-decoration:underline;">one’s ability to pay</span>. The more comprehensive we can understand income, the better we can underwrite.
-- **Credit worthiness**: Credit worthiness is the most valuable signal for <span style="text-decoration:underline;">one’s willingness to pay</span>. Web2’s credit score plays an important role, however it’s biased, limited, and controlled by a few agencies. We need decentralized credit systems.
-- **Receivables**: Today, <span style="text-decoration:underline;">collateral</span> in DeFi mainly represents a handful of digital assets backing debt. Majority of participants do not have tons of such digital assets idling, but most have <span style="text-decoration:underline;">receivables</span> in the form of future invoices, transactions, subscription income, paychecks, royalties etc. In fact, in structured finance, such receivables are regularly used in securitization of loans. Receivables are the best signal for <span style="text-decoration:underline;">one’s commitment to pay</span>, because once an entity transfers the ownership of their receivables to the lending platform, it acts as a payment guarantee. We actually think collaterals are just special forms of receivables. The only difference is that their cash value is available right now instead of at a future date.
+- **Income**: Income is probably the most vital signal in most underwriting scenarios since it offers the best measure against **one’s ability to pay**. The more comprehensive we can understand income, the better we can underwrite.
+- **Credit worthiness**: Credit worthiness is the most valuable signal for **one’s willingness to pay**. Web2’s credit score plays an important role, however it’s biased, limited, and controlled by a few agencies. We need decentralized credit systems.
+- **Receivables**: Today, **collateral** in DeFi mainly represents a handful of digital assets backing debt. Majority of participants do not have tons of such digital assets idling, but most have **receivables** in the form of future invoices, transactions, subscription income, paychecks, royalties etc. In fact, in structured finance, such receivables are regularly used in securitization of loans. Receivables are the best signal for **one’s commitment to pay**, because once an entity transfers the ownership of their receivables to the lending platform, it acts as a payment guarantee. We actually think collaterals are just special forms of receivables. The only difference is that their cash value is available right now instead of at a future date.
 
 ### 1.1 Protocol Overview
 
@@ -114,7 +114,7 @@ There are various user roles in the protocol. Some are at protocol-level. The ot
 
 #### 4.2.1 Protocol-level Admin Roles
 
-<span style="text-decoration:underline;">**Protocol Owner:**</span> Protocol Owner is responsible for the administration of the entire protocol. It will be a multisig. After the initial deployment, the ownership will be transferred from the deployer to this multisig protocol owner. It has the following access rights:
+\***\*Protocol Owner:\*\*** Protocol Owner is responsible for the administration of the entire protocol. It will be a multisig. After the initial deployment, the ownership will be transferred from the deployer to this multisig protocol owner. It has the following access rights:
 
 - The only user who can change various [protocol configurations](#43-protocol-administration)
 
@@ -125,13 +125,13 @@ There are various user roles in the protocol. Some are at protocol-level. The ot
 - The only user other than the pool owner who can perform admin tasks on a pool.
 - The only user who can transfer protocol income from pool wallet to protocol treasury.
 
-<span style="text-decoration:underline;">**Pausers:**</span> Pausers can call a pause function to pause the entire protocol. When the protocol is paused, no money moves in or out of the protocol. This is expected to happen in very rare cases, such as major security attacks, or serious security issues discovered. It is expected for the protocol to have multiple pausers, possibly including an external security monitoring firm. The only thing that a pauser can do is to pause the protocol, nothing else. After the protocol is paused, only the Protocol Owner can unpause it.
+\***\*Pausers:\*\*** Pausers can call a pause function to pause the entire protocol. When the protocol is paused, no money moves in or out of the protocol. This is expected to happen in very rare cases, such as major security attacks, or serious security issues discovered. It is expected for the protocol to have multiple pausers, possibly including an external security monitoring firm. The only thing that a pauser can do is to pause the protocol, nothing else. After the protocol is paused, only the Protocol Owner can unpause it.
 
-<span style="text-decoration:underline;">Protocol Treasury**:**</span> This is technically not a user. It is the wallet to hold treasury for the protocol.
+**Protocol Treasury**:\*\*\*\* This is technically not a user. It is the wallet to hold treasury for the protocol.
 
 #### 4.2.2 Pool-level User Roles
 
-<span style="text-decoration:underline;">**Pool Owners**</span>: Pool owners are a list of addresses that are approved by the ProtocolProtocol Owner to create and manage pools. They have the following access rights:
+\***\*Pool Owners\*\***: Pool owners are a list of addresses that are approved by the ProtocolProtocol Owner to create and manage pools. They have the following access rights:
 
 - The only user who can set Evaluation Agent for the pool.
 - The only user who can set Fee Manager to be used by the pool and configure the Fee Manager.
@@ -139,7 +139,7 @@ There are various user roles in the protocol. Some are at protocol-level. The ot
 
 - The only user who can transfer the Pool Owner’s income from the pool.
 
-<span style="text-decoration:underline;">Evaluation Agent**: **</span>The Evaluation Agent makes underwriting decisions for a pool. Each pool can only have one Evaluation Agent. They have the following access rights:
+\***\*Evaluation Agent:\*\***The Evaluation Agent makes underwriting decisions for a pool. Each pool can only have one Evaluation Agent. They have the following access rights:
 
 - The only user who can approve credit requests to the pool.
 - The only user who can post a pre-approved credit line to the pool contract.
@@ -150,27 +150,27 @@ After the pool owner has set the evaluation agent for the pool, the EA has to de
 
 Pool owner can choose to change the evaluate agent for the pool. When this happens, all the accrued EA rewards are paid to the old EA immediately. The EA needs to have made the required deposits.
 
-<span style="text-decoration:underline;">Liquidity Providers</span>: Liquidity Providers (a.k.a. Lenders) provide capital to the pool and expect financial returns for their investment. The only actions that they can do are depositing and withdrawing capital from the pool.
+\***\*Liquidity Providers:\*\***: Liquidity Providers (a.k.a. Lenders) provide capital to the pool and expect financial returns for their investment. The only actions that they can do are depositing and withdrawing capital from the pool.
 
-<span style="text-decoration:underline;">Borrowers**: **</span>Borrowers are the party who initiates a credit line with the pool and drawdown against the credit line. They are responsible for paying interest and minimal principal payment per pay period.
+\***\*Borrowers:\*\*** Borrowers are the party who initiates a credit line with the pool and drawdown against the credit line. They are responsible for paying interest and minimal principal payment per pay period.
 
 ### 4.3 Protocol Administration
 
-<span style="text-decoration:underline;">Pause Protocol</span>: At critical time, any of the pausers can pause the protocol. After a protocol is paused, it does not accept any actions that involve money flow in or out, i.e., no deposits, no withdrawals, no drawdowns, no repayments.
+\***\*Pause Protocol:\*\***: At critical time, any of the pausers can pause the protocol. After a protocol is paused, it does not accept any actions that involve money flow in or out, i.e., no deposits, no withdrawals, no drawdowns, no repayments.
 
-<span style="text-decoration:underline;">Unpause Protocol</span>: Resume the protocol operations. Only the Protocol Owner can unpause the protocol.
+\***\*Unpause Protocol:\*\***: Resume the protocol operations. Only the Protocol Owner can unpause the protocol.
 
-<span style="text-decoration:underline;">Add / Remove liquidity assets allowed</span>:This is the list of assets to be allowed as the underlying assets for pools in the protocol. We will only support stablecoins in the foreseeable future, starting with USDC.
+\***\*Add / Remove liquidity assets allowed:** \*\* This is the list of assets to be allowed as the underlying assets for pools in the protocol. We will only support stablecoins in the foreseeable future, starting with USDC.
 
-<span style="text-decoration:underline;">Change Protocol-level Grace Period for Defaults</span>: Protocol offers the default value for the grace period for defaults. Each pool can overwrite this default value.
+\***\*Change Protocol-level Grace Period for Defaults:\*\***: Protocol offers the default value for the grace period for defaults. Each pool can overwrite this default value.
 
-<span style="text-decoration:underline;">Change Protocol Treasury</span>: This is the wallet address for the protocol treasury. Only pool owner can change this address.
+\***\*Change Protocol Treasury:\*\***: This is the wallet address for the protocol treasury. Only pool owner can change this address.
 
-<span style="text-decoration:underline;">Change Protocol Fee</span>: Since Huma is a risk-on protocol, it is fair for the protocol to take a share of all the fees and interest generated in the protocol. To keep it simple, the protocol fee will simply be a percentage of all the fees and interest generated in the protocol. Initially, this Protocol Fee percentage will be configured by the protocol owner, later on, Huma DAO will take over the responsibility.
+\***\*Change Protocol Fee:\*\***: Since Huma is a risk-on protocol, it is fair for the protocol to take a share of all the fees and interest generated in the protocol. To keep it simple, the protocol fee will simply be a percentage of all the fees and interest generated in the protocol. Initially, this Protocol Fee percentage will be configured by the protocol owner, later on, Huma DAO will take over the responsibility.
 
-<span style="text-decoration:underline;">Add or remove pool owners</span>: Add or remove a pool owner.
+\***\*Add or remove pool owners:\*\***: Add or remove a pool owner.
 
-<span style="text-decoration:underline;">Add or remove pausers</span>: Add or remove a pauser.
+\***\*Add or remove pausers:\*\***: Add or remove a pauser.
 
 ### 4.4 Pool Administration
 
@@ -190,43 +190,43 @@ Both Pool Owner and Evaluation Agent commit to provide a certain percentage of t
 
 #### 4.4.2 Pool Configurations
 
-<span style="text-decoration:underline;">Pool Name**: **</span>Each pool needs to have a name. This name will be listed on the Huma website. We will define an off-chain workflow to make sure of the uniqueness of the pool names.
+**Pool Name**:\*\* Each pool needs to have a name. This name will be listed on the Huma website. We will define an off-chain workflow to make sure of the uniqueness of the pool names.
 
-<span style="text-decoration:underline;">Underlying Token</span>: This is the asset to be used for lending and borrowing in the pool. In v1, we will support USDC only.
+\***\*Underlying Token**: This is the asset to be used for lending and borrowing in the pool. In v1, we will support USDC only.
 
-<span style="text-decoration:underline;">Liquidity Cap**:**</span> the cap of liquidity for the pool in the unit of underlying token. Pool owners can set and change it.
+**Liquidity Cap**:\*\*\*\* the cap of liquidity for the pool in the unit of underlying token. Pool owners can set and change it.
 
-<span style="text-decoration:underline;">Pool Owner Commitment Rate**: **</span>the portion of the pool liquidity to be deposited by the pool owner. It will be represented in basis points.
+**Pool Owner Commitment Rate**: \*\*\*\*the portion of the pool liquidity to be deposited by the pool owner. It will be represented in basis points.
 
-<span style="text-decoration:underline;">Evaluation Agent Commitment Rate</span>: the portion of the pool liquidity to be deposited by the Evaluation Agent. It will be represented in basis points.
+**Evaluation Agent Commitment Rate**: the portion of the pool liquidity to be deposited by the Evaluation Agent. It will be represented in basis points.
 
-<span style="text-decoration:underline;">Max Credit Line</span>: The max credit line allowed by the pool. If the credit limit approved by EA is above this line, the request will be rejected.
+**Max Credit Line**: The max credit line allowed by the pool. If the credit limit approved by EA is above this line, the request will be rejected.
 
-<span style="text-decoration:underline;">Pool APR</span>: Interest rate for the pool. It is represented in basis points.
+**Pool APR**: Interest rate for the pool. It is represented in basis points.
 
-<span style="text-decoration:underline;">Origination Fee</span>: a fee to be charged when the user completes a drawdown. It can be a fixed fee or a percentage of the drawdown amount or a combination of both. In reality, we expect most pools to use a percentage. The percentage will be represented in basis points. What the borrower gets is the net of the drawdown amount and this fee.
+**Origination Fee**: a fee to be charged when the user completes a drawdown. It can be a fixed fee or a percentage of the drawdown amount or a combination of both. In reality, we expect most pools to use a percentage. The percentage will be represented in basis points. What the borrower gets is the net of the drawdown amount and this fee.
 
-<span style="text-decoration:underline;">Late Payment Fee</span>: a fee to be charged when the borrower is late for a payment or the payment is lower than the required due amount. The late fee can be a fixed fee or a percentage of the total outstanding balance or a combination of both. Please note when a percentage is used to calculate the late fee, the percentage is applied to the entire balance instead of the amount due. For example, if the outstanding balance is $5000 and the amount due for this cycle is $500, if the late fee rate is 1% per period, the late fee will be $50 instead of $5. If the user is late for several periods in a row. the late fee will be charged each period.
+**Late Payment Fee**: a fee to be charged when the borrower is late for a payment or the payment is lower than the required due amount. The late fee can be a fixed fee or a percentage of the total outstanding balance or a combination of both. Please note when a percentage is used to calculate the late fee, the percentage is applied to the entire balance instead of the amount due. For example, if the outstanding balance is $5000 and the amount due for this cycle is $500, if the late fee rate is 1% per period, the late fee will be $50 instead of $5. If the user is late for several periods in a row. the late fee will be charged each period.
 
 **Question: **We do not have a grace period for late fees. Shall we add? (it is kind of tricky to support it, I prefer we not to do it. In real life, there is no grace period to late fees in most cases.)
 
-<span style="text-decoration:underline;">Membership Fee</span>: a fixed fee per pay period.
+**Membership Fee**: a fixed fee per pay period.
 
-<span style="text-decoration:underline;">Required receivable rate**:**</span> The ratio between the value of the receivables and the credit limit. The ratio will be represented in basis points. There must be enough receivables deposited or making the pool the beneficiary of the receivable before the borrowers can draw down using the approved credit line.
+**Required receivable rate**:\*\*\*\* The ratio between the value of the receivables and the credit limit. The ratio will be represented in basis points. There must be enough receivables deposited or making the pool the beneficiary of the receivable before the borrowers can draw down using the approved credit line.
 
-<span style="text-decoration:underline;">withdrawalLockoutPeriod</span>: this is the period that the lender is prevented from withdrawing since its last deposit to the pool. This will be represented in seconds. The protocol will ensure it is longer than 30 days to guard pool admin from careless mistakes.
+**withdrawalLockoutPeriod**: this is the period that the lender is prevented from withdrawing since its last deposit to the pool. This will be represented in seconds. The protocol will ensure it is longer than 30 days to guard pool admin from careless mistakes.
 
-<span style="text-decoration:underline;">poolDefaultGracePeriod</span>: the grace period between the due date and the moment that a default can be triggered. Late fees will apply during the default grace period.
+**poolDefaultGracePeriod**: the grace period between the due date and the moment that a default can be triggered. Late fees will apply during the default grace period.
 
-<span style="text-decoration:underline;">Pay Period Duration</span>: The duration for each pay period. This can be configured in days. Every borrower follows the pay period duration to calculate its next due.
+**Pay Period Duration**: The duration for each pay period. This can be configured in days. Every borrower follows the pay period duration to calculate its next due.
 
-<span style="text-decoration:underline;">minPrincipalRateInBps</span>: Min percentage of the principal due at each pay period. This will be represented in basis points.
+**minPrincipalRateInBps**: Min percentage of the principal due at each pay period. This will be represented in basis points.
 
 #### 4.4.3 Pool Administration
 
-<span style="text-decoration:underline;">Enable and Disable Pool</span>: Pools can be enabled when the essential configurations are setup and the required minimal liquidity has been deposited by the admins.
+**Enable and Disable Pool**: Pools can be enabled when the essential configurations are setup and the required minimal liquidity has been deposited by the admins.
 
-<span style="text-decoration:underline;">Set Evaluation Agent</span>: Set the evaluation agent
+**Set Evaluation Agent**: Set the evaluation agent
 
 Set and update the configurations outlined in[the section above](#442-pool-configurations).
 
