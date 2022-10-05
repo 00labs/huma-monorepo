@@ -1,13 +1,13 @@
 [submodule "packages/huma-protocol"]
-	path = packages/huma-protocol
+	path = 1_huma_protocol
 	url = git@github.com:00labs/huma-contracts.git
 	branch = master
 [submodule "packages/evaluation-agent"]
-	path = packages/evaluation-agent
+	path = 3_evaluation-agent
 	url = git@github.com:00labs/evaluation-agent.git
 [submodule "packages/income-portfolio-platform"]
-	path = packages/income-portfolio-platform
+	path = 2_income-portfolio-platform
 	url = git@github.com:00labs/income-portfolio.git
 [submodule "packages/sdk/invoice-factoring-sdk"]
-	path = packages/sdk/invoice-factoring-sdk
+	path = 4_sdk/invoice-factoring-sdk
 	url = git@github.com:00labs/huma-sdk.git
