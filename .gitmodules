@@ -5,3 +5,9 @@
 [submodule "packages/evaluation-agent"]
 	path = packages/evaluation-agent
 	url = git@github.com:00labs/evaluation-agent.git
+[submodule "packages/income-portfolio-platform"]
+	path = packages/income-portfolio-platform
+	url = git@github.com:00labs/income-portfolio.git
+[submodule "packages/sdk/invoice-factoring-sdk"]
+	path = packages/sdk/invoice-factoring-sdk
+	url = git@github.com:00labs/huma-sdk.git
