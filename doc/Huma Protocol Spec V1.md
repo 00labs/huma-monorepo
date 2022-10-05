@@ -1,4 +1,4 @@
-# Huma Protocol Spec V1
+# Huma Protocol Spec v1
 
 Last updated: Oct. 5, 2022
 
