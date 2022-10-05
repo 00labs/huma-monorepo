@@ -1,44 +1,60 @@
 # Huma Protocol Spec V1
 
+Last updated: Oct. 5, 2022
+
 ## 1.0 Introduction
 
-## Overview
+**Huma is an open protocol for building next-gen decentralized risk-on lending solutions backed by income and receivables.**
 
-Smart contracts’ transparency and automatic execution played a critical role in DeFi’s success and will continue to do so. At the same time, the lack of two of the most critical inputs for all modern risk underwriting, income (cashflow) and credit history, DeFi had to rely solely on over-collateralization of a few digital assets. This substantially limited its reach, impact, and opportunities for sustainable high yield. As such limitation becomes more and more obvious to many in the industry, under-collateralization and lending for real world use cases naturally emerges as the next frontier. \
- \
-In the next decade, tens of thousands of institutions and billions of people will onboard onto web3 ecosystems. They are unlikely to have rich crypto asset portfolios initially to collateralize against, however most of them are going to be creditworthy participants looking to enrich their income portfolios.
+Smart contracts’ transparency and automatic execution played a critical role in DeFi’s success and will continue to do so. At the same time, it lacked the most critical input that all modern risk underwriting depends on, income (cashflow). Moreover, DeFi had to rely solely on over-collateralization of a few digital assets, making adoption by new entrants really difficult. These substantially limited its reach, impact, and opportunities for sustainable high yield. As such limitations become more and more obvious to many in the industry, under-collateralization and lending for real world use cases naturally emerges as the next frontier.
 
-The DeFi infrastructure for serving such participants is mostly missing today. Huma Protocol is introducing these critical DeFi infra 3 innovations to enable it :
+**Our Belief **
 
-Recognizing the reason that DeFi relies heavily on over-collateralization is because of a lack of essential infractures, in Huma, we focus on building these critical DeFi infrastructures through Huma Protocol and enable various lending products to be launched to serve millions of users. Let us first take a quick lookup at these critical building blocks and how Huma Protocol innovates on all of them.
+In the next decade, tens of thousands of institutions and billions of people will onboard onto web3 ecosystems. They won’t have rich crypto asset portfolios initially to collateralize against, however, most of them are going to be creditworthy participants.
 
-### Our Belief:
+The DeFi infrastructure for serving them is mostly missing today, and Huma Protocol is introducing such critical infrastructure elements to enable it.
 
-We believe the future of DeFi is automated underwriting powered by signals about the borrowers’ AWC (Ability, Willingness, and Commitment) to pay.
+We believe the future of DeFi is powered by automated underwriting as well as signals about the borrowers’ <span style="text-decoration:underline;">Ability, Willingness, and Commitment</span> to pay.
 
-- **Income**: Income is probably the most vital signal in most underwritings since it offers the best measure against <span style="text-decoration:underline;">one’s ability to pay</span>. The more comprehensive we can understand one’s income, the better we can underwrite.
-- **Credit worthiness**: Credit worthiness is probably the best signal for <span style="text-decoration:underline;">one’s willingness to pay</span>. Web2’s credit score plays an important role, but it is more like a blackbox. The central agencies have way too much power. We need a decentralized credit system.
-- **Receivables**: Receivables are proof of future income stream. Compared with collaterals, receivables are more accessible to most people. Not too many people have tons of crypto idling, but most people have receivables in the form of future paychecks, invoices, royalty, subscription income, etc. Receivables are the best signal for <span style="text-decoration:underline;">one’s commitment to pay</span>. Once someone transfers the ownership of their receivables to the lending platform, they are committed to pay. We actually think collaterals are just special forms of receivables. The only difference is that their cash value is available right now instead of at a future date. A good receivable platform should be able to embrace collaterals as well.
-- **Automated risk underwriting** (ARU) - Most of Web2 credit applications are approved in an automated fashion. All the major DeFi protocols are built on AMM. We expect this to continue. However, it is a lot more complicated to support ARU in a risk-on world than a risk-off world. The ARUs are intelligent models. By nature, AI will find its role in the ARUs. At the same time, these ARUs will not be possible without additional data (e.g. income, credit scores). So please read on.
+- **Automated risk underwriting** (ARU): Most successful fintech players serve high volume of credit applications in an automated fashion, utilizing alternative data sources. All the major DeFi protocols are built on AMMs. However, it is a lot more complicated to support ARU in a risk-on world than a risk-off world. The ARUs are intelligent models. By nature, AI will find its role in the ARUs. At the same time, these ARUs will not be possible without additional data (e.g. income, credit scores).
+- **Income**: Income is probably the most vital signal in most underwriting scenarios since it offers the best measure against <span style="text-decoration:underline;">one’s ability to pay</span>. The more comprehensive we can understand income, the better we can underwrite.
+- **Credit worthiness**: Credit worthiness is the most critical input for <span style="text-decoration:underline;">one’s willingness to pay</span>. Web2’s credit score plays an important role, however it’s biased, limited, and controlled by a few agencies. We need decentralized credit systems.
+- **Receivables**: Today, <span style="text-decoration:underline;">collateral</span> in DeFi mainly represents a handful of digital assets backing debt. Majority of participants do not have tons of such digital assets idling, but most have <span style="text-decoration:underline;">receivables</span> in the form of future invoices, transactions, subscription income, paychecks, royalties etc. In fact, in structured finance, such receivables are regularly used in securitization of loans. Receivables are the best signal for <span style="text-decoration:underline;">one’s commitment to pay</span>, because once an entity transfers the ownership of their receivables to the lending platform, it acts as a payment guarantee. We actually think collaterals are just special forms of receivables. The only difference is that their cash value is available right now instead of at a future date.
 
-### Huma’s Technical Bets:
-
-Figure 1 shows a high-level overview of Huma Protocol:
-
-- Income Portfolio - It is a comprehensive view of users’ Web3 and Web2 income. Income Portfolio Adapters (IPA) can be developed to capture income from Web3 income sources such as on-chain payments, staking, mining, NFT royalty, Web3 payroll, to Web2 sources. The Income Portfolio Platform is built in such a way that any developers in the community can contribute and share the upside of the IPAs. Please refer to &lt;<IPA Developer Guide>> for more information.
+### 1.1 Protocol Overview
 
 <p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 ![drawing](https://docs.google.com/drawings/d/12345/export/png)
 
+Figure 1 shows a high-level overview of Huma Protocol:
+
+- Income Portfolio - It is a comprehensive view of users’ Web3 and Web2 income. Income Portfolio Adapters (IPA) can be developed to capture income from Web3 income sources such as on-chain payments, staking, mining, NFT royalty, Web3 payroll, and Web2 sources. The Income Portfolio Platform is built in such a way that any developers in the community can contribute and share the upside of the IPAs. Please refer to &lt;<IPA Developer Guide>> for more information.
 - Receivable Management - We have developed infrastructures to allow receivables to be captured in the form of NFTs, transferred, and used to secure credit borrowing.
 - Evaluation Agent - This is an open platform for developers to contribute various risk underwriting models. Please refer to &lt;<Evaluation Agent Developer Guide>> for more information.
-- Aura - This is a placeholder for capturing, reporting, and leveraging credit trustworthiness. This is not in scope for our v1 protocol. In v2, we will either compose a decentralized credit system or work with a consortium of innovators to define the new credit standard for Web3.
-- Lending Protocol - This is a generic lending pool. It is designed to suit a broad range of use cases from receivable refactoring to general credit line. Please refer to &lt;<Huma Lending Protocol Technical Design>> for more information.
+- Aura - This is the layer for capturing, reporting, and leveraging credit trustworthiness. Auro is not in scope for our v1 protocol. In v2, we will either compose a decentralized credit system or work with a consortium of innovators to define the new credit standard for Web3.
+- Lending Protocol - This is a generic lending pool. It is designed to suit a broad range of use cases from receivable refactoring to general credit line. Please refer to &lt;<Huma Lending Protocol Technical Design>> for how to expand the protocol to launch more lending products.
 
 ## 2.0 Income Portfolio Platform
 
-Income Portfolio Platform (IPP) provides a comprehensive view of users’ on-chain and off-chain income. It is a general framework for the community to contribute to Huma’s vision. Developers can participate in the effort by building Income Portfolio Adapters (IPAs) for various income sources. Each IPA shall understand the amount, frequency, and other objective quantities that describe the income associated with a wallet. This can include information about predicted future income from that source. This can include information about predicted future income from that source. The API interface of an IPA is covered in the technical design doc.
+Income Portfolio Platform (IPP) provides a comprehensive view of users’ on-chain and off-chain income. It is an open framework for the community to easily contribute to Huma’s vision. Developers can participate in the effort by building Income Portfolio Adapters (IPAs) for various income sources. Each IPA shall understand the amount, frequency, and other objective quantities that describe the income associated with a wallet. This can include information about predicted future income from that source. The API interface of an IPA is covered in the technical design doc.
+
+Example sources include;
+
+- On-chain sources
+  - Direct payments from treasuries, i.e. Gnosis SAFE’s, Circle Business Account
+  - Payments/invoices like Request Network, Utopia Labs, Coinshift, Superfluid
+  - Yield farming income
+  - Staking, miner and validator income
+  - Gaming income
+  - …
+- Off-chain
+  - Transactions and SaaS revenue like Plaid, Teller, Stripe, Quickbooks, Recurly
+  - Invoices like Stripe, PayPal, Invoice2Go, Square, Zoho
+  - Income data aggregates like Pinwheel, Finicity, Argyle
+  - Sales data like Shopify, Amazon,
+  - Credit/debt data aggregates like Experian API
+  - …
 
 ### 2.1 Life Cycle of an IPA
 
@@ -46,7 +62,7 @@ Income Portfolio Platform (IPP) provides a comprehensive view of users’ on-cha
 2. Once accepted by Huma DAO, the Adapter will be deployed on IPP.
 3. All the accepted IPAs will be listed under the same directory, for the Evaluation Agents(EAs)to consume.
 4. Some performance stats about each IPA and share as metadata. This will be valuable to the EA developers. It will also serve as an input when Huma DAO decides how to distribute IP rewards to different IPA providers.
-5. Each IPA shall be maintained by the original developer, Huma DAODAO, or the community.
+5. Each IPA shall be maintained by the original developer, Huma DAO, or the community.
 
 ### 2.2 Developer Participation and Rewards
 
@@ -54,56 +70,27 @@ Developers can contribute to the initial development and ongoing maintenance of 
 
 To bootstrap the development of IPAs, Huma will offer bounty programs via gitcoin platform or hackathons. The IPA submissions will be reviewed, and once approved, the developers will be rewarded with the bounties.
 
-Once the protocol goes live, a portion of the protocol revenue will be carved out to reward IPA developers, who can contribute by developing new IPAs or maintaining existing IPAs. Huma DAO will review the contributions and determine how to split the total IPA rewards to different IPA contributors.
-
-### 2.3 V1 MVP
-
-- Publish standard interface for IPAs
-- Open source sample IPA (e.g. RN)
-- Publish a developer guide
-- Organize all IPAs in Github for easy discovery
-
-The following features will not be in MVP:
-
-- IP performance dashboard (v2)
+A portion of the protocol revenue will be carved out to reward IPA developers and maintainers. Huma DAO will review the contributions and determine how to split the total IPA rewards to different IPA contributors.
 
 ## 3.0 Evaluation Agent (EA)
 
-EA allows Developers to build and plug in their risk management modules in Huma Protocol. Each EA implements a standard interface to interact with Huma SDK and Huma contracts.
+Evaluation Agent developers build and plug in their context-aware risk management modules into Huma Protocol. Each EA implements a standard interface to interact with Huma SDK and Huma contracts.
 
-All the EAs are expected to run off-chain considering the computational complexity involved. We do not expect EAs to be open-sourced in the foreseeable future for anti-fraud reasons.
+All the EAs are expected to run off-chain considering the computational complexity involved. We do not expect EAs to be open-sourced in the foreseeable future as an anti-fraud measure.
 
 ### 3.1 EA Listing and Hosting
 
-In the early stage, we expect each pool to have its own EA. Once the platform becomes more mature, we envision some EAs will be generic or highly configurable, and thus can be shared by multiple pools. At that stage, we will provide a dashboard of the EAs to highlight their performances to the pool owners.
+Each pool will select an EA to delegate its underwriting. EAs are expected to be highly specialized per use case initially, however it's also possible that more generic EAs are developed in the future.
 
-The EA developers will submit EAs to Huma DAO for review. Once approved, the EAs will be deployed to a hosting platform provided by Huma. The hosting platform will be open-sourced, but we will not require the EAs to open source the EA programs themselves.
+The EA developers will submit EAs to Huma DAO for review. Once approved, the EAs will be deployed to a cloud platform provided by Huma. The cloud platform will be open-sourced, even though Huma does not require the EAs to open source their models.
 
-We also considered the option for EA developers to host EAs by themselves. We call this option Private EA. We decided not to support it in v1 for several reasons:
-
-1. Significant devops workload is needed to run an EA in production. It will be a burden for the EA developers.
-2. Pool owners will unlikely use a private EA in the early days. Only after some EAs proved their performance and trustworthiness, will pool owners be open to use private EAs.
-3. Huma’s hosting platform will be open sourced. It is merely a supporting infrastructure. Since it does not intervene with the credit underwriting decisions, the risk for it to be viewed as overly centralized is low.
-
-In v2, we will look to make this EA-hosting platform more decentralized.
+In v2, we will look into making this platform more decentralized.
 
 ### 3.2 EA rewards and responsibilities
 
-EA takes a percentage of the pool income. We will call it commissionRateInBpsForEA in the protocol. It can be configured for each pool and 2000bps can be a good starting point.
+EAs are required to provide meaningful contributions to the liquidity pool so that they have enough skin in the game. The percentage of EA’s contribution is governed by a configuration parameter: \_liquidityRateInBpsByEA, which is determined by each Pool Owner.
 
-EAs are required to provide meaningful contributions to the liquidity pool so that they have enough skin in the game. The percentage of EA’s contribution is governed by a configuration parameter: liquidityRateInBpsByEA, which is determined by each Pool Owner.
-
-### 3.3 V1 MVP
-
-- Publish standard interface for EAs
-- Publish a developer guide
-- Deploy Invoice Factoring EA (Note: not open source)
-- Host a descriptive page on Github or Gitbooks for each EA
-- Launch the EA hosting and serving platform
-
-The following features will not be in MVP:
-
-- EA performance dashboard (v2)
+EA takes a percentage of the pool income. It is defined in the configuration parameter \_rewardRateInBpsForEA. It can be configured for each pool balancing the liquidity contribution requirement.
 
 ## 4.0 Lending Protocol
 
@@ -121,7 +108,7 @@ In addition, Timelock will be used so that the community has time to react to th
 
 #### 4.1.2 Extensibility
 
-Huma Protocol shall be designed as a true protocol, instead of just a lending product. It shall allow developers and businesses to support new use cases by leveraging its Income Access Protocol. As a result, it should allow different pools to apply different underwriting policies and fee schedules. For example, it shall be able to support interest-only, minimal monthly payment (e.g. credit card), or installments (e.g. car loan, mortgage).
+Huma Protocol shall be designed as a full-stack protocol, instead of just a lending product. It shall allow developers and businesses to support new use cases by leveraging its Income Portfolio and EA Platforms. As a result, it should allow different pools to apply different underwriting policies and fee schedules. For example, it shall be able to support interest-only, minimal monthly payment (e.g. credit card), or installments (e.g. car loan, mortgage).
 
 ### 4.2 User Roles
 
@@ -204,13 +191,16 @@ Under Huma protocol, many pools can be created for specific business opportuniti
 When a pool is initialized, the following information shall we specified:
 
 - Pool name: the name of the pool
-- Pool token: the token that is used to track LP’s contribution to the pool. The current value of the pool token reflects the performance of the pool so far. We expect each pool to have a unique token. At the point of time, Huma view these tokens as utility tokens and does not have plan to support the trading of these tokens through DEX or other secondary market. LPs mint new tokens when they contribute capital to the pool, and burn tokens when they withdraw.
+- Pool token (HDT) : the utility token used to track LP’s contribution to the pool. Please see section
+
+<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "4.5.4"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+[4.5.4](#heading=h.x8q7cdkmho2v) for more detail.
+
 - Huma Config: Huma Config hosts all the global configurations.
 - Fee Manager: A FeeManager implements all the core functions around fee calculation. Every pool can have its own FeeManager implementation.
 
-**Question: **Who can initiate a pool? Is it the protocol owner to initiate on behalf of the pool owner or the pool owner? One thing to watch out for is the uniqueness of the pool name. Due to gas fee considerations, it is not advisable to enforce the uniqueness on-chain. It is better checked off-chain before initiating the pool on-chain. The protocol owner will be in a better position to do so. If that is the case, we may need the ability for the protocol owner to initiate the pool on behalf of the pool owner and transfer to the pool owner immediately after the initialization.
-
-Both Pool Owner and Evaluation Agent commit to provide a certain percentage of the pool liquidity. Once the pool is initiated, once after the Pool Owner and Evaluation Agent deposit the required liquidity, the pool can be enabled by the Pool Owner to accept additional deposits from the lenders and borrowing by the borrowers.
+Both Pool Owner and Evaluation Agent commit to provide a certain percentage of the pool liquidity. Once the pool is initiated, and after the Pool Owner and Evaluation Agent deposit the required liquidity, the pool can be enabled by the Pool Owner to accept additional deposits from the lenders. At that point, the pool will open to the borrowers.
 
 #### 4.4.2 Pool Configurations
 
@@ -223,8 +213,6 @@ Both Pool Owner and Evaluation Agent commit to provide a certain percentage of t
 <span style="text-decoration:underline;">Pool Owner Commitment Rate**: **</span>the portion of the pool liquidity to be deposited by the pool owner. It will be represented in basis points.
 
 <span style="text-decoration:underline;">Evaluation Agent Commitment Rate</span>: the portion of the pool liquidity to be deposited by the Evaluation Agent. It will be represented in basis points.
-
-~~<span style="text-decoration:underline;">Min Borrow Amount</span>: The min amount that one can borrow in each borrowing transaction. This does not add much value, thus has been deleted. ~~
 
 <span style="text-decoration:underline;">Max Credit Line</span>: The max credit line allowed by the pool. If the credit limit approved by EA is above this line, the request will be rejected.
 
@@ -256,7 +244,7 @@ Both Pool Owner and Evaluation Agent commit to provide a certain percentage of t
 
 Set and update the configurations outlined in
 
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "the section above"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "the section above"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 [the section above](#heading=h.kpxs0t2ztpy).
 
@@ -264,25 +252,31 @@ Set and update the configurations outlined in
 
 #### 4.5.1 Qualification
 
-LP needs to pass KYC to participate in the pool. The process can be managed off-chain in v1. As a result, the pool owner will add LP to the pool. Only after that, the LP can deposit and withdraw.
+LP needs to pass KYC/KYB/AML to participate in the pool. The process will be managed off-chain in v1 through partner services like Credora or Parallel Markets. As a result, the pool owner will add LP to the pool. Only after that, the LP can deposit and withdraw.
 
 #### 4.5.2 Deposits
 
 LP can contribute capitals to the pool as long as it has not reached the liquidity cap set by the pool owner. There is no max or min requirement for each deposit. After each deposit, the withdrawalLockupPeriod is reset, i.e., the LP has to wait for the period defined by withdrawalLockupPeriod before withdrawal.
 
-#### 4.5.3 Withdraw
+#### 4.5.3 Withdrawal
 
 Once the withdrawalLockupPeriod is passed, the LP can choose to withdraw from the pool. The LP can choose to withdraw a portion or the entire withdrawable amount.
 
-**Questions: **
+In v2, we are planning to introduce an opportunity cost pricing as a form of exit fee to make pools more sustainable and fair to all lenders.
 
-1. TruFi uses cooldown. The lender can propose a withdrawal. Then the counter of cooldown starts. Only after the cooldown period is over, can the lender withdraw. TruFi also implemented an exit fee concept. The exit fee varies depending on the liquidity in the pool. When there is lots of liquidity, the exit fee is low. When liquidity is tight, the exit fee is hiked. Which one is better? withdrawalLockupPeriod better or cooldown + exit fee? I think withdrawalLockupPeriod might be better than cooldown since it provides better certainty to the protocol on the lender’s commitment. I also think exit fees are a great concept from a pool stability perspective, but not very friendly to the lenders. I recommend we launch with withdrawalLockupPeriod only. We can add a variation of exit fee in v2.
+#### 4.5.4 Pool Liquidity Ownership
 
-#### 4.5.4 Income and Losses
-
-Please see section xxx for more detail.
+Huma Distribution Token (HDT) is a utility token used to track LP’s contribution to the pool. The current value of HDT reflects the performance of the pool so far. Each pool creates a new instance of HDT. They are minted when LPs contribute capital to the pool, and burned during withdrawal.
 
 ### 4.6 Borrowing
+
+**Borrowers access capital from specific pools that match their needs. **
+
+Institutional or retail borrowers are able to borrow from lending pools, as long as they have active income portfolios and/or receivables supported by the lending pool.
+
+Each borrower goes through an automated evaluation process by the designated Evaluation Agent of the pool. The evaluation agent determines whether the borrower can borrow and at which terms.
+
+Optionally, EAs can also confirm KYC/KYB/AML requirements for borrowers if required by PoolOwners.
 
 #### 4.6.1 Credit Line
 
@@ -297,8 +291,6 @@ In Web3, it is preferred for the users to initiate any actions rather than the p
 Each credit line has its personalized interest rate. The Evaluation Agent will consider each account’s credit history and income stability to determine the interest rate.
 
 This rate can be changed by the Evaluation Agent. Since it is a credit line, the new interest rate will apply to both the existing balance and new drawdowns. The rate change will take effect starting from the next pay period, thus, there is no change to the due amount to the current pay period.
-
-**Question: **Do we want to put a timeline for the user to initiate the first drawdown? Once past this timeline, withdrawals will be rejected
 
 #### 4.6.3 Payments Per Cycle
 
@@ -323,6 +315,8 @@ Please note in solidity, all divisions round to zero. We will round Late Fee, In
 #### 4.7.1 Underwriting Decision
 
 EA takes the borrowers’ income portfolio, credit history, and other factors to decide if to approve a credit line, the credit limit to be approved and the interest rate for the credit line.
+
+While we believe the majority of decisions are going to be fully automated, for sophisticated lending cases, EAs can be configured to work in hybrid mode, requiring human supervision to do the final approval.
 
 In v2, the performance of each EA, including approval rate and risk loss rate, will be available for the Pool Owner to review.
 
@@ -350,4 +344,29 @@ The same process applies to the commission fee for the EAs. It will be kept in t
 
 ### 4.9 Upgradability
 
-We expect the core contracts continue to evolve, thus upgradability is critical for key contracts.
+We expect the core contracts to continue to evolve, thus upgradability is critical for the pool contracts and Huma Distribution Token contract.
+
+## 5.0 Aura (Decentralized Credit Tracking)
+
+Aura is the layer capturing, reporting, and leveraging credit trustworthiness. This is not in scope for our v1 protocol, as decentralized solutions in this space are also in early development. In v2, we will either compose with a mature solution out of those or work with a consortium of innovators to define the new credit standard for Web3.
+
+## 6.0 Governance
+
+Huma’s governance is going to be managed by its community DAO which will maintain and update the protocol via decentralized voting. DAO will be responsible for tasks like :
+
+- Managing DAO treasury
+- Growing the community of IPA and EA builders
+- Securing and maintaining the IPA and EA platforms
+- Upgrading contracts
+- Responding to emergencies by pausing and unpausing the protocol
+- Launching new community pools and acting as PoolOwner where needed
+- Updating protocol configurations
+- Planning tokenomics for HUMA tokens, as well as rewards and distributions
+
+**6.1 Governance Council **
+
+The Governance Council will represent all major stakeholders of the platform and will be in charge of executing the decisions made by Snapshot votes through a multi-sig.
+
+### 6.2 Participation
+
+Anybody will be able to participate in governance through proposals, discussions, and Snapshot votes.
