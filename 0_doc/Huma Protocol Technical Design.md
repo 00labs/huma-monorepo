@@ -1,6 +1,49 @@
 # Huma Protocol Technical Design
 
-Last updated: Oct. 1, 2022
+## Table of Content
+
+- [Overview](#overview)
+  - [Our Belief](#our-belief)
+  - [Huma’s Technical Bets](#humas-technical-bets)
+  - [Interaction between Components](#interaction-between-components)
+- [Huma Lending Protocol](#huma-lending-protocol)
+  - [Contract Architecture](#contract-architecture)
+  - [Fee Calculation and Management](#fee-calculation-and-management)
+    - [Extensible Fee Manager](#extensible-fee-manager)
+    - [Bill Triggering](#bill-triggering)
+    - [Bill Calculation](#bill-calculation)
+  - [Credit Line State Management](#credit-line-state-management)
+  - [Sentinel Service](#sentinel-service)
+  - [Error Handling](#error-handling)
+  - [Upgradability](#upgradability)
+  - [Testing](#testing)
+  - [Security and Risk Considerations](#security-and-risk-considerations)
+    - [Contract Audit](#contract-audit)
+    - [Protocol Multisig and Timelock](#protocol-multisig-and-timelock)
+    - [Pool Owner Multisig](#pool-owner-multisig)
+    - [Security for Service Accounts](#security-for-service-accounts)
+    - [Capital Commitment by Pool Owner and Evaluation Agent](#capital-commitment-by-pool-owner-and-evaluation-agent)
+    - [Security Bug Bounty](#security-bug-bounty)
+    - [Credit Risk](#credit-risk)
+- [Invoice Factoring Service](#invoice-factoring-service)
+  - [Architecture](#architecture)
+  - [SDK](#sdk)
+- [Income Portfolio](#income-portfolio)
+- [Evaluation Agent](#evaluation-agent)
+  - [EA description](#ea-description)
+  - [EA experiences](#ea-experiences)
+    - [EA experience for developers](#ea-experience-for-developers)
+    - [Pool admin experience](#pool-admin-experience)
+  - [Design](#design)
+    - [Huma hosted EA](#huma-hosted-ea)
+    - [Manual EA](#manual-ea)
+    - [EA registry](#ea-registry)
+  - [EA Serving Flow](#ea-serving-flow)
+  - [Interaction with the smart contracts](#interaction-with-the-smart-contracts)
+- [Appendix A: Intro to Credit Line and Receivable Factoring](#appendix-a-intro-to-credit-line-and-receivable-factoring)
+  - [Introduction to Credit Line](#introduction-to-credit-line)
+  - [Introduction to Receivable Factoring](#introduction-to-receivable-factoring)
+- [Appendix B: List of Events](#appendix-b-list-of-events)
 
 ## Overview
 
@@ -8,7 +51,7 @@ DeFi sparked the last crypto summer. Smart contracts’ transparency and automat
 
 Recognizing the reason that DeFi relies heavily on over-collateralization is because of a lack of essential infractures, in Huma, we focus on building these critical DeFi infrastructures through Huma Protocol and enable various lending products to be launched to serve millions of users. Let us first take a quick lookup at these critical building blocks and how Huma Protocol innovates on all of them.
 
-### Our Belief:
+### Our Belief
 
 We believe the future of DeFi is automated underwriting powered by signals about the borrowers’ AWC (Ability, Willingness, and Commitment) to pay.
 
@@ -17,24 +60,22 @@ We believe the future of DeFi is automated underwriting powered by signals about
 - **Receivables**: Receivables are proof of future income stream. Compared with collaterals, receivables are more accessible to most people. Not too many people have tons of crypto idling, but most people have receivables in the form of future paychecks, invoices, royalty, subscription income, etc. Receivables are the best signal for <span style="text-decoration:underline;">one’s commitment to pay</span>. Once someone transfers the ownership of their receivables to the lending platform, they are committed to pay. We actually think collaterals are just special forms of receivables. The only difference is that their cash value is available right now instead of at a future date. A good receivable platform should be able to embrace collaterals as well.
 - **Automated risk underwriting** (ARU) - Most of Web2 credit applications are approved in an automated fashion. All the major DeFi protocols are built on AMM. We expect this to continue. However, it is a lot more complicated to support ARU in a risk-on world than a risk-off world. The ARUs are intelligent models. By nature, AI will find its role in the ARUs. At the same time, these ARUs will not be possible without additional data (e.g. income, credit scores). So please read on.
 
-### Huma’s Technical Bets:
+### Huma’s Technical Bets
 
 Figure 1 shows a high-level overview of Huma Protocol:
 
-- Income Portfolio - It is a comprehensive view of users’ Web3 and Web2 income. Income Portfolio Adapters (IPA) can be developed to capture income from Web3 income sources such as on-chain payments, staking, mining, NFT royalty, Web3 payroll, to Web2 sources. The Income Portfolio Platform is built in such a way that any developers in the community can contribute and share the upside of the IPAs. Please refer to &lt;<IPA Developer Guide>> for more information.
+- Income Portfolio - It is a comprehensive view of users’ Web3 and Web2 income. Income Portfolio Adapters (IPA) can be developed to capture income from Web3 income sources such as on-chain payments, staking, mining, NFT royalty, Web3 payroll, to Web2 sources. The Income Portfolio Platform is built in such a way that any developers in the community can contribute and share the upside of the IPAs. Please refer to << IPA Developer Guide >> for more information.
 
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-![drawing](https://docs.google.com/drawings/d/12345/export/png)
+![drawing](./images/protocol-spec/figure1-huma-protocol-overview.png)
 
 - Receivable Management - We have developed infrastructures to allow receivables to be captured in the form of NFTs, transferred, and used to secure credit borrowing.
 - Evaluation Agent - This is an open platform for developers to contribute various risk underwriting models. Please refer to &lt;<Evaluation Agent Developer Guide>> for more information.
 - Aura - This is a placeholder for capturing, reporting, and leveraging credit trustworthiness. This is not in scope for our v1 protocol. In v2, we will either compose a decentralized credit system or work with a consortium of innovators to define the new credit standard for Web3.
-- Lending Protocol - This is a generic lending pool. It is designed to suit a broad range of use cases from receivable refactoring to general credit line. Please refer to &lt;<Huma Lending Protocol Technical Design>> for more information.
+- Lending Protocol - This is a generic lending pool. It is designed to suit a broad range of use cases from receivable refactoring to general credit line. Please refer to << Huma Lending Protocol Technical Design >> for more information.
 
 ### Interaction between Components
 
-Income Portfolio works relatively independently. Following the &lt;<IPA Developer Guide>>, developers can submit IPAs for approval. Once an IPA is approved by Huma DAO, it is available for Evaluation Agen developers to consume.
+Income Portfolio works relatively independently. Following the << IPA Developer Guide >>, developers can submit IPAs for approval. Once an IPA is approved by Huma DAO, it is available for Evaluation Agen developers to consume.
 
 Auro works fairly independently as well. It acts on events emitted by Huma and other protocols and makes decisions on one’s credit worthiness.
 

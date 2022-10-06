@@ -1,6 +1,23 @@
 # Huma Protocol Spec v1
 
-Last updated: Oct. 5, 2022
+## Table of Content
+
+- [1.0 Introduction](#10-introduction)
+- [2.0 Income Portfolio Platform](#20-income-portfolio-platform)
+- [3.0 Evaluation Agent (EA)](#30-evaluation-agent-ea)
+- [4.0 Lending Protocol](#40-lending-protocol)
+  - [4.1 Design Principles](#41-design-principles)
+  - [4.2 User Roles](#42-user-roles)
+  - [4.3 Protocol Administration](#43-protocol-administration)
+  - [4.4 Pool Administration](#44-pool-administration)
+  - [4.5 LP Participations](#45-lp-participations)
+  - [4.6 Borrowing](#46-borrowing)
+  - [4.7 Risk Management](#47-risk-management)
+  - [4.8 Income and Loss Distribution](#48-income-and-loss-distribution)
+  - [4.9 Upgradability](#49-upgradability)
+- [5.0 Aura (Decentralized Credit Tracking)](#50-aura-decentralized-credit-tracking)
+- [6.0 Governance](#60-governance)
+- [6.1 Governance Council](#61-governance-council)
 
 ## 1.0 Introduction
 
@@ -27,11 +44,11 @@ We believe the future of DeFi is powered by automated underwriting as well as si
 
 Figure 1 shows a high-level overview of Huma Protocol:
 
-- Income Portfolio - It is a comprehensive view of users’ Web3 and Web2 income. Income Portfolio Adapters (IPA) can be developed to capture income from Web3 income sources such as on-chain payments, staking, mining, NFT royalty, Web3 payroll, and Web2 sources. The Income Portfolio Platform is built in such a way that any developers in the community can contribute and share the upside of the IPAs. Please refer to &lt;<IPA Developer Guide>> for more information.
+- Income Portfolio - It is a comprehensive view of users’ Web3 and Web2 income. Income Portfolio Adapters (IPA) can be developed to capture income from Web3 income sources such as on-chain payments, staking, mining, NFT royalty, Web3 payroll, and Web2 sources. The Income Portfolio Platform is built in such a way that any developers in the community can contribute and share the upside of the IPAs. Please refer to << IPA Developer Guide >> for more information.
 - Receivable Management - We have developed infrastructures to allow receivables to be captured in the form of NFTs, transferred, and used to secure credit borrowing.
-- Evaluation Agent - This is an open platform for developers to contribute various risk underwriting models. Please refer to &lt;<Evaluation Agent Developer Guide>> for more information.
+- Evaluation Agent - This is an open platform for developers to contribute various risk underwriting models. Please refer to << Evaluation Agent Developer Guide >> for more information.
 - Aura - This is the layer for capturing, reporting, and leveraging credit trustworthiness. Auro is not in scope for our v1 protocol. In v2, we will either compose a decentralized credit system or work with a consortium of innovators to define the new credit standard for Web3.
-- Lending Protocol - This is a generic lending pool. It is designed to suit a broad range of use cases from receivable refactoring to general credit line. Please refer to &lt;<Huma Lending Protocol Technical Design>> for how to expand the protocol to launch more lending products.
+- Lending Protocol - This is a generic lending pool. It is designed to suit a broad range of use cases from receivable refactoring to general credit line. Please refer to & [Huma Lending Protocol Technical Design](Huma%20Protocol%20Technical%20Design.md) for how to expand the protocol to launch more lending products.
 
 ## 2.0 Income Portfolio Platform
 
@@ -86,9 +103,9 @@ In v2, we will look into making this platform more decentralized.
 
 ### 3.2 EA rewards and responsibilities
 
-EAs are required to provide meaningful contributions to the liquidity pool so that they have enough skin in the game. The percentage of EA’s contribution is governed by a configuration parameter: \_liquidityRateInBpsByEA, which is determined by each Pool Owner.
+EAs are required to provide meaningful contributions to the liquidity pool so that they have enough skin in the game. The percentage of EA’s contribution is governed by a configuration parameter: `_liquidityRateInBpsByEA`, which is determined by each Pool Owner.
 
-EA takes a percentage of the pool income. It is defined in the configuration parameter \_rewardRateInBpsForEA. It can be configured for each pool balancing the liquidity contribution requirement.
+EA takes a percentage of the pool income. It is defined in the configuration parameter `_rewardRateInBpsForEA`. It can be configured for each pool balancing the liquidity contribution requirement.
 
 ## 4.0 Lending Protocol
 
@@ -135,7 +152,7 @@ There are various user roles in the protocol. Some are at protocol-level. The ot
 
 - The only user who can set Evaluation Agent for the pool.
 - The only user who can set Fee Manager to be used by the pool and configure the Fee Manager.
-- The only user who can change various[pool configurations](#442-pool-configurations).
+- The only user who can change various [pool configurations](#442-pool-configurations).
 
 - The only user who can transfer the Pool Owner’s income from the pool.
 
@@ -181,7 +198,7 @@ Under Huma protocol, many pools can be created for specific business opportuniti
 When a pool is initialized, the following information shall we specified:
 
 - Pool name: the name of the pool
-- Pool token (HDT) : the utility token used to track LP’s contribution to the pool. Please see section [link](#454-Pool-Liquidity-Ownership) for more detail.
+- Pool token (HDT) : the utility token used to track LP’s contribution to the pool. Please see section [link](#454-pool-liquidity-ownership) for more detail.
 
 - Huma Config: Huma Config hosts all the global configurations.
 - Fee Manager: A FeeManager implements all the core functions around fee calculation. Every pool can have its own FeeManager implementation.
@@ -226,7 +243,7 @@ Both Pool Owner and Evaluation Agent commit to provide a certain percentage of t
 
 **Set Evaluation Agent:** Set the evaluation agent
 
-Set and update the configurations outlined in[the section above](#442-pool-configurations).
+Set and update the configurations outlined in [the section above](#442-pool-configurations).
 
 ### 4.5 LP Participations
 
@@ -276,19 +293,19 @@ This rate can be changed by the Evaluation Agent. Since it is a credit line, the
 
 The amount due for each pay period is calculated using the following formula:
 
-Amount Due = Late Fee + Interest Fee + Principal Due
+`Amount Due` = `Late Fee` + `Interest Fee` + `Principal Due`
 
 Late fee will be charged if the full amount due from the last pay period is not paid in full by the end of the pay period. First, the remaining amount due is added to the outstanding balance. Then the following formula is used to calculate the late fee.
 
-Late Fee = Flat Rate + Percentage Rate \* Total Outstanding Balance.
+`Late Fee` = `Flat Rate` + `Percentage Rate` \* `Total Outstanding Balance`
 
 Interest Fee is computed using the following formula. The corrections are introduced to reflect additional drawdown or principal payment during the middle of the pay period. For example, if there is a drawdown in the middle of the cycle, the Total Outstanding Balance at the end of the pay period is higher than the actual balance in part of the pay cycle, thus the interest fee will be overly charged, thus a negative correction shall be applied. Similarly, when there is a payment towards principal, the Total Outstanding Balance at the end of the cycle gets lower, the interest fee is thus under accounted for, thus a positive correction amount.
 
-Interest Fee = Total Outstanding Balance _ APR _ Seconds in a Pay Period / Seconds in a year + Corrections
+`Interest Fee` = (`Total Outstanding Balance` \* `APR` \* `Seconds in a Pay Period` / `Seconds in a year`) + `Corrections`
 
 Principal Due is the product of Total Outstanding Balance and the min principal payment rate.
 
-Please note in solidity, all divisions round to zero. We will round Late Fee, Interest Fee, and Principal Due separately. For example, if Late Fee is 3.3, Interest Fee is 2.9, Principle Due is 4.9, the Amount Due is 9, instead of 11.
+Please note in solidity, all divisions round to zero. We will round Late Fee, Interest Fee, and Principal Due separately. For example, if Late Fee is `3.3`, Interest Fee is `2.9`, Principle Due is `4.9`, the Amount Due is `9`, instead of `11`.
 
 ### 4.7 Risk Management
 
