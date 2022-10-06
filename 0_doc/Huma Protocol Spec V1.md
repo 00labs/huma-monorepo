@@ -1,6 +1,23 @@
 # Huma Protocol Spec v1
 
-Last updated: Oct. 5, 2022
+## Table of Content
+
+- [1.0 Introduction](#10-introduction)
+- [2.0 Income Portfolio Platform](#20-income-portfolio-platform)
+- [3.0 Evaluation Agent (EA)](#30-evaluation-agent-ea)
+- [4.0 Lending Protocol](#40-lending-protocol)
+  - [4.1 Design Principles](#41-design-principles)
+  - [4.2 User Roles](#42-user-roles)
+  - [4.3 Protocol Administration](#43-protocol-administration)
+  - [4.4 Pool Administration](#44-pool-administration)
+  - [4.5 LP Participations](#45-lp-participations)
+  - [4.6 Borrowing](#46-borrowing)
+  - [4.7 Risk Management](#47-risk-management)
+  - [4.8 Income and Loss Distribution](#48-income-and-loss-distribution)
+  - [4.9 Upgradability](#49-upgradability)
+- [5.0 Aura (Decentralized Credit Tracking)](#50-aura-decentralized-credit-tracking)
+- [6.0 Governance](#60-governance)
+- [6.1 Governance Council](#61-governance-council)
 
 ## 1.0 Introduction
 
