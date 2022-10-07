@@ -69,7 +69,7 @@ Figure 1 shows a high-level overview of Huma Protocol:
 ![drawing](./images/protocol-spec/figure1-huma-protocol-overview.png)
 
 - Receivable Management - We have developed infrastructures to allow receivables to be captured in the form of NFTs, transferred, and used to secure credit borrowing.
-- Evaluation Agent - This is an open platform for developers to contribute various risk underwriting models. Please refer to &lt;<Evaluation Agent Developer Guide>> for more information.
+- Evaluation Agent - This is an open platform for developers to contribute various risk underwriting models. Please refer to [Evaluation Agent Developer Guide](Evaluation%20Agent%20Developer%20Guide.md) for more information.
 - Aura - This is a placeholder for capturing, reporting, and leveraging credit trustworthiness. This is not in scope for our v1 protocol. In v2, we will either compose a decentralized credit system or work with a consortium of innovators to define the new credit standard for Web3.
 - Lending Protocol - This is a generic lending pool. It is designed to suit a broad range of use cases from receivable refactoring to general credit line. Please refer to << Huma Lending Protocol Technical Design >> for more information.
 
@@ -173,7 +173,7 @@ With our design so far, we update the user account whenever users take actions o
 
 Sentinel Service monitors our own subgraph and partners’ subgraphs, calls the contracts when any of the conditions are met.
 
-[design doc](https://docs.google.com/document/d/1nxzVGVjMzk_LnsSznc5GRt80pgZNuIcKaHuoHZShasY/edit#heading=h.d0lh7ix9lw8v)
+[design doc](Payment%20Defaulting%20Service.md)
 
 ### Error Handling
 
@@ -256,7 +256,7 @@ To enable more partner sites to take advantage of Huma’s Get Paid Now capabili
 
 ## Income Portfolio
 
-Please refer to &lt;<IPA Developer Guide>>
+Please refer to [IPA Developer Guide](IPA%20Developer%20Guide.md)
 
 ## Evaluation Agent
 
