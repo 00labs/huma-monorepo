@@ -89,9 +89,7 @@ Huma Lending Protocol offers a great level of flexibility as it strives to suppo
 
 ### Contract Architecture
 
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-![alt_text](images/image1.png "image_tooltip")
+![drawing](./images/technical-design/contract_architecture.png)
 
 Huma Distribution Token (HDT) is used to track LPs’ deposits and ownership of the pool.
 
@@ -146,11 +144,7 @@ The billing anniversary is set when the first drawdown happens. The bill is comp
 
 We introduced the following states for a credit line. The diagram below is the state transition diagram.
 
-###
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-![alt_text](images/image2.png "image_tooltip")
+![drawing](./images/technical-design/credit_line_state_management.png)
 
 - Requested
 - Approved
@@ -250,11 +244,7 @@ For a receivable factoring to work in Web3, we need to tokenize the receivable a
 
 The sequence diagram below shows the flow. Step 10-90 shows the request and approval process. Step 210-240 shows the actual factoring and funding process. Step 300-340 illustrates the payment flow. Step 400 shows the default flow when a payment is not received by the end of default grace period. Step 500-530 (not included in v1) shows how Huma protocol interacts with Aura on credit reporting.
 
-​​
-
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-![alt_text](images/image3.png "image_tooltip")
+​![drawing](./images/technical-design/invoice_factoring_service.png)​
 
 ### SDK
 
@@ -304,9 +294,7 @@ Each agent has the following properties:
 6. Get selected by pool admins
 7. Get rewards
 
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-![alt_text](images/image4.png "image_tooltip")
+![drawing](./images/technical-design/ea_experience.png)
 
 #### Pool admin experience
 
@@ -314,15 +302,11 @@ Each agent has the following properties:
 2. Select an EA for the pool
 3. Config pool with EAID and authorize EA
 
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-![alt_text](images/image5.png "image_tooltip")
+![drawing](./images/technical-design/pool_admin_experience.png)
 
 ### Design
 
-<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-![alt_text](images/image6.png "image_tooltip")
+![drawing](./images/technical-design/ea_design.png)
 
 #### Huma hosted EA
 
@@ -350,9 +334,7 @@ When a credit approval request comes from Huma SDK, EA reacts by fulling the fol
 - If approved, call functions in the pool to record approved credit
 - Return results to SDK
 
-<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-![alt_text](images/image7.png "image_tooltip")
+![drawing](./images/technical-design/ea_serving_flow.png)
 
 ### Interaction with the smart contracts
 
