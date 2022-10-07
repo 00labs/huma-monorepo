@@ -1,0 +1,49 @@
+@startuml
+header Invoice Factoring Sequence Diagram
+actor borrower
+participant payer
+participant SDK
+participant InvoiceProcessor as IP
+participant EvaluationAgent as EA
+participant sentinel
+participant LendingProtocol as LP
+participant Aura 
+
+autonumber 10 10
+SDK -> borrower : present GetPaidNow option
+borrower -> SDK : select GetPaidNow
+SDK -> borrower : request to connect wallet
+borrower -> SDK : connect wallet
+
+SDK -> EA : requestLoan()
+EA -> EA : evaluate request
+EA -> LP : postApprovedCredit()
+EA -> SDK : credit approved
+SDK -> borrower : credit approved
+
+autonumber 200 10
+borrower -> LP : approve NFT transfer
+borrower -> SDK : request drawdown
+SDK -> LP : drawdownWithReceivable()
+LP -> borrower : transfer borrowed amount
+LP -> borrower : rejection for receivable mismatch
+
+autonumber 300 10
+payer -> IP : payInvoice()
+IP -> IP : lookup NFT owner
+IP -> sentinel : route payments to the NFT owner
+sentinel -> LP : onReceivedPayment()
+LP -> borrower : disperseRefund() 
+
+autonumber 400 10
+sentinel -> LP : triggerDefault()
+
+autonumber 500 10
+LP -> Aura : various events
+Aura -> Aura : user borrowed
+Aura -> Aura : user paid off
+Aura -> Aura : user defaulted
+
+
+
+@enduml

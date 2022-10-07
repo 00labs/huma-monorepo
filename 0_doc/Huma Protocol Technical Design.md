@@ -55,9 +55,9 @@ Recognizing the reason that DeFi relies heavily on over-collateralization is bec
 
 We believe the future of DeFi is automated underwriting powered by signals about the borrowers’ AWC (Ability, Willingness, and Commitment) to pay.
 
-- **Income**: Income is probably the most vital signal in most underwritings since it offers the best measure against <span style="text-decoration:underline;">one’s ability to pay</span>. The more comprehensive we can understand one’s income, the better we can underwrite.
-- **Credit worthiness**: Credit worthiness is probably the best signal for <span style="text-decoration:underline;">one’s willingness to pay</span>. Web2’s credit score plays an important role, but it is more like a blackbox. The central agencies have way too much power. We need a decentralized credit system.
-- **Receivables**: Receivables are proof of future income stream. Compared with collaterals, receivables are more accessible to most people. Not too many people have tons of crypto idling, but most people have receivables in the form of future paychecks, invoices, royalty, subscription income, etc. Receivables are the best signal for <span style="text-decoration:underline;">one’s commitment to pay</span>. Once someone transfers the ownership of their receivables to the lending platform, they are committed to pay. We actually think collaterals are just special forms of receivables. The only difference is that their cash value is available right now instead of at a future date. A good receivable platform should be able to embrace collaterals as well.
+- **Income**: Income is probably the most vital signal in most underwritings since it offers the best measure against <u>one’s ability to pay</u>. The more comprehensive we can understand one’s income, the better we can underwrite.
+- **Credit worthiness**: Credit worthiness is probably the best signal for <u>one’s willingness to pay</u>. Web2’s credit score plays an important role, but it is more like a blackbox. The central agencies have way too much power. We need a decentralized credit system.
+- **Receivables**: Receivables are proof of future income stream. Compared with collaterals, receivables are more accessible to most people. Not too many people have tons of crypto idling, but most people have receivables in the form of future paychecks, invoices, royalty, subscription income, etc. Receivables are the best signal for <u>one’s commitment to pay</u>. Once someone transfers the ownership of their receivables to the lending platform, they are committed to pay. We actually think collaterals are just special forms of receivables. The only difference is that their cash value is available right now instead of at a future date. A good receivable platform should be able to embrace collaterals as well.
 - **Automated risk underwriting** (ARU) - Most of Web2 credit applications are approved in an automated fashion. All the major DeFi protocols are built on AMM. We expect this to continue. However, it is a lot more complicated to support ARU in a risk-on world than a risk-off world. The ARUs are intelligent models. By nature, AI will find its role in the ARUs. At the same time, these ARUs will not be possible without additional data (e.g. income, credit scores). So please read on.
 
 ### Huma’s Technical Bets
@@ -69,7 +69,7 @@ Figure 1 shows a high-level overview of Huma Protocol:
 ![drawing](./images/protocol-spec/figure1-huma-protocol-overview.png)
 
 - Receivable Management - We have developed infrastructures to allow receivables to be captured in the form of NFTs, transferred, and used to secure credit borrowing.
-- Evaluation Agent - This is an open platform for developers to contribute various risk underwriting models. Please refer to &lt;<Evaluation Agent Developer Guide>> for more information.
+- Evaluation Agent - This is an open platform for developers to contribute various risk underwriting models. Please refer to [Evaluation Agent Developer Guide](Evaluation%20Agent%20Developer%20Guide.md) for more information.
 - Aura - This is a placeholder for capturing, reporting, and leveraging credit trustworthiness. This is not in scope for our v1 protocol. In v2, we will either compose a decentralized credit system or work with a consortium of innovators to define the new credit standard for Web3.
 - Lending Protocol - This is a generic lending pool. It is designed to suit a broad range of use cases from receivable refactoring to general credit line. Please refer to << Huma Lending Protocol Technical Design >> for more information.
 
@@ -89,9 +89,7 @@ Huma Lending Protocol offers a great level of flexibility as it strives to suppo
 
 ### Contract Architecture
 
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-![alt_text](images/image1.png "image_tooltip")
+![drawing](./images/technical-design/contract_architecture.png)
 
 Huma Distribution Token (HDT) is used to track LPs’ deposits and ownership of the pool.
 
@@ -146,11 +144,7 @@ The billing anniversary is set when the first drawdown happens. The bill is comp
 
 We introduced the following states for a credit line. The diagram below is the state transition diagram.
 
-###
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-![alt_text](images/image2.png "image_tooltip")
+![drawing](./images/technical-design/credit_line_state_management.png)
 
 - Requested
 - Approved
@@ -179,7 +173,7 @@ With our design so far, we update the user account whenever users take actions o
 
 Sentinel Service monitors our own subgraph and partners’ subgraphs, calls the contracts when any of the conditions are met.
 
-[design doc](https://docs.google.com/document/d/1nxzVGVjMzk_LnsSznc5GRt80pgZNuIcKaHuoHZShasY/edit#heading=h.d0lh7ix9lw8v)
+[design doc](Payment%20Defaulting%20Service.md)
 
 ### Error Handling
 
@@ -250,11 +244,7 @@ For a receivable factoring to work in Web3, we need to tokenize the receivable a
 
 The sequence diagram below shows the flow. Step 10-90 shows the request and approval process. Step 210-240 shows the actual factoring and funding process. Step 300-340 illustrates the payment flow. Step 400 shows the default flow when a payment is not received by the end of default grace period. Step 500-530 (not included in v1) shows how Huma protocol interacts with Aura on credit reporting.
 
-​​
-
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-![alt_text](images/image3.png "image_tooltip")
+​![drawing](./images/technical-design/invoice_factoring_service.png)​
 
 ### SDK
 
@@ -266,7 +256,7 @@ To enable more partner sites to take advantage of Huma’s Get Paid Now capabili
 
 ## Income Portfolio
 
-Please refer to &lt;<IPA Developer Guide>>
+Please refer to [IPA Developer Guide](IPA%20Developer%20Guide.md)
 
 ## Evaluation Agent
 
@@ -304,9 +294,7 @@ Each agent has the following properties:
 6. Get selected by pool admins
 7. Get rewards
 
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-![alt_text](images/image4.png "image_tooltip")
+![drawing](./images/technical-design/ea_experience.png)
 
 #### Pool admin experience
 
@@ -314,15 +302,11 @@ Each agent has the following properties:
 2. Select an EA for the pool
 3. Config pool with EAID and authorize EA
 
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-![alt_text](images/image5.png "image_tooltip")
+![drawing](./images/technical-design/pool_admin_experience.png)
 
 ### Design
 
-<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-![alt_text](images/image6.png "image_tooltip")
+![drawing](./images/technical-design/ea_design.png)
 
 #### Huma hosted EA
 
@@ -350,9 +334,7 @@ When a credit approval request comes from Huma SDK, EA reacts by fulling the fol
 - If approved, call functions in the pool to record approved credit
 - Return results to SDK
 
-<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-![alt_text](images/image7.png "image_tooltip")
+![drawing](./images/technical-design/ea_serving_flow.png)
 
 ### Interaction with the smart contracts
 
