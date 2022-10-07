@@ -9,5 +9,5 @@
 	path = 2_income-portfolio-platform
 	url = git@github.com:00labs/income-portfolio.git
 [submodule "4_sdk/invoice_factoring_sdk"]
-	path = 4_sdk/invoice_factoring_sdk
+	path = 4_sdk
 	url = git@github.com:00labs/huma-sdk-react.git
