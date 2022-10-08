@@ -47,18 +47,24 @@
 
 ## Overview
 
-DeFi sparked the last crypto summer. Smart contracts’ transparency and automatic execution played a critical role in DeFi 2.0’s success. We expect the transparency and automatic execution will continue in DeFi 3.0. At the same time, because of a lack of support of income and credit history, two of the most critical inputs for all modern risk underwriting, DeFi has to rely heavily on over-collateralization. This substantially limited its reach and impact. As the limitation of over-collateralization becomes more and more obvious to many in the industry, under-collateralization naturally emerges as the next frontier. We expect the industry to emerge from the current crypto winter with key breakthroughs in this space.
+In Huma Protocol Whitepaper, we have outlined our beliefs and vision. In Huma Protocol Spec, we have detailed how Huma protocol works. If you have not read these two articles, please check them out first. In this article, we will dive into the technical design of various key components in Huma Protocol. 
 
-Recognizing the reason that DeFi relies heavily on over-collateralization is because of a lack of essential infractures, in Huma, we focus on building these critical DeFi infrastructures through Huma Protocol and enable various lending products to be launched to serve millions of users. Let us first take a quick lookup at these critical building blocks and how Huma Protocol innovates on all of them.
+In Huma, we cheer for DeFi's wins so far, at the same time, we also recognize DeFi's substantial limitation due to a lack of support for critical infrastructure such income, receivables, and credit trustworthiness, thus has to heavily rely on over-collateralization. Huma Protocol is built to establish these critcial infrastructures so that we can power a lot more lending use cases and allow millions and billions of users to benefit from DeFi in the next ten years. 
 
-### Our Belief
+**Our Belief**
 
-We believe the future of DeFi is automated underwriting powered by signals about the borrowers’ AWC (Ability, Willingness, and Commitment) to pay.
+First, let us recap some fundamental beliefs that we have outlined in our white paper as they are the backbone of our vision and design. We believe the future of DeFi is automated underwriting powered by signals about the borrowers’ AWC (Ability, Willingness, and Commitment) to pay.
 
-- **Income**: Income is probably the most vital signal in most underwritings since it offers the best measure against <u>one’s ability to pay</u>. The more comprehensive we can understand one’s income, the better we can underwrite.
-- **Credit worthiness**: Credit worthiness is probably the best signal for <u>one’s willingness to pay</u>. Web2’s credit score plays an important role, but it is more like a blackbox. The central agencies have way too much power. We need a decentralized credit system.
-- **Receivables**: Receivables are proof of future income stream. Compared with collaterals, receivables are more accessible to most people. Not too many people have tons of crypto idling, but most people have receivables in the form of future paychecks, invoices, royalty, subscription income, etc. Receivables are the best signal for <u>one’s commitment to pay</u>. Once someone transfers the ownership of their receivables to the lending platform, they are committed to pay. We actually think collaterals are just special forms of receivables. The only difference is that their cash value is available right now instead of at a future date. A good receivable platform should be able to embrace collaterals as well.
-- **Automated risk underwriting** (ARU) - Most of Web2 credit applications are approved in an automated fashion. All the major DeFi protocols are built on AMM. We expect this to continue. However, it is a lot more complicated to support ARU in a risk-on world than a risk-off world. The ARUs are intelligent models. By nature, AI will find its role in the ARUs. At the same time, these ARUs will not be possible without additional data (e.g. income, credit scores). So please read on.
+- **Income**: Income is probably the most vital signal in most underwritings since it offers the best measure against <u>one’s ability to payback</u>. 
+- **Credit worthiness**: Credit worthiness is probably the best signal for <u>one’s willingness to payback</u>. It is critical to drive accountability. 
+- **Receivables**: Receivables is a more general form of collaterals. Depositing receivables is the best signal for <u>one’s commitment to payback</u>.  
+- **Automated risk underwriting** (ARU) - For DeFi to reach the 99%, automatic underwriting is the only way to go. The ARUs are AI models that leverage the additional data (e.g. income, credit worthiness) and backing assets (e.g. receivables) to power to power lending products that have 100x more reach than today's DeFi.
+
+**Our Principles**
+
+- **Open**: 
+- **Income**: 
+- **Income**: 
 
 ### Huma’s Technical Bets
 
@@ -75,27 +81,27 @@ Figure 1 shows a high-level overview of Huma Protocol:
 
 ### Interaction between Components
 
-Income Portfolio works relatively independently. Following the << IPA Developer Guide >>, developers can submit IPAs for approval. Once an IPA is approved by Huma DAO, it is available for Evaluation Agen developers to consume.
+Income Portfolio is a fundamental infrastructure. Following the << IPA Developer Guide >>, developers can submit IPAs for approval. Once an IPA is approved by Huma DAO, it is available for Evaluation Agen developers to consume. It does not depend on other components in Huma Protocol, but does interact with many other protocols, Web 2 and Web3 sources. 
 
-Auro works fairly independently as well. It acts on events emitted by Huma and other protocols and makes decisions on one’s credit worthiness.
+Auro is another fundamental infrastructure. It acts on events emitted by Huma and other protocols and makes decisions on one’s credit worthiness. This will be a fcous in our V2 protocol. 
 
-Evaluation Agent (EA) makes underwriting decisions using signals from Income Portfolio and Auro. It leverages input from the Income Portfolio and Auro. It also factors in receivables that are available in different use cases in the models. Similar to the IPA platform, the EA platform is open to various entrepreneurs and developers. They can build powerful underwriting engines for specific use cases and launch with different liquidity pools.
+Evaluation Agent (EA) makes underwriting decisions using signals from Income Portfolio and Auro. It also factors in receivables that are available in different use cases in the models. Similar to the IPA platform, the EA platform is open to various entrepreneurs and developers. They can build powerful underwriting engines for specific use cases and launch with different liquidity pools.
 
-Huma Lending Protocol interacts with the liquidity providers and the borrowers in a similar way as other DeFi protocols. The borrowers interact with Huma DApp or a partner’s DApp via Huma SDK to submit credit requests, drawdown, and payback. There are two differences from today’s common DeFi protocols. First, the borrowers will leverage many forms of receivables instead of the collaterals. Secondly, the DApp will talk to the Evaluation Agent to get the credit request approved instead of interacting with the contract directly. Since the Evaluation Agent is designed to make real-time decisions, there is very little difference to the end users.
+Huma Lending Protocol interacts with the liquidity providers and the borrowers in a similar way as other DeFi protocols. The borrowers interact with Huma DApp or a partner’s DApp via Huma SDK to submit credit requests, drawdown, and payback. What differentiates Huma from many other protocols is its creative way of leverageing income, credit trustworthiness and receivable signals to underwrite a lot of use cases that are not poissbile today.   
 
 ## Huma Lending Protocol
 
-Huma Lending Protocol offers a great level of flexibility as it strives to support a wide range of use cases, including credit line and receivable factoring (please refer to Appendix A for introduction about credit line and receivable factoring). In this section, we will first look at the overall contract architecture, then look at Fee Manager to examine how Huma is able to or be extended to support various use cases, followed by risk management, security, upgradability, gas, and contract size management.
+Since Huma strives to support a wide range of use cases, including credit line and receivable factoring (please refer to Appendix A for introduction about credit line and receivable factoring), we put a lot of focus on flexbility and extensibility when designing Huma Lending protocol. In this section, we will first look at the overall contract architecture and the critical Fee Manager to examine how Huma is able to or be extended to support various use cases, followed by risk management, security, upgradability, gas, and contract size management.
 
 ### Contract Architecture
 
 ![drawing](./images/technical-design/contract_architecture.png)
 
-Huma Distribution Token (HDT) is used to track LPs’ deposits and ownership of the pool.
+Huma Distribution Token (HDT) is used to track LPs’ deposits and ownership of the pool, similar to the distribution token design in most of the popular protocols. 
 
 At the core of the protocol are the pool contracts:
 
-- Interface IPool defines some pool administrative functions.
+- Interface IPool defines pool administrative functions.
 - Interface ILiquidityProvidrer defines functions for liquidity providers, from deposit to withdrawal.
 - Interface ICredit defines the borrowing functions, from drawdown, payback, to default.
 - Interface IReceivable defines the special functions related to receivables.
@@ -103,7 +109,7 @@ At the core of the protocol are the pool contracts:
 - BaseCreditPool is the core pool contract. It extends BasePool and implements ICredit. We expect most pools on Huma protocol to be running on BaseCreditPool.
 - ReceivableFactoringPool is the special contract for receivable factoring. It extends BaseCreditPool and supports functions related to receivables.
 
-BaseFeeManager, BasePoolConfig, HumaConfig and EvaluationAgentNFT are important supporting contracts.
+BaseFeeManager, BasePoolConfig, HumaConfig and EvaluationAgentNFT are important supporting contracts that are composed into the pool contracts.
 
 - BaseFeeManager implements all the functions related to fee settings and calculations.
 - BasePoolConfig manages all the configurations specific to a pool. Technically, all the functions can reside in BasePool as well. They are separated into this contract purely because the contract size for BaseCreditPool is getting close to Ethereum’s 24K contract size limit.
@@ -111,6 +117,10 @@ BaseFeeManager, BasePoolConfig, HumaConfig and EvaluationAgentNFT are important 
 - EvaluationAgentNFT is a utility NFT that we have developed to manage the evaluation agents. Every evaluation agent is represented as an NFT in Huna Protocol.
 
 The two storage contracts, HDTStorage, and BaseCreditPoolStorage are for upgradability. We will discuss in section x.
+
+
+A credit line can be created in two ways. One way is for the borrower to submit a request, and approved by the Evaluation Agent by calling the approveCredit() function in the pool contract. This flow is easier when there is no need to evaluate the value of a collateral. The other way is used when receivables are invovled. The borrower can submit a credit request to the Evaluation Agent via a DApp. The Evaluation Agent takes all signals including the receivable into consideration and approves the request and calls the pool contract’s postApprovedCredit(...) directly. One natural question is why not submit the request to the contract and have the contract contact the Evaluation Agent to do the underwriting. Oracle is essential for such a call flow. However, today's oracle capability is pretty limited. It is a lot more efficient to take this code path without losing any benefit. Once oracle infrastructure is more powerful, it will not be hard for us to update the contract to switch the call flow. 
+
 
 ### Fee Calculation and Management
 
@@ -134,11 +144,17 @@ To meet our needs to be flexible with various fee and payment options, we allow 
 
 #### Bill Triggering
 
-With Web3, we prefer users to trigger transactions if we can. So for most cases, we wait for the user to trigger the bill. Only when the user is late, we use Sentinel, a service that monitors account activities through events, to refresh the account. When the account is so late that it has passed the grace period for account default, Sentinel can trigger default as well. More details on Sentinel can be found in section x. This means the bill may not be computed exactly at the anniversary of the pay cycle. It is possible the bill is not refreshed for multiple months if there were no activities on the account.
+With Web3, we prefer users to trigger transactions if possible. So for most cases, we wait for the user to trigger the bill. Only when the user is late, we use Sentinel, a service that monitors account activities through events, to refresh the account. When the account is so late that it has passed the grace period for account default, Sentinel can trigger default as well. More details on Sentinel can be found in section x. This means the bill may not be computed exactly at the anniversary of the pay cycle. 
 
 #### Bill Calculation
 
 The billing anniversary is set when the first drawdown happens. The bill is computed from the beginning of each pay period whenever the bill is triggered. This means the user might be over-paying interest if the payment is made before the end of the pay period. We introduced a correction concept to capture this kind of adjustment. When a payback happens before the due date, the user has paid more than the actual interest cost, there will be a negative correction. Similarly, when the user makes an additional drawdown during the middle of the cycle, we compute a positive correction. Both positive and negative corrections will be applied in the next bill. Please refer to Appendix B for the algorithm for computing amount due for each pay period is Appendix B.
+
+The Fee Manager is also built in such a way that it is super easy to get the due and payoff information of an account without spending any gas. 
+
+#### Administrator Fees
+
+The protocol, pool owner, and evaluation agent get compensated for the effort to power the protocol and the pools. To save gas fees for the borrowers and lenders, the allocation of the management fees is accured without being transferred to special account. The administrators can request to transfer the amount that they ahve earned in batches. They will be paying for gas when triggering such transfer.  
 
 ### Credit Line State Management
 
@@ -153,7 +169,7 @@ We introduced the following states for a credit line. The diagram below is the s
 - Defaulted
 - Deleted
 
-The credit line is in Requested state once created. After approval, it transitions to the Approved state. A credit line can be created in two ways. One way is for the borrower to submit a request, and approved by the Evaluation Agent by calling the approveCredit() function in the pool contract. This flow is easier when there is no need to evaluate the value of a collateral. The other way is for the borrower to submit a credit request to the Evaluation Agent via a DApp. The Evaluation Agent approves the request and calls the pool contract’s postApprovedCredit() directly. This path is used when receivables are involved so that the Evaluation Agent can decide the credit line by considering income, credit worthiness, and receivables.
+The credit line is in Requested state once created. After approval, it transitions to the Approved state. 
 
 Once the borrower finishes the first drawdown, the credit line will be transitioned to GoodStanding state. If the borrower continues to pay on time, it will stay in GoodStanding state until the credit line reaches its maturity, when the credit line is transitioned to Deleted state after the balance is paid off.
 
@@ -165,13 +181,13 @@ There are several special cases in the state transitions, either due to the limi
 
 ### Sentinel Service
 
-With our design so far, we update the user account whenever users take actions on the account. There are several needs that the contract needs to be triggered.
+With our design so far, we update the user account whenever users take actions on the account. There are several needs that the contract needs to be triggered without user triggering.
 
-- Refresh the account when the user is late. This is necessary so that we can bookkeeping the balances for the LPs correctly.
-- Trigger default when the account has passed the default grace period.
-- Let the contract know a payment related to a collateral has been received.
+- Refresh the account when the user is late. This is necessary so that we can bookkeeping the balances  and distribute incomes to the LPs for the LPs correctly.
+- Trigger default when the account has passed the default grace period. This is necessary so that we can distribute losses to the LPs timely and correctly. 
+- Let the contract know a payment related to a receivable has been received. Because of the limitation of ERC20, Wehn a receivable is paid, we only know some fund is transferred to the pool account, but do not know exactly which receivable has been paid. We have to listen to events to see which receivables are paid and trigger bookkeeping with the contract properly.
 
-Sentinel Service monitors our own subgraph and partners’ subgraphs, calls the contracts when any of the conditions are met.
+Sentinel Service uses GraphQL to monitor our own subgraph and partners’ subgraphs, add the transactions that meeting predefined transactions into job queues. The job queues will call functions provided by the contracts (e.r.g refreshAccount(...), triggerDefault(...), onReceivedPayment(...)) to finish the bookkeeping, and dispurse remaining funds to the user in receivable factoring use case. 
 
 [design doc](Payment%20Defaulting%20Service.md)
 
@@ -210,7 +226,7 @@ We plan to have two audits. The first audit happens before our Beta launch with 
 
 #### Protocol Multisig and Timelock
 
-The protocol owner account must be a multisig with at least 3 signatures. Any actions with protocol changes except pausing at emergency will be governed by Timelock so that the community has the full transparency on any changes to the protocol in advance.
+The protocol owner account must be a multisig with at least 5 or more signatures. Only after a majority of the signatures sign, can transactions proceed to the next control - timelock. Any actions with protocol changes except pausing at emergency will be governed by Timelock so that the community has the full transparency on any changes to the protocol in advance.
 
 #### Pool Owner Multisig
 
@@ -221,8 +237,8 @@ Each pool owner is required to be a multisig. Initially, Huma will hold one of t
 The protocol uses two service accounts:
 
 - eaServiceAccount: For security consideration, Huma will host the EAs initially. This means all the approvals will be initiated from a service account.
-- pdsServiceAccount: Sentinel uses this service account to interact
-- AWS Key Manager will be leveraged to store the
+- pdsServiceAccount: Sentinel uses this service account to interact.
+- AWS Key Manager will be used to manage these secrets.
 
 #### Capital Commitment by Pool Owner and Evaluation Agent
 
@@ -240,7 +256,7 @@ The Evaluation Agent manages the credit risk. We will have a separate chapter fo
 
 ### Architecture
 
-For a receivable factoring to work in Web3, we need to tokenize the receivable and NFT is a natural choice. We are working with partners to tokenize the receivables. The users are presented with the option to get paid now. Once the user selects to do so, the Evaluation Agent will determine the credit line that the receivable factoring pool on Huma can offer to the user. If the user is happy to proceed with the factoring, they can choose to draw down partial or the entire approved amount. Huma smart contract will accept the transfer of the NFT and fund the user. Once the receivable is paid, the receivable processor will direct the payment to the NFT owner, in this case, the receivable factoring pool on Huma. Sentinel monitors the subgraph of the receivable processor and notifies the contract about the received payment. The contract will then disperse the remainder of the fund to the user.
+For a receivable factoring to work in Web3, we need to tokenize the receivable. NFT is a natural choice. We are working with various partners to tokenize the receivables for differen use cases. The users are presented with the option to get paid now. Once the user selects to do so, the Evaluation Agent will determine the credit line that the receivable factoring pool on Huma can offer to the user. If the user is happy to proceed with the factoring, they can choose to draw down partial or the entire approved amount. Huma smart contract will accept the transfer of the NFT and fund the user. Once the receivable is paid, the receivable processor will direct the payment to the NFT owner, in this case, the receivable factoring pool on Huma. Sentinel monitors the subgraph of the receivable processor and notifies the contract about the received payment. The contract will then disperse the remainder of the fund to the user.
 
 The sequence diagram below shows the flow. Step 10-90 shows the request and approval process. Step 210-240 shows the actual factoring and funding process. Step 300-340 illustrates the payment flow. Step 400 shows the default flow when a payment is not received by the end of default grace period. Step 500-530 (not included in v1) shows how Huma protocol interacts with Aura on credit reporting.
 
@@ -256,11 +272,12 @@ To enable more partner sites to take advantage of Huma’s Get Paid Now capabili
 
 ## Income Portfolio
 
-Please refer to [IPA Developer Guide](IPA%20Developer%20Guide.md)
+Income Portfolio is a plaform that hosts a set of Income Portfolio Adapters (IPAs) to provide a comprehnsive view ones' income from various sources, from on-chain payments, staking, mining, NFT royalty, subscriptions, in-game earning, and Web2 income. Each IPA spcializes in one income sources, retrieves and aggregates income for each account. Building a comprehensive IPA library requires a lot of knowledge about various income sources. The Huma team has developed some IPAs and will continue to do so. More importantly, we are going to rely on the community to contribute more IPAs and share the IPA rewards to be approved by the Huma DAO. 
+Please refer to [IPA Developer Guide](IPA%20Developer%20Guide.md) for more details on how to contribute IPAs.
 
 ## Evaluation Agent
 
-Evaluation Agent (EA) is a process that evaluates each credit line request using signals from IPAs, receivables, and Aura. A typical EA is an underwriting strategy in the form of rule-based engines or Machine Learning(ML) models. Huma pool owners select EA for their pools. The selected EA must make the required liquidity contribution to the pool.
+Evaluation Agent (EA) is a process that evaluates each credit line request using signals from IPAs, receivables, and Aura. A typical EA is an underwriting strategy in the form of rule-based engines or Machine Learning(ML) models. Huma pool owners select EA for their pools. To demonstrate its commitment and accountability, each selected EA must make the required liquidity contribution to the pool. The Evaluation Agent and Pool Owner are the last two lenders who will withdraw their last capital from the pool. 
 
 ### EA description
 
@@ -288,11 +305,13 @@ Each agent has the following properties:
 
 1. Checkout EA GitHub repo, which has a template for building an EA
 2. Develop their own EA
-3. Register their EA with their own wallet address
+3. Mint an EA NFT with their own wallet address
 4. Collaborate with Huma DAO to get EA approved
 5. Launch the EA in Huma infrastructure
 6. Get selected by pool admins
-7. Get rewards
+7. Pool admin calls the pool contract to set the EA for the pool by supplying the EAID and wallet address
+8. Service risk underwriting requests
+9. Get rewards
 
 ![drawing](./images/technical-design/ea_experience.png)
 
@@ -310,23 +329,19 @@ Each agent has the following properties:
 
 #### Huma hosted EA
 
-To simplify developers’ efforts and enhance secret management, Huma runs EA infrastructure to host all EAs. Developers can submit their EA code to Huma DAO for approval to create new EAs. Huma’s wallet signs transactions between EA and Huma pool.
+To simplify developers’ efforts and enhance secret management, Huma runs EA infrastructure to host all EAs. Developers can submit their EA code to Huma DAO for approval to create new EAs. Huma’s eaServiceAccount wallet signs transactions between EA and Huma pool.
 
-For reasons such as confidentiality of evaluation strategy, anti-fraud, etc. Only EA developers and Huma have access to EA source code.
+For reasons such as confidentiality of evaluation strategy, anti-fraud, etc. EA developers are not required to open source their solution. Huma team will have access to the source code for audit and verification. 
 
 #### Manual EA
 
 For some use cases, the EA could be manual-reviewed based, e.g. business lending, our protocol also supports manual EAs to enable these use cases.
 
-For manual EAs, borrowers request manual reviews and the manual EAs (authorized by the pool admins by their wallet address) post approval results to the pool contract.
-
-#### EA registry
-
-A contract that maps an EAID to its corresponding descrition data. When an EA developer registers a new EA, they need to interact with the contract to sign, so their wallet address is verified.
+For manual EAs, borrowers request manual reviews and the manual EAs (authorized by the pool admins by their wallet address) post approval results to the pool contract in the same way as the ARUs. The only difference is that the underwriting is manual and not real-time.
 
 ### EA Serving Flow
 
-When a credit approval request comes from Huma SDK, EA reacts by fulling the following tasks:
+After receiving a credit approval request, EA reacts by fulling the following tasks:
 
 - Take context(including pool address) from SDK
 - Retrieve pool info (including EAID) from the pool
@@ -338,17 +353,15 @@ When a credit approval request comes from Huma SDK, EA reacts by fulling the fol
 
 ### Interaction with the smart contracts
 
-We will create an NFT contract to represent the collection of EAs. Each EA will be an NFT.
+EvaluationAgentNFT contract is created to represent the collection of EAs on Huma protocol. Each EA will be represented by an NFT. All the transfer functions of the NFT have been disabled so that people cannot obtain EA status through transfers. 
 
-EA NFT can be minted by TBD (protocol owner vs. end user). Each EA NFT will have a status (Developer vs. Production) that will be displayed. We will disable all functions related to the transfer so that people cannot obtain EA status through transfers.
+Each EA NFT will have a status (Developer vs. Production). Only EA approved to serving in production, can be selected by the pool owners to serve production pools. The status will be displayed very visibly on the NFT.  
+
+The developer can mint an EANFT to start the development process. 
 
 The wallet address of the EA NFT owner will be the only wallet that can receive EA rewards. The EA NFT tokenid will be the EA identifier used in our system.
 
 When pool owner decides which EA to use, BasePool.setEvaluationAgent(address eaAddress, uint256 tokenId) will be called to register EA wallet and EA tokenid.
-
-Because we only support hosted EA, a Huma service account _eaServiceAccount_ will be used to call the pool contracts to approve credit lines. \_eaServiceAccount \_and the EA NFT contract address will be stored in HumaConfig. BasePool.getPoolSummary() will also be updated to return the EA ID for the pool as well.
-
-We debated whether to use the same service account for Payment Detection Service. We decided to use two accounts. One of the key considerations is if we use the same service account, if it is compromised, the hacker can approve the credit line and mark it as paid to make everything look very normal and more difficult to discover. The service account for Payment Detection Service will be called _pdsServiceAccount_, which will be stored in HumaConfig as well.
 
 ## Appendix A: Intro to Credit Line and Receivable Factoring
 

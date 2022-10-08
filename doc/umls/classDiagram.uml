@@ -1,0 +1,30 @@
+@startuml
+interface IPool
+interface ILiquidityProvider
+interface IHDT
+interface ICredit
+interface IReceivable
+class HDT
+abstract class BasePool
+class BaseCreditPool
+class ReceivableFactoringPool
+class HumaConfig
+class BaseFeeManager
+class BasePoolConfig
+IHDT <|.. HDT
+IPool <|.. BasePool
+ILiquidityProvider <|.. BasePool
+HDT <|-- BasePool
+BasePool <|-- BaseCreditPool
+ICredit <|.. BaseCreditPool
+BaseCreditPool <|-- ReceivableFactoringPool
+IReceivable <|.. ReceivableFactoringPool
+BaseFeeManager "1" <-- "1" BaseCreditPool : uses
+BasePoolConfig "1" <-- "1" BaseCreditPool : uses
+HumaConfig <-- BaseCreditPool
+HumaConfig <-- BasePool
+HumaConfig <-- BasePoolConfig
+BaseCreditPoolStorage "1" <|-- "1" BaseCreditPool : stores in
+HDTStorage "1" <|-- "1" HDT : stores in
+EvaluationAGentNFT "1" <-- "1" BasePoolConfig : uses
+@enduml
