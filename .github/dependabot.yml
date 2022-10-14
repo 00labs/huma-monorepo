@@ -1,0 +1,8 @@
+version: 2
+updates:
+  - package-ecosystem: "gitsubmodule"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      # Check for npm updates at 7am UTC
+      time: "07:00"
