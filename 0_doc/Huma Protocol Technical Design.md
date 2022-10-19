@@ -140,11 +140,9 @@ With Web3, we prefer users to trigger transactions if possible. So for most case
 
 #### Bill Calculation
 
-The billing anniversary is set when the first drawdown happens. The bill is computed from the beginning of each pay period whenever the bill is triggered. A key principle used in the calculation is to make interest accurate. Every penny of principal carries interest for every second the principal is still outstanding, but not more than that either. This means the user might be overpaying interest if the payment is made before the end of the pay period. We introduced a correction concept to capture this kind of adjustment. When a payback happens before the due date, the user has paid more than the actual interest cost, there will be a negative correction. Similarly, when the user makes an additional drawdown during the middle of the cycle, we compute a positive correction. Both positive and negative corrections will be applied in the next bill.
+The billing anniversary is set when the first drawdown happens. The bill is computed from the beginning of each pay period whenever the bill is triggered. This means the user might be overpaying interest if the payment is made before the end of the pay period. We introduced a correction concept to capture this kind of adjustment. When a payback happens before the due date, the user has paid more than the actual interest cost, there will be a negative correction. Similarly, when the user makes an additional drawdown during the middle of the cycle, we compute a positive correction. Both positive and negative corrections will be applied in the next bill. Please refer to Appendix B for the algorithm for computing the amount due for each pay period is Appendix B.
 
-The Fee Manager is also built in such a way that it is super easy to get the due and estimated payoff information of an account without spending any gas. At the moment of payment, the contract computes an accurate payoff amount. If the amount tendered is more than the payoff amount, only the payoff amount is collected.
-
-In each billing cycle, if the account is late, we first compute the late fees, then add membership fee if it applies to the pool. After that, we add the unpaid due amount, unbilled principal, and outstanding correction together as the principal for the next cycle. We then compute the interest due and principal due. The sum of the fees, interest due, and principal due will become the total due amount for the next cycle.
+The Fee Manager is also built in such a way that it is super easy to get the due and payoff information of an account without spending any gas.
 
 #### Administrator Fees
 
@@ -167,8 +165,7 @@ The credit line is in Requested state once created. After approval, it transitio
 
 Once the borrower finishes the first drawdown, the credit line will be transitioned to GoodStanding state. If the borrower continues to pay on time, it will stay in GoodStanding state until the credit line reaches its maturity, when the credit line is transitioned to Deleted state after the balance is paid off.
 
-When a credit line is late for payments, it is moved to Delayed state. Once the due amount is paid, it will be moved back to GoodStanding again. If there is not enough payment for the entire duration of a default grace period, the account can be defaulted. If the default is triggered by the pool owner, it will be transitioned to Defaulted state. At that moment, the contract will automatically write off all the outstanding principal balance. The borrower can still make payments even after the account is defaulted. All the payments will first be applied towards the principal write-off. Once after the principals are paid off,
-payments are applied towards fees and interests. Once the entire due amount including principal, interest, and fees is paid, the account can be brought back to GoodStanding.
+When a credit line is late for payments, it is moved to Delayed state. Once the due amount is paid, it will be moved back to GoodStanding again. If there is not enough payment for the entire duration of a default grace period, the account can be defaulted. If the default is triggered by the pool owner, it will be transitioned to Defaulted state. At that moment, the contract will automatically write off all the outstanding balances including principal, interest, and fees. The borrower can still make payments even after the account is defaulted. Once the entire due amount is paid, the account can be brought back to GoodStanding.
 
 One special case is that the Evaluation Agent can decide to stop the credit line by changing the credit limit to 0 at any time. If there is no outstanding balance, the credit line will be moved to Deleted state. If there are outstanding balances, the credit line will be changed to 0 and the borrower will not be able to draw down anymore, but they can still pay back.
 
@@ -349,7 +346,7 @@ After receiving a credit approval request, EA reacts by fulfilling the following
 
 EvaluationAgentNFT contract is created to represent the collection of EAs on Huma protocol. Each EA will be represented by an NFT. All the transfer functions of the NFT have been disabled so that people cannot obtain EA status through transfers.
 
-Each EA NFT will have a status (Developer vs. Production). Only EA approved to serving in production, can be selected by the pool owners to serve production pools. The status will be displayed very visibly on the NFT.
+Each EA NFT will have a status (Developer vs. Production). Only EA approved to serving in production, can be selected by the pool owners to serve production pools. The status will be displayed very visibly on the NFT.  
 
 The developer can mint an EANFT to start the development process.
 
