@@ -1,4 +1,4 @@
-# Huma Protocol Spec v1
+# Huma Protocol Whitepaper
 
 ## Table of Content
 
@@ -21,9 +21,9 @@
 
 ## 1.0 Introduction
 
-**Huma is an open protocol for building next-gen decentralized lending solutions backed by income and receivables.**
+**Huma is an open protocol for building next-gen decentralized risk and lending solutions backed by income and receivables.**
 
-Smart contracts’ transparency and automatic execution played a critical role in DeFi’s success and will continue to do so. At the same time, it lacked the most critical input that all modern risk underwriting depends on, income (cashflow). Moreover, DeFi had to rely solely on over-collateralization of a few digital assets, making adoption by new entrants really difficult. These substantially limited its reach and impact. As such limitations become more and more obvious to many in the industry, under-collateralization and lending for real world use cases naturally emerges as the next frontier.
+Smart contracts’ transparency and automatic execution played a critical role in DeFi’s success and will continue to do so. At the same time, the current DeFi ecosystem lacked the most critical input that all modern risk underwriting depends on, income (cashflow). Moreover, DeFi had to rely solely on over-collateralization of a few digital assets, making adoption by new entrants really difficult. These substantially limited its reach and impact. As such limitations become more and more obvious to many in the industry, under-collateralization and lending for real world use cases naturally emerge as the next frontier.
 
 **Our Belief**
 
@@ -33,10 +33,10 @@ The DeFi infrastructure for serving them is mostly missing today, and Huma Proto
 
 We believe the future of DeFi is powered by automated underwriting as well as signals about the borrowers’ **Ability, Willingness, and Commitment** to pay.
 
-- **Automated risk underwriting** (ARU): Most successful fintech players serve high volume of credit applications in an automated fashion, utilizing alternative data sources. All the major DeFi protocols are built on AMMs. However, it is a lot more complicated to support ARU in a risk-on world than a risk-off world. The ARUs are intelligent models. By nature, AI will find its role in the ARUs. At the same time, these ARUs will not be possible without additional data (e.g. income, credit worthiness).
+- **Automated risk underwriting** (ARU): Most successful fintech players serve high volume of credit applications in an automated fashion, utilizing alternative data sources. All the major DeFi protocols are built as Automated Market Makers(AMMs). However, it is a lot more complicated to support ARU in a risk-on world than in a risk-off world. The ARUs are intelligent models. By nature, AI will find its role in the ARUs. At the same time, these ARUs will not be possible without additional data (e.g. income, credit worthiness).
 - **Income**: Income is probably the most vital signal in most underwriting scenarios since it offers the best measure against **one’s ability to pay**. The more comprehensive we can understand income, the better we can underwrite.
-- **Credit worthiness**: Credit worthiness is the most valuable signal for **one’s willingness to pay**. Web2’s credit score plays an important role, however it’s biased, limited, and controlled by a few agencies. We need decentralized credit systems.
-- **Receivables**: Today, **collateral** in DeFi mainly represents a handful of digital assets backing debt. Majority of participants do not have tons of such digital assets idling, but most have **receivables** in the form of future invoices, transactions, subscription income, paychecks, royalties etc. In fact, in structured finance, such receivables are regularly used in securitization of loans. Receivables are the best signal for **one’s commitment to pay**, because once an entity transfers the ownership of their receivables to the lending platform, it acts as a payment guarantee. We actually think collaterals are just special forms of receivables. The only difference is that their cash value is available right now instead of at a future date.
+- **Credit worthiness**: Credit worthiness is the most valuable signal for **one’s willingness to pay**. Web2’s credit score plays an important role, however it’s biased, limited, and controlled by a few agencies. We need to achieve a similar goal of a credit score that drives borrowing accountability but not being managed in a blackbox fashion by the big agencies.
+- **Receivables**: Today, **collateral** in DeFi mainly represents a handful of digital assets backing debt. The majority of participants do not have tons of such digital assets idling, but most have **receivables** in the form of future invoices, transactions, subscription income, paychecks, royalties etc. In fact, in structured finance, such receivables are regularly used in the securitization of loans. Receivables are the best signal for **one’s commitment to pay**, because once an entity transfers the ownership of their receivables to the lending platform, it acts as a payment guarantee. We actually think collaterals are just special forms of receivables. The only difference is that their cash value is available right now instead of at a future date.
 
 ### 1.1 Protocol Overview
 
@@ -47,7 +47,7 @@ Figure 1 shows a high-level overview of Huma Protocol:
 - Income Portfolio - It is a comprehensive view of users’ Web3 and Web2 income. Income Portfolio Adapters (IPA) can be developed to capture income from Web3 income sources such as on-chain payments, staking, mining, NFT royalty, Web3 payroll, and Web2 sources. The Income Portfolio Platform is built in such a way that any developers in the community can contribute and share the upside of the IPAs. Please refer to [IPA Developer Guide](IPA%20Developer%20Guide.md) for more information.
 - Receivable Management - We have developed infrastructures to allow receivables to be captured in the form of NFTs, transferred, and used to secure credit borrowing.
 - Evaluation Agent - This is an open platform for developers to contribute various risk underwriting models. Please refer to [Evaluation Agent Developer Guide](Evaluation%20Agent%20Developer%20Guide.md) for more information.
-- Aura - This is the layer for capturing, reporting, and leveraging credit trustworthiness. Auro is not in scope for our v1 protocol. In v2, we will either compose a decentralized credit system or work with a consortium of innovators to define the new credit standard for Web3.
+- Aura - This is the layer for capturing, reporting, and leveraging credit trustworthiness. Aura is not in scope for our v1 protocol. In v2, we will either compose a decentralized credit system or work with a consortium of innovators to define the new credit standard for Web3.
 - Lending Protocol - This is a generic lending pool. It is designed to suit a broad range of use cases from receivable refactoring to general credit line. Please refer to & [Huma Lending Protocol Technical Design](Huma%20Protocol%20Technical%20Design.md) for how to expand the protocol to launch more lending products.
 
 ## 2.0 Income Portfolio Platform
@@ -131,41 +131,17 @@ There are various user roles in the protocol. Some are at protocol-level. The ot
 
 #### 4.2.1 Protocol-level Admin Roles
 
-**Protocol Owner:** Protocol Owner is responsible for the administration of the entire protocol. It will be a multisig. After the initial deployment, the ownership will be transferred from the deployer to this multisig protocol owner. It has the following access rights:
-
-- The only user who can change various [protocol configurations](#43-protocol-administration)
-
-- The only user who can add and remove Pool Owners.
-- The only user who can add and remove Pausers.
-- One of the users who can pause the entire protocol.
-- The only user who can unpause the protocol after it is paused by one of the pausers.
-- The only user other than the pool owner who can perform admin tasks on a pool.
-- The only user who can transfer protocol income from pool wallet to protocol treasury.
+**Protocol Owner:** Protocol Owner is responsible for the administration of the entire protocol. It will be a multisig. After the initial deployment, the ownership will be transferred from the deployer to this multisig protocol owner. This is the only account who can change various protocol configurations and perform administrative tasks, most notably, adding and removing pool owners and pausers, unpausing the protocol, and transferring protocol income from pool wallet to protocol treasury.
 
 **Pausers:** Pausers can call a pause function to pause the entire protocol. When the protocol is paused, no money moves in or out of the protocol. This is expected to happen in very rare cases, such as major security attacks, or serious security issues discovered. It is expected for the protocol to have multiple pausers, possibly including an external security monitoring firm. The only thing that a pauser can do is to pause the protocol, nothing else. After the protocol is paused, only the Protocol Owner can unpause it.
 
-**Protocol Treasury:** This is technically not a user. It is the wallet to hold treasury for the protocol.
-
 #### 4.2.2 Pool-level User Roles
 
-**Pool Owners**: Pool owners are a list of addresses that are approved by the ProtocolProtocol Owner to create and manage pools. They have the following access rights:
+**Pool Owners**: Pool owners are a list of addresses that are approved by the ProtocolProtocol Owner to create and manage pools. They config the key parameters for the pool, and choose the Evaluation Agent and set the fee structure through Fee Manager. They will be rewarded with a percentage of the pool income. They are the only users who can transfer this reward from the pool.
 
-- The only user who can set Evaluation Agent for the pool.
-- The only user who can set Fee Manager to be used by the pool and configure the Fee Manager.
-- The only user who can change various [pool configurations](#442-pool-configurations).
+**Evaluation Agent:** The Evaluation Agent (EA) makes underwriting decisions, approve or diapprove credit requests for a pool. Each pool can only have one Evaluation Agent. We envision most of the EAs are automated. The protocol also allows it to be manual. They will be rewarded with a percentage of the pool income for their contribution. They are the only accounts who can transfer this reward from the pool.
 
-- The only user who can transfer the Pool Owner’s income from the pool.
-
-**Evaluation Agent:** The Evaluation Agent makes underwriting decisions for a pool. Each pool can only have one Evaluation Agent. They have the following access rights:
-
-- The only user who can approve credit requests to the pool.
-- The only user who can post a pre-approved credit line to the pool contract.
-- The only user who can post off-contract payments received and trigger subsequent actions by the contract.
-- The only user who can transfer the EA’s income from the pool.
-
-After the pool owner has set the evaluation agent for the pool, the EA has to deposit the required capital before the pool owner to enable the pool.
-
-Pool owner can choose to change the evaluate agent for the pool. When this happens, all the accrued EA rewards are paid to the old EA immediately. The EA needs to have made the required deposits.
+To drive accountability, similar to the Pool Owners, EAs are required to deposit capital to the pools that they are supporting. Only after both the Pool Owner and EA have deposited the required capital, can a pool be enabled to accept capital from others Liquidity Providers. Pool owner can choose to change the evaluate agent for the pool. The new EA needs to meet the deposit requirement before the change can happen.  When this happens, all the accrued EA rewards are paid to the old EA immediately. 
 
 **Liquidity Providers:** Liquidity Providers (a.k.a. Lenders) provide capital to the pool and expect financial returns for their investment. The only actions that they can do are depositing and withdrawing capital from the pool.
 
@@ -195,55 +171,27 @@ Under Huma protocol, many pools can be created for specific business opportuniti
 
 #### 4.4.1 Pool Initialization
 
-When a pool is initialized, the following information shall we specified:
-
-- Pool name: the name of the pool
-- Pool token (HDT) : the utility token used to track LP’s contribution to the pool. Please see section [link](#454-pool-liquidity-ownership) for more detail.
-
-- Huma Config: Huma Config hosts all the global configurations.
-- Fee Manager: A FeeManager implements all the core functions around fee calculation. Every pool can have its own FeeManager implementation.
-
 Both Pool Owner and Evaluation Agent commit to provide a certain percentage of the pool liquidity. Once the pool is initiated, and after the Pool Owner and Evaluation Agent deposit the required liquidity, the pool can be enabled by the Pool Owner to accept additional deposits from the lenders. At that point, the pool will open to the borrowers.
+
+Pools can be enabled when the essential configurations are setup and the required minimal liquidity has been deposited by the admins.
 
 #### 4.4.2 Pool Configurations
 
-**Pool Name:** Each pool needs to have a name. This name will be listed on the Huma website. We will define an off-chain workflow to make sure of the uniqueness of the pool names.
+A pool owner can set and change the following configurations for the pool. Please see [Huma Protocol Spec](../Huma%20Protocol%20Spec%20V1.md) for more details.
 
-**Underlying Token:** This is the asset to be used for lending and borrowing in the pool. In v1, we will support USDC only.
-
-**Liquidity Cap:** the cap of liquidity for the pool in the unit of underlying token. Pool owners can set and change it.
-
-**Pool Owner Commitment Rate:** the portion of the pool liquidity to be deposited by the pool owner. It will be represented in basis points.
-
-**Evaluation Agent Commitment Rate:** the portion of the pool liquidity to be deposited by the Evaluation Agent. It will be represented in basis points.
-
-**Max Credit Line:** The max credit line allowed by the pool. If the credit limit approved by EA is above this line, the request will be rejected.
-
-**Pool APR:** Interest rate for the pool. It is represented in basis points.
-
-**Origination Fee:** a fee to be charged when the user completes a drawdown. It can be a fixed fee or a percentage of the drawdown amount or a combination of both. In reality, we expect most pools to use a percentage. The percentage will be represented in basis points. What the borrower gets is the net of the drawdown amount and this fee.
-
-**Late Payment Fee:** a fee to be charged when the borrower is late for a payment or the payment is lower than the required due amount. The late fee can be a fixed fee or a percentage of the total outstanding balance or a combination of both. Please note when a percentage is used to calculate the late fee, the percentage is applied to the entire balance instead of the amount due. For example, if the outstanding balance is $5000 and the amount due for this cycle is $500, if the late fee rate is 1% per period, the late fee will be $50 instead of $5. If the user is late for several periods in a row. the late fee will be charged each period.
-
-**Membership Fee:** a fixed fee per pay period.
-
-**Required receivable rate:** The ratio between the value of the receivables and the credit limit. The ratio will be represented in basis points. There must be enough receivables deposited or making the pool the beneficiary of the receivable before the borrowers can draw down using the approved credit line.
-
-**withdrawalLockoutPeriod:** this is the period that the lender is prevented from withdrawing since its last deposit to the pool. This will be represented in seconds. The protocol will ensure it is longer than 30 days to guard pool admin from careless mistakes.
-
-**poolDefaultGracePeriod:** the grace period between the due date and the moment that a default can be triggered. Late fees will apply during the default grace period.
-
-**Pay Period Duration:** The duration for each pay period. This can be configured in days. Every borrower follows the pay period duration to calculate its next due.
-
-**minPrincipalRateInBps:** Min percentage of the principal due at each pay period. This will be represented in basis points.
-
-#### 4.4.3 Pool Administration
-
-**Enable and Disable Pool:** Pools can be enabled when the essential configurations are setup and the required minimal liquidity has been deposited by the admins.
-
-**Set Evaluation Agent:** Set the evaluation agent
-
-Set and update the configurations outlined in [the section above](#442-pool-configurations).
+- Pool Liquidity Cap
+- Pool Owner Capital Commitment
+- Evaluation Agent Capital Commitment
+- Max Amout Per Credit Line
+- Pool APR
+- Origination Fee
+- Late Payment Fee
+- Membership Fee
+- Required Receivable Rate
+- Withdrawal Lockout Period
+- Default Grace Period
+- Pay Period Duration
+- Principal Payment Requirement Per Period
 
 ### 4.5 LP Participations
 
@@ -329,9 +277,7 @@ At the same time, the borrowing record will still be open and the borrower still
 
 ### 4.8 Income and Loss Distribution
 
-The protocol defines a percentage of all pool income that goes to the protocol treasury. Huma DAO will then decide how to distribute the income. We know a portion of it will go to the IPA
-
-developers.
+The protocol defines a percentage of all pool income that goes to the protocol treasury. Huma DAO will then decide how to distribute the income. We know a portion of it will go to the IPA developers.
 
 For any pool income, it will allocate the portion for the protocol first, and distribute the remainder to the pool. For the portion allocated to the pool, it will first distribute the commission to the EA. The remainder will be distributed to all the LPs per their share of ownership of the liquidity pool.
 
