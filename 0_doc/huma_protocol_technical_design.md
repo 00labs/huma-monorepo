@@ -144,7 +144,7 @@ The billing anniversary is set when the first drawdown happens. The bill is comp
 
 The Fee Manager is also built in such a way that it is super easy to get the due and estimated payoff information of an account without spending any gas. At the moment of payment, the contract computes an accurate payoff amount. If the amount tendered is more than the payoff amount, only the payoff amount is collected.
 
-In each billing cycle, if the account is late, we first compute the late fees, then add membership fee if it applies to the pool. After that, we add the unpaid due amount, unbilled principal, and outstanding correction together as the principal for the next cycle. We then compute the interest due and principal due. The sum of the fees, interest due, and principal due will become the total due amount for the next cycle.
+In each billing cycle, if the account is late, we first compute the late fees, then add a membership fee if it applies to the pool. After that, we add the unpaid due amount, unbilled principal, and outstanding correction together as the principal for the next cycle. We then compute the interest due and principal due. The sum of the fees, interest due, and principal due will become the total due amount for the next cycle.
 
 #### Administrator Fees
 
