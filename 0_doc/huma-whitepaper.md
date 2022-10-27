@@ -313,3 +313,7 @@ The Governance Council will represent all major stakeholders of the platform and
 #### 6.2 Participation
 
 Anybody will be able to participate in governance through proposals, discussions, and Snapshot votes.
+
+
+
+asdlfsjdlk
