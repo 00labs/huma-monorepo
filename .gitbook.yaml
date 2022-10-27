@@ -1,0 +1,6 @@
+root: ./0_doc
+
+​structure:
+
+redirects:
+  previous/page: 0_doc/support.md
