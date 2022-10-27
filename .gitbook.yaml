@@ -1,6 +1,8 @@
 root: ./0_doc
 
 ​structure:
+  readme: ./0_doc/README.md
+  summary: ./0_doc/SUMMARY.md​
 
 redirects:
-  previous/page: 0_doc/support.md
+  previous/page: ./0_doc/support.md
