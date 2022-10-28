@@ -13,7 +13,7 @@ jobs:
   review-dependabot-pr:
     runs-on: ubuntu-latest
     steps:
-    - name: create pull request
-    run: gh pr create -B main -H gitbook --title 'Merge gitbook into main' --body 'Created by Github actions'
-    env:
-      GITHUB_TOKEN: ${{ secrets.REVIWER_TOKEN }}
+      - name: create pull request
+        run: gh pr create -B main -H gitbook --title 'Merge gitbook into main' --body 'Created by Github actions'
+        env:
+          GITHUB_TOKEN: ${{ secrets.REVIWER_TOKEN }}
