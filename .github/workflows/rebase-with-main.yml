@@ -27,5 +27,6 @@ jobs:
           git config --global user.email "bot@huma.finance"
           git config --global user.name "Huma bot"
           git fetch
+          git checkout gitbook
           git reset --hard origin/main
           git push
