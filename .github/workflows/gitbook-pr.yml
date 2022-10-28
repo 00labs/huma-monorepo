@@ -16,4 +16,4 @@ jobs:
     - name: create pull request
     run: gh pr create -B main -H gitbook --title 'Merge gitbook into main' --body 'Created by Github actions'
     env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.REVIWER_TOKEN }}
