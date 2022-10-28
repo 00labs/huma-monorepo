@@ -16,7 +16,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
       - name: Merge main branch
-        - run: git merge main --rebase
+        run: git merge main --rebase
       - name: Create pull request
         run: gh pr create -B main -H gitbook --title 'Merge gitbook into main' --body 'Created by Github actions'
         env:
