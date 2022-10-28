@@ -17,8 +17,8 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v3
+#      - name: Check out repository code
+#        uses: actions/checkout@v3
       - name: Create pull request
         id: cpr
         uses: peter-evans/create-pull-request@v4
