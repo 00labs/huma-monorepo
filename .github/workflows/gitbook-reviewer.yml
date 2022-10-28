@@ -1,6 +1,8 @@
 name: Huma-bot reviewer
 
 on: pull_request_target
+  branches:
+    - main
 
 permissions:
   pull-requests: write
@@ -11,9 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event.pull_request.user.login == 'Huma-bot' }}
     steps:
-      - name: Huma-bot metadata
-        id: huma-bot-metadata
-        uses: dependabot/fetch-metadata@v1.3.1
       - name: Enable auto-merge for Gitbook PRs
         run: gh pr merge --auto --merge "$PR_URL"
         env:
