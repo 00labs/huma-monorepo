@@ -20,10 +20,16 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-      - name: Fetch main branch
-        run: git fetch
-      - name: Merge main branch
-        run: git reset --hard origin/main
+      - name: Fetch&merge main branch
+        run: |
+          git fetch
+          git reset --hard origin/main
       - name: Create pull request
+        id: cpr
         uses: peter-evans/create-pull-request@v4
+      - name: Check outputs
+        if: ${{ steps.cpr.outputs.pull-request-number }}
+        run: |
+          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
+          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
 
