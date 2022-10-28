@@ -5,6 +5,8 @@ on:
     branches:
       - gitbook
 
+  workflow_dispatch:
+
 permissions:
   pull-requests: write
   contents: write
@@ -12,10 +14,26 @@ permissions:
 jobs:
   creat-gitbook-pr:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-      - name: create pull request
-        run: gh pr create -B main -H gitbook --title 'Merge gitbook into main' --body 'Created by Github actions'
-        env:
-          GITHUB_TOKEN: ${{ secrets.REVIWER_TOKEN }}
+      - name: Fetch&merge main branch
+        run: |
+          git config --global user.email "bot@huma.finance"
+          git config --global user.name "Huma bot"
+          git fetch
+          git merge origin/main --allow-unrelated-histories
+      - name: Create pull request
+        id: cpr
+        uses: peter-evans/create-pull-request@v4
+        with:
+          branch: gitbook
+          base: main
+      - name: Check outputs
+        if: ${{ steps.cpr.outputs.pull-request-number }}
+        run: |
+          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
+          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
+
