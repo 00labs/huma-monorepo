@@ -22,7 +22,7 @@ jobs:
       - name: Fetch&merge main branch
         run: |
           git fetch
-          git merge origin/main
+          git rebase origin/main --allow-unrelated-histories
       - name: Create pull request
         id: cpr
         uses: peter-evans/create-pull-request@v4
