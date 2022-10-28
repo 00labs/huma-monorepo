@@ -17,14 +17,11 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
     steps:
-#      - name: Check out repository code
-#        uses: actions/checkout@v3
+      - name: Check out repository code
+        uses: actions/checkout@v3
       - name: Create pull request
         id: cpr
-        uses: peter-evans/create-pull-request@v4
-        with:
-          branch: gitbook
-          base: main
+        run: gh pr create -B main -H gitbook --title 'Merge gitbook into main' --body 'Created by Github actions'
       - name: Check outputs
         if: ${{ steps.cpr.outputs.pull-request-number }}
         run: |
