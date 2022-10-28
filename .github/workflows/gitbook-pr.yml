@@ -21,9 +21,9 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
       - name: Fetch main branch
-        run: git fetch origin
+        run: git fetch
       - name: Merge main branch
-        run: git merge origin/main --commit --allow-unrelated-histories
+        run: git reset --hard origin/main
       - name: Create pull request
         run: gh pr create -B main -H gitbook --title 'Merge gitbook into main' --body 'Created by Github actions'
 
