@@ -1,0 +1,21 @@
+name: Gitbook PR
+
+on:
+  push:
+    branches:
+      - gitbook
+
+permissions:
+  pull-requests: write
+  contents: write
+
+jobs:
+  creat-gitbook-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: create pull request
+        run: gh pr create -B main -H gitbook --title 'Merge gitbook into main' --body 'Created by Github actions'
+        env:
+          GITHUB_TOKEN: ${{ secrets.REVIWER_TOKEN }}
