@@ -19,12 +19,6 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-      - name: Fetch&merge main branch
-        run: |
-          git config --global user.email "bot@huma.finance"
-          git config --global user.name "Huma bot"
-          git fetch
-          git merge origin/main --allow-unrelated-histories
       - name: Create pull request
         id: cpr
         uses: peter-evans/create-pull-request@v4
