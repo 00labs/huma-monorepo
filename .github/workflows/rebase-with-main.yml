@@ -28,3 +28,4 @@ jobs:
           git config --global user.name "Huma bot"
           git fetch
           git reset --hard origin/main
+          git push
