@@ -5,6 +5,8 @@ on:
     branches:
       - gitbook
 
+  workflow_dispatch:
+
 permissions:
   pull-requests: write
   contents: write
@@ -14,6 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
+    # actions
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
