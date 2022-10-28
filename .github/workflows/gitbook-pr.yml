@@ -16,7 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
-    # actions
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
