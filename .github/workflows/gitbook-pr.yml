@@ -20,7 +20,7 @@ jobs:
       - name: Fetch main branch
         run: git fetch origin
       - name: Merge main branch
-        run: git merge origin/main --commit
+        run: git merge origin/main --commit --allow-unrelated-histories
       - name: Create pull request
         run: gh pr create -B main -H gitbook --title 'Merge gitbook into main' --body 'Created by Github actions'
 
