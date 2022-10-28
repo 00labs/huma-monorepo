@@ -1,4 +1,4 @@
-name: Gitbook PR
+name: Gitbook rebase with main
 
 on:
   pull_request_target:
@@ -14,7 +14,7 @@ permissions:
   contents: write
 
 jobs:
-  creat-gitbook-pr:
+  gitbook-rebase-main:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     env:
