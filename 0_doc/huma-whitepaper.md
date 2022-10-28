@@ -45,7 +45,7 @@ We believe the future of DeFi is powered by automated underwriting as well as si
 Figure 1 shows a high-level overview of Huma Protocol:
 
 * Income Portfolio - It is a comprehensive view of users’ Web3 and Web2 income. Income Portfolio Adapters (IPA) can be developed to capture income from Web3 income sources such as on-chain payments, staking, mining, NFT royalty, Web3 payroll, and Web2 sources. The Income Portfolio Platform is built in such a way that any developers in the community can contribute and share the upside of the IPAs. Please refer to IPA Developer Guide for more information.
-* Receivable Management - We have developed infrastructures to allow receivables to be captured in the form of NFTs, transferred, and used to secure credit borrowing.
+* Receivable Management - It is the infrastructure to allow receivables captured in the form of NFTs, which can be transferred, and used to secure debt.
 * Evaluation Agent - This is an open platform for developers to contribute various risk underwriting models. Please refer to Evaluation Agent Developer Guide for more information.
 * Aura - This is the layer for capturing, reporting, and leveraging credit trustworthiness. Aura is not in scope for our v1 protocol. In v2, we will either compose a decentralized credit system or work with a consortium of innovators to define the new credit standard for Web3.
 * Lending Protocol - This is a generic lending pool. It is designed to suit a broad range of use cases from receivable refactoring to general credit line. Please refer to & Huma Lending Protocol Technical Design for how to expand the protocol to launch more lending products.
@@ -314,8 +314,4 @@ The Governance Council will represent all major stakeholders of the platform and
 
 Anybody will be able to participate in governance through proposals, discussions, and Snapshot votes.
 
-
-
-\<Last updated: Oct 28 9:38AM PST>
-
-
+\<Last updated: Oct 28 9:49AM PST>
