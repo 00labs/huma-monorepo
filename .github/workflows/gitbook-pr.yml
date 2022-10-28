@@ -12,18 +12,15 @@ permissions:
 jobs:
   creat-gitbook-pr:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
       - name: Fetch main branch
-          run: git fetch origin/main
-          env:
-            GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
+        run: git fetch origin/main
       - name: Merge main branch
         run: git merge origin/main --commit
-        env:
-          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
       - name: Create pull request
         run: gh pr create -B main -H gitbook --title 'Merge gitbook into main' --body 'Created by Github actions'
-        env:
-          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
+
