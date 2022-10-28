@@ -18,7 +18,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
       - name: Fetch main branch
-        run: git fetch origin/main
+        run: git fetch origin
       - name: Merge main branch
         run: git merge origin/main --commit
       - name: Create pull request
