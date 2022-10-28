@@ -2,7 +2,7 @@ name: Huma-bot reviewer
 
 on: pull_request_target
   branches:
-    - main
+    - gitbook
 
 permissions:
   pull-requests: write
