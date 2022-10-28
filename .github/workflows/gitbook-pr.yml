@@ -16,8 +16,10 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
       - name: Merge main branch
-        run: git merge main --commit
+        run: git merge origin/main --commit
+        env:
+          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
       - name: Create pull request
         run: gh pr create -B main -H gitbook --title 'Merge gitbook into main' --body 'Created by Github actions'
         env:
-          GITHUB_TOKEN: ${{ secrets.REVIWER_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
