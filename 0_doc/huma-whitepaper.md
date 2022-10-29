@@ -25,7 +25,7 @@
 
 **Huma is an open protocol for building next-gen decentralized risk and lending solutions backed by income and receivables.**
 
-Smart contracts’ transparency and automatic execution played a critical role in DeFi’s success and will continue to do so. At the same time, the current DeFi ecosystem lacked the most critical input that all modern risk underwriting depends on, income (cashflow). Moreover, DeFi had to rely solely on over-collateralization of a few digital assets, making adoption by new entrants really difficult. These substantially limited its reach and impact. As such limitations become more and more obvious to many in the industry, under-collateralization and lending for real world use cases naturally emerge as the next frontier.
+Smart contracts’ transparency and automatic execution played a critical role in DeFi’s success and will continue to do so. At the same time, the current DeFi ecosystem falls short when it comes to lending for real world use cases, where real users and yields are. First of all, it lacks the most critical input that all modern risk underwriting depends on, income (cashflow). Moreover, it relies solely on over-collateralization of a few digital assets, making adoption by new entrants really difficult. As such limitations become obvious to many in the industry, under-collateralized lending for real world use cases emerges as the next frontier.
 
 **Our Belief**
 
@@ -33,22 +33,24 @@ In the next decade, tens of thousands of institutions and billions of people wil
 
 The DeFi infrastructure for serving them is mostly missing today, and Huma Protocol is introducing such critical infrastructure elements to enable it.
 
-We believe the future of DeFi is powered by automated underwriting as well as signals about the borrowers’ **Ability, Willingness, and Commitment** to pay.
+We believe the future of DeFi is powered by automated underwriting supported by signals about the borrowers’ **Ability, Willingness, and Commitment** to pay.
 
-* **Automated risk underwriting** (ARU): Most successful fintech players serve high volume of credit applications in an automated fashion, utilizing alternative data sources. All the major DeFi protocols are built as Automated Market Makers(AMMs). However, it is a lot more complicated to support ARU in a risk-on world than in a risk-off world. The ARUs are intelligent models. By nature, AI will find its role in the ARUs. At the same time, these ARUs will not be possible without additional data (e.g. income, credit worthiness).
-* **Income**: Income is probably the most vital signal in most underwriting scenarios since it offers the best measure against **one’s ability to pay**. The more comprehensive we can understand income, the better we can underwrite.
-* **Credit worthiness**: Credit worthiness is the most valuable signal for **one’s willingness to pay**. Web2’s credit score plays an important role, however it’s biased, limited, and controlled by a few agencies. We need to achieve a similar goal of a credit score that drives borrowing accountability but not being managed in a blackbox fashion by the big agencies.
-* **Receivables**: Today, **collateral** in DeFi mainly represents a handful of digital assets backing debt. The majority of participants do not have tons of such digital assets idling, but most have **receivables** in the form of future invoices, transactions, subscription income, paychecks, royalties etc. In fact, in structured finance, such receivables are regularly used in the securitization of loans. Receivables are the best signal for **one’s commitment to pay**, because once an entity transfers the ownership of their receivables to the lending platform, it acts as a payment guarantee. We actually think collaterals are just special forms of receivables. The only difference is that their cash value is available right now instead of at a future date.
+* **Automated risk underwriting** (ARU): Most successful fintech players serve high volume of credit applications in an automated fashion, often utilizing alternative data sources. Similarly, major DeFi protocols are all run by Automated Market Makers(AMMs). However, it is a lot more complicated to support ARU in a risk-on world than in a risk-off world. Naturally, ARUs will evolve as intelligent models and will utilize additional data points (e.g. income, credit worthiness).
+* **Income**: Income (cashflow) is the most vital signal in a wide array of underwriting scenarios since it offers the best measure for **ability to pay**. The more comprehensive we can understand income, the better we can underwrite.
+* **Credit worthiness**: Credit worthiness is the most valuable signal for **willingness to pay**. Traditional credit scores played an important role for a long time, however it’s known to be biased, and heavily centralized. We need alternative decentralized systems to carry these signals and to establish borrowing accountability.
+* **Receivables**: Today, **collateral** in DeFi mainly represents a handful of digital assets backing debt. The majority of businesses and people are the world do not have tons of digital assets idling, but they do have **receivables** in the form of future invoices, transactions, subscription revenue, paychecks, royalties etc. In fact, in structured finance, such receivables are regularly used in the securitization of loans. Receivables are the best signal for **one’s commitment to pay**, because once an entity transfers the ownership of their receivables to the lending platform, it acts as a payment guarantee. We actually think collaterals are just special forms of receivables.&#x20;
 
 #### 1.1 Protocol Overview
 
+<figure><img src=".gitbook/assets/Figure1PNG.png" alt=""><figcaption></figcaption></figure>
+
 Figure 1 shows a high-level overview of Huma Protocol:
 
-* Income Portfolio - It is a comprehensive view of users’ Web3 and Web2 income. Income Portfolio Adapters (IPA) can be developed to capture income from Web3 income sources such as on-chain payments, staking, mining, NFT royalty, Web3 payroll, and Web2 sources. The Income Portfolio Platform is built in such a way that any developers in the community can contribute and share the upside of the IPAs. Please refer to IPA Developer Guide for more information.
-* Receivable Management - It is the infrastructure to allow receivables captured in the form of NFTs, which can be transferred, and used to secure debt.
-* Evaluation Agent - This is an open platform for developers to contribute various risk underwriting models. Please refer to Evaluation Agent Developer Guide for more information.
-* Aura - This is the layer for capturing, reporting, and leveraging credit trustworthiness. Aura is not in scope for our v1 protocol. In v2, we will either compose a decentralized credit system or work with a consortium of innovators to define the new credit standard for Web3.
-* Lending Protocol - This is a generic lending pool. It is designed to suit a broad range of use cases from receivable refactoring to general credit line. Please refer to & Huma Lending Protocol Technical Design for how to expand the protocol to launch more lending products.
+* **Income Portfolio** - It is a comprehensive view of users’ Web3 and Web2 income. Income Portfolio Adapters (IPA) can be developed to capture income from Web3 income sources such as on-chain payments, staking, mining, NFT royalty, Web3 payroll, and Web2 sources. The Income Portfolio Platform is built in such a way that any developers in the community can contribute and share the upside of the IPAs. Please refer to IPA Developer Guide for more information.
+* **Receivables** - It is the infrastructure that manages receivables captured in the form of NFTs, which can be transferred, and used to secure debt.
+* **Evaluation Agent** - This is an open platform for developers to contribute various risk underwriting models. Please refer to Evaluation Agent Developer Guide for more information.
+* **Aura** - This is the layer for capturing, reporting, and leveraging credit trustworthiness. Aura is not in scope for our v1 protocol. In v2, we will either compose a decentralized credit system or work with a consortium of innovators to define the new credit standard for Web3.
+* **Lending Protocol** - This is a generic lending pool. It is designed to suit a broad range of use cases from receivable refactoring to general purpose credit lines. Please refer to Huma Lending Protocol Technical Design for how to expand the protocol to launch more lending products.
 
 ### 2.0 Income Portfolio Platform
 
