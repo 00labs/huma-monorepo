@@ -35,7 +35,7 @@ The DeFi infrastructure for serving them is mostly missing today, and Huma Proto
 
 We believe the future of DeFi is powered by automated underwriting supported by signals about the borrowers’ **Ability, Willingness, and Commitment** to pay.
 
-* **Automated risk underwriting** (ARU): Most successful fintech players serve high volume of credit applications in an automated fashion, often utilizing a varieties of data sources. Similarly, major DeFi protocols are all run by Automated Market Makers(AMMs). However, it is a lot more complicated to support ARU in a risk-on world than in a risk-off world. Naturally, ARUs will evolve as additional data points (e.g. income, credit worthiness) and better intelligent models are introduced.
+* **Automated risk underwriting** (ARU): Most successful fintech players serve high volume of credit applications in an automated fashion, often utilizing a variety of data sources. Similarly, major DeFi protocols are all run by Automated Market Makers(AMMs). However, it is a lot more complicated to support ARU in a risk-on world than in a risk-off world. Naturally, ARUs will evolve as additional data points (e.g. income, credit worthiness) and better intelligent models are introduced.
 * **Income**: Income (cashflow) is the most vital signal in a wide array of underwriting scenarios, since it offers the best measure for **ability to pay**. The more comprehensive we can understand income, the better we can underwrite.
 * **Receivables**: Today, **collateral** in DeFi mainly represents a handful of digital assets. The majority of businesses and people in the world do not have tons of digital assets idling, but they do have **receivables** in the form of future invoices, transactions, subscription revenue, paychecks, royalties etc. In fact, in structured finance, such receivables are regularly used in the securitization of loans. Receivables are the best signal for **commitment to pay**, because once an entity transfers the ownership of their receivables to the lending platform, it acts as a payment guarantee. We actually think collaterals are just special forms of receivables.
 * **Credit worthiness**: Credit worthiness is the most valuable signal for **willingness to pay**. Traditional credit scores played an important role for a long time, however it’s known to be biased, and heavily centralized. We need alternative decentralized systems to carry these signals and to establish borrowing accountability.
@@ -126,7 +126,7 @@ In addition, Timelock will be used so that the community has time to react to th
 
 **4.1.2 Extensibility**
 
-Huma Protocol is designed as a full-stack protocol, instead of just a lending product. It allows developers and businesses to support new use cases by leveraging its Income Portfolio and EA Platforms. As a result, different pools can apply different underwriting policies and fee schedules. For example, For example, it is able to support interest-only and minimal monthly payments, and it can be easily extended to support installments.
+Huma Protocol is designed as a full-stack protocol, instead of just a lending product. It allows developers and businesses to support new use cases by leveraging its Income Portfolio and EA Platforms. As a result, different pools can apply different underwriting policies and fee schedules. For example, it is able to support interest-only and minimal monthly payments, and it can be easily extended to support installments.
 
 #### 4.2 User Roles
 
@@ -158,7 +158,7 @@ To drive accountability, similar to the Pool Owners, EAs are required to commit 
 
 **Add / Remove liquidity assets allowed:** This is the list of assets to be allowed as the underlying assets for pools in the protocol. We will only support stablecoins in the foreseeable future, starting with USDC.
 
-**Change Protocol-level Grace Period for Defaults:** This is the protocol-level default value for the grace period after which an overdue debt is considered a default. Individual pools can overwrite this protocol-level setting to suit the needs of their pools. &#x20;
+**Change Protocol-level Grace Period for Defaults:** This is the protocol-level preset value for the grace period after which an overdue debt is considered a default. Individual pools can overwrite this protocol-level setting to suit the needs of their pools. &#x20;
 
 **Change Protocol Treasury:** This is the protocol treasury wallet address. Only protocol owner (a multisig) can make this change.
 
