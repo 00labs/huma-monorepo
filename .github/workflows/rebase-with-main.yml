@@ -22,6 +22,8 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Rebase main branch
         run: |
           git config --global user.email "bot@huma.finance"
