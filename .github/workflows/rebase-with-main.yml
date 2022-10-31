@@ -28,5 +28,5 @@ jobs:
           git config --global user.name "Huma bot"
           git fetch
           git checkout gitbook
-          git reset --hard origin/main
+          git merge origin/main --commit
           git push

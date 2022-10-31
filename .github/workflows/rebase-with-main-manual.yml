@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  gitbook-rebase-main:
+  gitbook-rebase-main-manual:
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
@@ -17,5 +17,5 @@ jobs:
           git config --global user.name "Huma bot"
           git fetch
           git checkout gitbook
-          git reset --hard origin/main
+          git merge origin/main --commit
           git push
