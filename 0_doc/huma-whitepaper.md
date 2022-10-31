@@ -29,15 +29,15 @@ Smart contracts’ transparency and automatic execution played a critical role i
 
 **Our Belief**
 
-In the next decade, tens of thousands of institutions and billions of people will onboard onto Web3 ecosystems. They won’t have rich crypto asset portfolios initially to collateralize against, however, most of them are going to be creditworthy participants.
+In the next decade, tens of thousands of institutions and billions of people will onboard onto Web3 ecosystems. They won’t have rich crypto asset portfolios initially to collateralize against, however, most of them will be creditworthy participants.
 
 The DeFi infrastructure for serving them is mostly missing today, and Huma Protocol is introducing such critical infrastructure elements to enable it.
 
 We believe the future of DeFi is powered by automated underwriting supported by signals about the borrowers’ **Ability, Willingness, and Commitment** to pay.
 
 * **Automated risk underwriting** (ARU): Most successful fintech players serve high volume of credit applications in an automated fashion, often utilizing alternative data sources. Similarly, major DeFi protocols are all run by Automated Market Makers(AMMs). However, it is a lot more complicated to support ARU in a risk-on world than in a risk-off world. Naturally, ARUs will evolve as intelligent models and will utilize additional data points (e.g. income, credit worthiness).
-* **Income**: Income (cashflow) is the most vital signal in a wide array of underwriting scenarios since it offers the best measure for **ability to pay**. The more comprehensive we can understand income, the better we can underwrite.
-* **Receivables**: Today, **collateral** in DeFi mainly represents a handful of digital assets backing debt. The majority of businesses and people in the world do not have tons of digital assets idling, but they do have **receivables** in the form of future invoices, transactions, subscription revenue, paychecks, royalties etc. In fact, in structured finance, such receivables are regularly used in the securitization of loans. Receivables are the best signal for **one’s commitment to pay**, because once an entity transfers the ownership of their receivables to the lending platform, it acts as a payment guarantee. We actually think collaterals are just special forms of receivables.
+* **Income**: Income (cashflow) is the most vital signal in a wide array of underwriting scenarios, since it offers the best measure for **ability to pay**. The more comprehensive we can understand income, the better we can underwrite.
+* **Receivables**: Today, **collateral** in DeFi mainly represents a handful of digital assets backing debt. The majority of businesses and people in the world do not have tons of digital assets idling, but they do have **receivables** in the form of future invoices, transactions, subscription revenue, paychecks, royalties etc. In fact, in structured finance, such receivables are regularly used in the securitization of loans. Receivables are the best signal for **commitment to pay**, because once an entity transfers the ownership of their receivables to the lending platform, it acts as a payment guarantee. We actually think collaterals are just special forms of receivables.
 * **Credit worthiness**: Credit worthiness is the most valuable signal for **willingness to pay**. Traditional credit scores played an important role for a long time, however it’s known to be biased, and heavily centralized. We need alternative decentralized systems to carry these signals and to establish borrowing accountability.
 
 **1.1 Protocol Overview**
@@ -85,15 +85,15 @@ Example sources include;
 
 Developers can contribute to the initial development and ongoing maintenance of the IPAs.
 
-To bootstrap the development of IPAs, Huma will offer bounty programs via gitcoin platform or hackathons. The IPA submissions will be reviewed, and once approved, the developers will be rewarded with the bounties.
+To bootstrap the development of IPAs, Huma will offer bounty programs.&#x20;
 
-A portion of the protocol revenue will be carved out to reward IPA developers and maintainers. Huma DAO will review the contributions and determine how to split the total IPA rewards to different IPA contributors.
+A portion of the protocol revenue will be carved out to reward IPA developers and maintainers. Huma DAO will review the contributions and determine how to split the total IPA rewards to different contributors.
 
 ### 3.0 Evaluation Agent (EA)
 
 Evaluation Agent developers build and plug in their context-aware risk management modules into Huma Protocol. Each EA implements a standard interface to interact with Huma SDK and Huma contracts.
 
-All the EAs are expected to run off-chain considering the computational complexity involved. We do not expect EAs to be open-sourced in the foreseeable future as an anti-fraud measure.
+All the EAs are expected to run off-chain considering the computational complexity and the volume of data involved. As an anti-fraud measure, Huma does not require EAs to be open-sourced.
 
 #### 3.1 EA Listing and Hosting
 
@@ -101,7 +101,7 @@ Each pool will select an EA to delegate its underwriting. EAs are expected to be
 
 The EA developers will submit EAs to Huma DAO for review. Once approved, the EAs will be deployed to a cloud platform provided by Huma. The cloud platform will be open-sourced, even though Huma does not require the EAs to open source their models.
 
-In v2, we will look into making this platform more decentralized.
+In future iterations, we plan to decentralize this platform further.
 
 #### 3.2 EA rewards and responsibilities
 
@@ -111,21 +111,21 @@ EA takes a percentage of the pool income. It is defined in the configuration par
 
 ### 4.0 Lending Protocol
 
-On top of the Income Portfolio Platform and Evaluation Agent, Huma Lending Protocol intends to provide a credit line for every wallet. Different pools can be built to leverage different income streams and for various use cases, from credit card, receivable factoring, car loan, to many other forms of lending products. The protocol shall be designed in such a way that developers and business owners outside the Huma core team can develop and launch new products on the protocol.
+On top of the Income Portfolio Platform and Evaluation Agent, Huma Lending Protocol makes it possible to create a credit line for every wallet. Different pools can be built to leverage different income streams and for various use cases, from business loan, personal loan, factoring, to many other forms of lending products. The protocol is designed to let developers and busineses develop and launch new products easily on it.
 
 #### 4.1 Design Principles
 
 **4.1.1 Transparency & Community Confidence**
 
-Transparency is critical to building community confidence. We will operate Huma Protocol at the highest level of transparency that we can.
+Transparency is critical to building community confidence. We will operate Huma Protocol at the highest level of transparency.
 
-Since the Protocol Owner wallet has a lot of power, it will be a multi-sig wallet with signees geographically distributed.
+For wallets representing different roles, we will require multi-sig with a diverse group of signees.
 
-In addition, Timelock will be used so that the community has time to react to the proposed changes to the protocol. Openzeppelin timelock can apply different delays for different actions.
+In addition, Timelock will be used so that the community has time to react to the proposed changes to the protocol.
 
 **4.1.2 Extensibility**
 
-Huma Protocol shall be designed as a full-stack protocol, instead of just a lending product. It shall allow developers and businesses to support new use cases by leveraging its Income Portfolio and EA Platforms. As a result, it should allow different pools to apply different underwriting policies and fee schedules. For example, it shall be able to support interest-only, minimal monthly payment (e.g. credit card), or installments (e.g. car loan, mortgage).
+Huma Protocol is designed as a full-stack protocol, instead of just a lending product. It allows developers and businesses to support new use cases by leveraging its Income Portfolio and EA Platforms. As a result, different pools can apply different underwriting policies and fee schedules. For example, For example, it is able to support interest-only, minimal monthly payments or installments.
 
 #### 4.2 User Roles
 
@@ -133,35 +133,35 @@ There are various user roles in the protocol. Some are at protocol-level. The ot
 
 **4.2.1 Protocol-level Admin Roles**
 
-**Protocol Owner:** Protocol Owner is responsible for the administration of the entire protocol. It will be a multisig. After the initial deployment, the ownership will be transferred from the deployer to this multisig protocol owner. This is the only account who can change various protocol configurations and perform administrative tasks, most notably, adding and removing pool owners and pausers, unpausing the protocol, and transferring protocol income from pool wallet to protocol treasury.
+**Protocol Owner:** Protocol Owner (a multi-sig) is responsible for the administration of the entire protocol. This is the only account that can change various protocol configurations and perform administrative tasks, most notably, adding and removing pool owners and pausers, unpausing the protocol, and transferring protocol income from pool wallet to protocol treasury.
 
-**Pausers:** Pausers can call a pause function to pause the entire protocol. When the protocol is paused, no money moves in or out of the protocol. This is expected to happen in very rare cases, such as major security attacks, or serious security issues discovered. It is expected for the protocol to have multiple pausers, possibly including an external security monitoring firm. The only thing that a pauser can do is to pause the protocol, nothing else. After the protocol is paused, only the Protocol Owner can unpause it.
+**Pausers:** Pausers can pause the entire protocol. When the protocol is paused, no money moves in or out of the protocol. This is expected to happen in very rare cases, where the safety and integrity of the protocol is threatened. There can be multiple pausers, including external security monitoring firms. After the protocol is paused, only the Protocol Owner can unpause it.
 
 **4.2.2 Pool-level User Roles**
 
-**Pool Owners**: Pool owners are a list of addresses that are approved by the ProtocolProtocol Owner to create and manage pools. They config the key parameters for the pool, and choose the Evaluation Agent and set the fee structure through Fee Manager. They will be rewarded with a percentage of the pool income. They are the only users who can transfer this reward from the pool.
+**Pool Owners**: Pool owners are a list of addresses that are approved by the Protocol Owner to create and manage pools. They configure the key parameters for the pool, choose the Evaluation Agent and set the fee structure through Fee Manager. They earn a percentage of the pool income as a reward.&#x20;
 
-**Evaluation Agent:** The Evaluation Agent (EA) makes underwriting decisions, approve or diapprove credit requests for a pool. Each pool can only have one Evaluation Agent. We envision most of the EAs are automated. The protocol also allows it to be manual. They will be rewarded with a percentage of the pool income for their contribution. They are the only accounts who can transfer this reward from the pool.
+**Evaluation Agent:** The Evaluation Agent (EA) makes underwriting decisions, approve or disapprove credit requests for a pool. Each pool can only have one Evaluation Agent. We envision most of the EAs to be automated, but the protocol also allows EAs to have human supervision. They earn a percentage of the pool income for their contribution as a reward.&#x20;
 
-To drive accountability, similar to the Pool Owners, EAs are required to deposit capital to the pools that they are supporting. Only after both the Pool Owner and EA have deposited the required capital, can a pool be enabled to accept capital from others Liquidity Providers. Pool owner can choose to change the evaluate agent for the pool. The new EA needs to meet the deposit requirement before the change can happen. When this happens, all the accrued EA rewards are paid to the old EA immediately.
+To drive accountability, similar to the Pool Owners, EAs are required to commit capital to the pools that they are supporting. Only after both the Pool Owner and EA have deposited the required capital, can a pool be enabled to accept capital from other Liquidity Providers. In rare occasions, Pool Owners are allowed to change the EA for the pool. The new EA needs to meet the deposit requirements before the change can happen. All the accrued EA rewards are paid to the old EA immediately after the change takes effect.
 
-**Liquidity Providers:** Liquidity Providers (a.k.a. Lenders) provide capital to the pool and expect financial returns for their investment. The only actions that they can do are depositing and withdrawing capital from the pool.
+**Liquidity Providers:** Liquidity Providers (a.k.a. Lenders) provide capital to the pool and earn a proportional share of the pool income. The can only deposit and withdraw capital from the pool.
 
-**Borrowers:** Borrowers are the party who initiates a credit line with the pool and drawdown against the credit line. They are responsible for paying interest and minimal principal payment per pay period.
+**Borrowers:** Borrowers initiate credit requests with the pools and drawdown against it if approved by the designated EA. They are responsible for paying interest and minimal principal payment per pay period.
 
 #### 4.3 Protocol Administration
 
-**Pause Protocol:** At critical time, any of the pausers can pause the protocol. After a protocol is paused, it does not accept any actions that involve money flow in or out, i.e., no deposits, no withdrawals, no drawdowns, no repayments.
+**Pause Protocol:** In an emergency, any of the pausers can pause the protocol. After a protocol is paused, it does not accept any actions that involve money flow in or out, i.e., no deposits, no withdrawals, no drawdowns, no repayments.
 
 **Unpause Protocol:** Resume the protocol operations. Only the Protocol Owner can unpause the protocol.
 
 **Add / Remove liquidity assets allowed:** This is the list of assets to be allowed as the underlying assets for pools in the protocol. We will only support stablecoins in the foreseeable future, starting with USDC.
 
-**Change Protocol-level Grace Period for Defaults:** Protocol offers the default value for the grace period for defaults. Each pool can overwrite this default value.
+**Change Protocol-level Grace Period for Defaults:** Pools can overwrite the protocol-level grace period after which an overdue debt is considered a default.&#x20;
 
-**Change Protocol Treasury:** This is the wallet address for the protocol treasury. Only pool owner can change this address.
+**Change Protocol Treasury:** Only protocol owner can change the protocol treasury wallet address.
 
-**Change Protocol Fee:** Since Huma is a risk-on protocol, it is fair for the protocol to take a share of all the fees and interest generated in the protocol. To keep it simple, the protocol fee will simply be a percentage of all the fees and interest generated in the protocol. Initially, this Protocol Fee percentage will be configured by the protocol owner, later on, Huma DAO will take over the responsibility.
+**Change Protocol Fee:** Since Huma is a risk-on protocol with many participants and reward structures, it takes a share of all the fees and interest generated in the protocol. To keep it simple, the protocol fee is a percentage of all the fees and interest generated in the protocol.&#x20;
 
 **Add or remove pool owners:** Add or remove a pool owner.
 
@@ -175,7 +175,7 @@ Under Huma protocol, many pools can be created for specific business opportuniti
 
 Both Pool Owner and Evaluation Agent commit to provide a certain percentage of the pool liquidity. Once the pool is initiated, and after the Pool Owner and Evaluation Agent deposit the required liquidity, the pool can be enabled by the Pool Owner to accept additional deposits from the lenders. At that point, the pool will open to the borrowers.
 
-Pools can be enabled when the essential configurations are setup and the required minimal liquidity has been deposited by the admins.
+Pools can be enabled when the essential configurations are setup and the required minimal liquidity has been deposited.
 
 **4.4.2 Pool Configurations**
 
@@ -184,7 +184,7 @@ A pool owner can set and change the following configurations for the pool. Pleas
 * Pool Liquidity Cap
 * Pool Owner Capital Commitment
 * Evaluation Agent Capital Commitment
-* Max Amout Per Credit Line
+* Max Amount Per Credit Line
 * Pool APR
 * Origination Fee
 * Late Payment Fee
@@ -195,19 +195,19 @@ A pool owner can set and change the following configurations for the pool. Pleas
 * Pay Period Duration
 * Principal Payment Requirement Per Period
 
-#### 4.5 LP Participations
+#### 4.5 LP Participation
 
 **4.5.1 Qualification**
 
-LP needs to pass KYC/KYB/AML to participate in the pool. The process will be managed off-chain in v1 through partner services like Credora or Parallel Markets. As a result, the pool owner will add LP to the pool. Only after that, the LP can deposit and withdraw.
+When required, LPs go through a KYC/KYB/AML process to participate in the pool. The process will be managed off-chain in v1 through partner services. Once qualified, the pool owner will add LP to the pool's allowed lenders list.&#x20;
 
 **4.5.2 Deposits**
 
-LP can contribute capitals to the pool as long as it has not reached the liquidity cap set by the pool owner. There is no max or min requirement for each deposit. After each deposit, the withdrawalLockupPeriod is reset, i.e., the LP has to wait for the period defined by withdrawalLockupPeriod before withdrawal.
+LPs can contribute capital to the pool as long as it has not reached the liquidity cap set by the pool owner. There is no max or min requirement for each deposit. After each deposit, the withdrawalLockupPeriod is reset, i.e., the LP has to wait for the period defined by withdrawalLockupPeriod before withdrawal.
 
 **4.5.3 Withdrawal**
 
-Once the withdrawalLockupPeriod is passed, the LP can choose to withdraw from the pool. The LP can choose to withdraw a portion or the entire withdrawable amount.
+Once the withdrawalLockupPeriod is passed, the LP is free to withdraw a portion or their entire withdrawable amount from the pool.
 
 In v2, we are planning to introduce an opportunity cost pricing as a form of exit fee to make pools more sustainable and fair to all lenders.
 
@@ -219,7 +219,7 @@ Huma Distribution Token (HDT) is a utility token used to track LP’s contributi
 
 **Borrowers access capital from specific pools that match their needs.**
 
-Institutional or retail borrowers are able to borrow from lending pools, as long as they have active income portfolios and/or receivables supported by the lending pool.
+Institutional or retail borrowers can borrow from lending pools, as long as they have active income portfolios and/or receivables supported by the lending pool.
 
 Each borrower goes through an automated evaluation process by the designated Evaluation Agent of the pool. The evaluation agent determines whether the borrower can borrow and at which terms.
 
@@ -227,17 +227,15 @@ Optionally, EAs can also confirm KYC/KYB/AML requirements for borrowers if requi
 
 **4.6.1 Credit Line**
 
-What Huma offers to the borrowers are credit lines. Based on the information that the Evaluation Agent can gather about the account, it approves a credit line with a credit limit. After the approval, the borrower can drawdown or payback at any time that they want as long as the total outstanding balance is below the credit limit.
+Within the Huma Protocol, borrowers are always interacting with a credit line. Based on the information that the Evaluation Agent gathers about the account, it approves a credit line up to a credit limit. The borrower can drawdown or payback at any time that they want, as long as the total outstanding balance is below this limit.
 
-EA can update the terms of the credit line for various reasons. Some sample reasons are massive changes to the external environment, or changes to the borrower’s financial situation, or algorithm enhancements.
-
-In Web3, it is preferred for the users to initiate any actions rather than the protocol. We want to give EA the power to change the terms of the credit line before a new drawdown, at the same time, it suits Web3 pattern better if this process is triggered by the users. Instead of having EAs periodically update the terms of the credit lines, we can allow the users to get the latest terms of their credit line before requesting a new drawdown. This will prompt the EA to run its algorithm and update the contract with the latest terms.
+EAs can update an existing credit line, in cases where there are substantial changes to the external environment, or to the borrower’s financial situation.
 
 **4.6.2 Interest Rate**
 
 Each credit line has its personalized interest rate. The Evaluation Agent will consider each account’s credit history and income stability to determine the interest rate.
 
-This rate can be changed by the Evaluation Agent. Since it is a credit line, the new interest rate will apply to both the existing balance and new drawdowns. The rate change will take effect starting from the next pay period, thus, there is no change to the due amount to the current pay period.
+In rare occasions, EAs can update this rate. Since it is a credit line, the new interest rate will apply to both the existing balance and new drawdowns. The rate change will take effect starting from the next pay period, thus, there is no change to the due amount to the current pay period.
 
 **4.6.3 Payments Per Cycle**
 
@@ -255,13 +253,13 @@ Interest Fee is computed using the following formula. The corrections are introd
 
 Principal Due is the product of Total Outstanding Balance and the min principal payment rate.
 
-Please note in solidity, all divisions round to zero. We will round Late Fee, Interest Fee, and Principal Due separately. For example, if Late Fee is `3.3`, Interest Fee is `2.9`, Principle Due is `4.9`, the Amount Due is `9`, instead of `11`.
+Please note, in solidity, all divisions round to zero. We will round Late Fee, Interest Fee, and Principal Due separately. For example, if Late Fee is `3.3`, Interest Fee is `2.9`, Principle Due is `4.9`, the Amount Due is `9`, instead of `11`.
 
 #### 4.7 Risk Management
 
 **4.7.1 Underwriting Decision**
 
-EA takes the borrowers’ income portfolio, credit history, and other factors to decide if to approve a credit line, the credit limit to be approved and the interest rate for the credit line.
+EA takes the borrowers’ income portfolio, credit history, and other factors to decide whether to approve a credit line, the credit limit and the interest rate.
 
 While we believe the majority of decisions are going to be fully automated, for sophisticated lending cases, EAs can be configured to work in hybrid mode, requiring human supervision to do the final approval.
 
@@ -279,13 +277,13 @@ At the same time, the borrowing record will still be open and the borrower still
 
 #### 4.8 Income and Loss Distribution
 
-The protocol defines a percentage of all pool income that goes to the protocol treasury. Huma DAO will then decide how to distribute the income. We know a portion of it will go to the IPA developers.
+The protocol defines a percentage of all pool income that goes to the protocol treasury. Huma DAO periodically decides how to distribute the income to various participants.
 
-For any pool income, it will allocate the portion for the protocol first, and distribute the remainder to the pool. For the portion allocated to the pool, it will first distribute the commission to the EA. The remainder will be distributed to all the LPs per their share of ownership of the liquidity pool.
+Pool income, is distributed to the pool participants after protocol income is deducted. Out of all pool participants, EAs commission is distributed first. The remainder is distributed to the LPs per their share of ownership of the pool.
 
-For the amount allocated for the protocol, to avoid unnecessary gas waste, it will not be moved to the protocol treasury immediately. it will be kept in the pool wallet but with a clear record. The protocol owner can trigger the withdrawal any time and resulting in an immediate transfer.
+For the amount allocated for the protocol, the protocol owner has flexibility to decide when to withdraw its balance.
 
-The same process applies to the commission fee for the EAs. It will be kept in the pool wallet with a clear record and the EA can trigger a transfer at its sole discretion.
+The same process applies to the commission fee for the EAs. It is kept in the pool balance with a clear record and the EA can trigger a transfer at its sole discretion.
 
 #### 4.9 Upgradability
 
