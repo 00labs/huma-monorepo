@@ -35,9 +35,9 @@ The DeFi infrastructure for serving them is mostly missing today, and Huma Proto
 
 We believe the future of DeFi is powered by automated underwriting supported by signals about the borrowers’ **Ability, Willingness, and Commitment** to pay.
 
-* **Automated risk underwriting** (ARU): Most successful fintech players serve high volume of credit applications in an automated fashion, often utilizing alternative data sources. Similarly, major DeFi protocols are all run by Automated Market Makers(AMMs). However, it is a lot more complicated to support ARU in a risk-on world than in a risk-off world. Naturally, ARUs will evolve as intelligent models and will utilize additional data points (e.g. income, credit worthiness).
+* **Automated risk underwriting** (ARU): Most successful fintech players serve high volume of credit applications in an automated fashion, often utilizing a varieties of data sources. Similarly, major DeFi protocols are all run by Automated Market Makers(AMMs). However, it is a lot more complicated to support ARU in a risk-on world than in a risk-off world. Naturally, ARUs will evolve as additional data points (e.g. income, credit worthiness) and better intelligent models are introduced.
 * **Income**: Income (cashflow) is the most vital signal in a wide array of underwriting scenarios, since it offers the best measure for **ability to pay**. The more comprehensive we can understand income, the better we can underwrite.
-* **Receivables**: Today, **collateral** in DeFi mainly represents a handful of digital assets backing debt. The majority of businesses and people in the world do not have tons of digital assets idling, but they do have **receivables** in the form of future invoices, transactions, subscription revenue, paychecks, royalties etc. In fact, in structured finance, such receivables are regularly used in the securitization of loans. Receivables are the best signal for **commitment to pay**, because once an entity transfers the ownership of their receivables to the lending platform, it acts as a payment guarantee. We actually think collaterals are just special forms of receivables.
+* **Receivables**: Today, **collateral** in DeFi mainly represents a handful of digital assets. The majority of businesses and people in the world do not have tons of digital assets idling, but they do have **receivables** in the form of future invoices, transactions, subscription revenue, paychecks, royalties etc. In fact, in structured finance, such receivables are regularly used in the securitization of loans. Receivables are the best signal for **commitment to pay**, because once an entity transfers the ownership of their receivables to the lending platform, it acts as a payment guarantee. We actually think collaterals are just special forms of receivables.
 * **Credit worthiness**: Credit worthiness is the most valuable signal for **willingness to pay**. Traditional credit scores played an important role for a long time, however it’s known to be biased, and heavily centralized. We need alternative decentralized systems to carry these signals and to establish borrowing accountability.
 
 **1.1 Protocol Overview**
@@ -64,6 +64,7 @@ Example sources include;
   * Yield farming income
   * Staking, miner and validator income
   * Gaming income
+  * NFT royalties
   * …
 * Off-chain
   * Transactions and SaaS revenue like Plaid, Teller, Stripe, Quickbooks, Recurly
@@ -119,13 +120,13 @@ On top of the Income Portfolio Platform and Evaluation Agent, Huma Lending Proto
 
 Transparency is critical to building community confidence. We will operate Huma Protocol at the highest level of transparency.
 
-For wallets representing different roles, we will require multi-sig with a diverse group of signees.
+For wallets representing administrative roles, we will require multi-sig with a diverse group of signees.
 
 In addition, Timelock will be used so that the community has time to react to the proposed changes to the protocol.
 
 **4.1.2 Extensibility**
 
-Huma Protocol is designed as a full-stack protocol, instead of just a lending product. It allows developers and businesses to support new use cases by leveraging its Income Portfolio and EA Platforms. As a result, different pools can apply different underwriting policies and fee schedules. For example, For example, it is able to support interest-only, minimal monthly payments or installments.
+Huma Protocol is designed as a full-stack protocol, instead of just a lending product. It allows developers and businesses to support new use cases by leveraging its Income Portfolio and EA Platforms. As a result, different pools can apply different underwriting policies and fee schedules. For example, For example, it is able to support interest-only and minimal monthly payments, and it can be easily extended to support installments.
 
 #### 4.2 User Roles
 
@@ -157,9 +158,9 @@ To drive accountability, similar to the Pool Owners, EAs are required to commit 
 
 **Add / Remove liquidity assets allowed:** This is the list of assets to be allowed as the underlying assets for pools in the protocol. We will only support stablecoins in the foreseeable future, starting with USDC.
 
-**Change Protocol-level Grace Period for Defaults:** Pools can overwrite the protocol-level grace period after which an overdue debt is considered a default.&#x20;
+**Change Protocol-level Grace Period for Defaults:** This is the protocol-level default value for the grace period after which an overdue debt is considered a default. Individual pools can overwrite this protocol-level setting to suit the needs of their pools. &#x20;
 
-**Change Protocol Treasury:** Only protocol owner can change the protocol treasury wallet address.
+**Change Protocol Treasury:** This is the protocol treasury wallet address. Only protocol owner (a multisig) can make this change.
 
 **Change Protocol Fee:** Since Huma is a risk-on protocol with many participants and reward structures, it takes a share of all the fees and interest generated in the protocol. To keep it simple, the protocol fee is a percentage of all the fees and interest generated in the protocol.&#x20;
 
@@ -175,11 +176,9 @@ Under Huma protocol, many pools can be created for specific business opportuniti
 
 Both Pool Owner and Evaluation Agent commit to provide a certain percentage of the pool liquidity. Once the pool is initiated, and after the Pool Owner and Evaluation Agent deposit the required liquidity, the pool can be enabled by the Pool Owner to accept additional deposits from the lenders. At that point, the pool will open to the borrowers.
 
-Pools can be enabled when the essential configurations are setup and the required minimal liquidity has been deposited.
-
 **4.4.2 Pool Configurations**
 
-A pool owner can set and change the following configurations for the pool. Please see Huma Protocol Spec for more details.
+A pool owner can set and change the following configurations for the pool.&#x20;
 
 * Pool Liquidity Cap
 * Pool Owner Capital Commitment
@@ -199,7 +198,7 @@ A pool owner can set and change the following configurations for the pool. Pleas
 
 **4.5.1 Qualification**
 
-When required, LPs go through a KYC/KYB/AML process to participate in the pool. The process will be managed off-chain in v1 through partner services. Once qualified, the pool owner will add LP to the pool's allowed lenders list.&#x20;
+When required by the pool, LPs go through a KYC/KYB/AML process to participate in the pool. The process will be managed off-chain in v1 through partner services. Once qualified, the pool owner will add LP to the pool's allowed lenders list.&#x20;
 
 **4.5.2 Deposits**
 
@@ -210,6 +209,8 @@ LPs can contribute capital to the pool as long as it has not reached the liquidi
 Once the withdrawalLockupPeriod is passed, the LP is free to withdraw a portion or their entire withdrawable amount from the pool.
 
 In v2, we are planning to introduce an opportunity cost pricing as a form of exit fee to make pools more sustainable and fair to all lenders.
+
+Since the Pool Owner and EA are required to commit capital to enable the pool, they cannot pull out the amount required by the pool until the pool is set to retire. Consequently, they have to wait until all other LPs have withdrawn their investment before they can withdraw their own capital.  &#x20;
 
 **4.5.4 Pool Liquidity Ownership**
 
@@ -223,7 +224,7 @@ Institutional or retail borrowers can borrow from lending pools, as long as they
 
 Each borrower goes through an automated evaluation process by the designated Evaluation Agent of the pool. The evaluation agent determines whether the borrower can borrow and at which terms.
 
-Optionally, EAs can also confirm KYC/KYB/AML requirements for borrowers if required by PoolOwners.
+Optionally, EAs can also confirm KYC/KYB/AML requirements for borrowers if required by Pool Owners.
 
 **4.6.1 Credit Line**
 
@@ -277,11 +278,11 @@ At the same time, the borrowing record will still be open and the borrower still
 
 #### 4.8 Income and Loss Distribution
 
-The protocol defines a percentage of all pool income that goes to the protocol treasury. Huma DAO periodically decides how to distribute the income to various participants.
+The protocol defines a percentage of all pool income that goes to the protocol treasury. Huma DAO periodically decides how to distribute the income to various participants.&#x20;
 
 Pool income, is distributed to the pool participants after protocol income is deducted. Out of all pool participants, EAs commission is distributed first. The remainder is distributed to the LPs per their share of ownership of the pool.
 
-For the amount allocated for the protocol, the protocol owner has flexibility to decide when to withdraw its balance.
+For the amount allocated for the Pool Owner, the Pool Owner has flexibility to decide when to withdraw its balance.
 
 The same process applies to the commission fee for the EAs. It is kept in the pool balance with a clear record and the EA can trigger a transfer at its sole discretion.
 
