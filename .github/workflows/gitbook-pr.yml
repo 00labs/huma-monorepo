@@ -21,11 +21,11 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - shell: pwsh
+      - name: Compare diff with main
         id: check_diff
         run: |
-          $diff = git diff --name-only origin/main origin/gitbook
-          Write-Host "::set-output name=file_changed::$diff"
+          diff=$(git diff --name-only origin/main origin/gitbook)
+          echo "file_changed=$diff" >> $GITHUB_OUTPUT
       - name: Create pull request
         if: ${{ steps.check_diff.outputs.file_changed }}
         id: cpr
