@@ -27,10 +27,8 @@ jobs:
           token: ${{ secrets.BOT_TOKEN }}
       - name: Rebase main branch
         run: |
-          git config --list
           git config --global user.email "bot@huma.finance"
           git config --global user.name "Huma-bot"
-          git config --list
           git pull
           git checkout gitbook
           git merge origin/main --commit --no-edit
