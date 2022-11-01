@@ -18,15 +18,17 @@ jobs:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     env:
-      GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.REVIWER_TOKEN }}
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Rebase main branch
         run: |
           git config --global user.email "bot@huma.finance"
           git config --global user.name "Huma bot"
           git fetch
           git checkout gitbook
-          git merge origin/main --commit
+          git merge origin/main --commit --no-edit
           git push
