@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - name: Compare diff with main
+      - shell: pwsh
         id: check_diff
         run: |
           $diff = git diff --name-only origin/main origin/gitbook
