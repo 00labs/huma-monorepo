@@ -254,8 +254,6 @@ Interest Fee is computed using the following formula. The corrections are introd
 
 Principal Due is the product of Total Outstanding Balance and the min principal payment rate.
 
-Please note, in solidity, all divisions round to zero. We will round Late Fee, Interest Fee, and Principal Due separately. For example, if Late Fee is `3.3`, Interest Fee is `2.9`, Principle Due is `4.9`, the Amount Due is `9`, instead of `11`.
-
 #### 4.7 Risk Management
 
 **4.7.1 Underwriting Decision**
