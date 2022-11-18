@@ -46,7 +46,7 @@ We believe the future of DeFi is powered by automated underwriting supported by 
 
 Figure 1 shows a high-level overview of Huma Protocol:
 
-* **Decentralized Signal Portfolio** - This is an open platform that facilitates access to high quality signals about a borrower's income, assets and liabilities. These signals can be gathered from a verity of on-chain or off-chain sources. Any developer can add a new signal source to enchance underwriting. Please refer to DSP Developer Guide for more information.
+* **Decentralized Signal Portfolio** - This is an open platform that facilitates access to high quality signals about a borrower's income, assets and liabilities. These signals can be gathered from a variety of on-chain or off-chain sources. Any developer can add a new Signal Adapter for a particular signal source to enhance underwriting. Please refer to DSP Developer Guide for more information.
 * **Receivables** - It is the infrastructure that manages receivables captured in the form of NFTs, which can be transferred, and used to secure debt.
 * **Evaluation Agent** - This is an open platform for developers to contribute various risk underwriting models. Please refer to Evaluation Agent Developer Guide for more information.
 * **Aura** - This is the layer for capturing, reporting, and leveraging credit trustworthiness. Aura is not in scope for our v1 protocol. In v2, Huma will integrate with decentralized reputation systems that combine on-chain and off-chain data points.&#x20;
@@ -64,7 +64,7 @@ Asset related signals help understand the quality and quantity of the assets the
 
 Liabilities are signals about a borrower’s utilization of their assets as collateral and their future income.
 
-DSP defines a unified interface for the community to easily contribute to Huma’s vision. Developers can participate in the effort by defining specific signals that can improve underwriting decisions. Signals are open-sourced for full transparency. Please refer to the technical documentation to contribute.&#x20;
+DSP defines a unified interface for the community to easily contribute to Huma’s vision. Developers can participate in the effort by developing Signal Adapters for specific signals that can improve underwriting decisions. Signal Adapters are open-sourced for full transparency. Please refer to the technical documentation to contribute.&#x20;
 
 DSP is agnostic to where such signals can be gathered. Examples include;
 
@@ -79,27 +79,27 @@ DSP is agnostic to where such signals can be gathered. Examples include;
   * …
 * Off-chain
   * Balances, transactions and revenue like Plaid, Teller, Stripe, Quickbooks, Recurly
-  * Invoices like Stripe, PayPal, Invoice2Go, Square, Zoho
+  * Invoices like Bill, Stripe, PayPal, Invoice2Go, Square, Zoho
   * Income data aggregates like Pinwheel, Finicity, Argyle
-  * Sales data like Shopify, Amazon,
+  * Sales data like Shopify, Amazon
   * Credit/debt data aggregates like Experian API
   * …
 
-#### 2.1 Life Cycle of a Signal
+#### 2.1 Life Cycle of a Signal Adapter
 
-1. Developers implement the Signal, conforming to interface and documentation guidelines, then submit it to Huma DAO for review
-2. Once accepted by Huma DAO, the Signal will be deployed on DSP with the appropriate open source license.
-3. All the accepted Signals will be listed under the same directory, for the Evaluation Agents (EAs) to consume.
-4. Performance stats about Signals will be gathered regularly and shared as metadata. This will be valuable to the EA developers. It will also serve as an input to rewards are distributed to different contributors.
-5. Each Signal shall be maintained by the original developer, Huma DAO, or the community.
+1. Developers implement the Signal Adapter, conforming to interface and documentation guidelines, then submit it to Huma DAO for review
+2. Once accepted by Huma DAO, the Signal Adapter will be deployed on DSP with the appropriate open source license.
+3. All the accepted Signal Adapters will be listed under the same directory, for the Evaluation Agents (EAs) to consume.
+4. Performance stats about Signal Adapters will be gathered regularly and shared as metadata. This will be valuable to the EA developers. It will also serve as an input to rewards are distributed to different contributors.
+5. Each Signal Adapter shall be maintained by the original developer, Huma DAO, or the community.
 
 #### 2.2 Developer Participation and Rewards
 
-Developers can contribute to the initial development and ongoing maintenance of the Signals.
+Developers can contribute to the initial development and ongoing maintenance of the Signal Adapters.
 
 To bootstrap the development, Huma will offer bounty programs.&#x20;
 
-A portion of the protocol revenue will be carved out to reward Signal developers and maintainers. Huma DAO will review the contributions and determine how to split the total reward pool to different contributors.
+A portion of the protocol revenue will be carved out to reward Signal Adapter developers and maintainers. Huma DAO will review the contributions and determine how to split the total reward pool to different contributors.
 
 ### 3.0 Evaluation Agent (EA)
 
@@ -115,11 +115,11 @@ All the EAs are expected to run off-chain considering the computational complexi
 
 EA developers submit their models, EAs, to Huma DAO for review. Once approved, the EAs are deployed in a secure container provided by Huma. This hosting platform will be open-sourced, even though Huma does not require the EAs to open source their models.
 
-Huma DAO generates an EA NFT with all the relevant metadata for the deployed EA and creates an entry in the EA Registry.&#x20;
+An NFT is minted to represent each EA. Although any developer can mint an EA NFT, only Huma DAO can update the relevant metadata (e.g. status, performance) for each EA NFT and creates an entry in the EA Registry so that it is available to be discovered by pool owners.&#x20;
 
 Each pool selects an EA from this registry to delegate its underwriting. EAs can further specialize to serve the use cases of a specific pool, or stay more generic to support more pools.
 
-In future iterations, we plan to fully decentralize the EA platform.
+The EAs are fully decentralized, but the hosting platform is centralized at this moment due to the need for complicated computations. As decentralized execution engines become more powerful, we will be proactively looking for path to transition the EA hosting platform to fully decentralized as well.&#x20;
 
 #### 3.2 EA rewards and responsibilities
 
@@ -129,7 +129,7 @@ EA takes a percentage of the pool income. It is defined in the configuration par
 
 ### 4.0 Lending Protocol
 
-On top of the Income Portfolio Platform and Evaluation Agent, Huma Lending Protocol makes it possible to create a credit line for every wallet. Different pools can be built to leverage different income streams and for various use cases, from business loan, personal loan, factoring, to many other forms of lending products. The protocol is designed to let developers and busineses develop and launch new products easily on it.
+On top of the Decentralized Signal Portfolio and Evaluation Agent, Huma Lending Protocol makes it possible to create a credit line for every wallet. Different pools can be built to leverage different income streams and for various use cases, from business loan, personal loan, factoring, to many other forms of lending products. The protocol is designed to let developers and busineses develop and launch new products easily on it.
 
 #### 4.1 Design Principles
 
