@@ -115,11 +115,11 @@ All the EAs are expected to run off-chain considering the computational complexi
 
 EA developers submit their models, EAs, to Huma DAO for review. Once approved, the EAs are deployed in a secure container provided by Huma. This hosting platform will be open-sourced, even though Huma does not require the EAs to open source their models.
 
-An NFT is minted to represent each EA. Although any developer can mint an EA NFT, only Huma DAO can update the relevant metadata (e.g. status, performance) for each EA NFT and creates an entry in the EA Registry so that it is available to be discovered by pool owners.&#x20;
+An NFT is minted to represent each EA. Although any developer can mint an EA NFT, only Huma DAO can update the relevant metadata (e.g. status, performance) for each EA NFT and creates an entry in the EA Registry so that it is discoverable by pool owners.&#x20;
 
 Each pool selects an EA from this registry to delegate its underwriting. EAs can further specialize to serve the use cases of a specific pool, or stay more generic to support more pools.
 
-The EAs are fully decentralized, but the hosting platform is centralized at this moment due to the need for complicated computations. As decentralized execution engines become more powerful, we will be proactively looking for path to transition the EA hosting platform to fully decentralized as well.&#x20;
+The EAs are fully decentralized, but the hosting platform is centralized at this moment due to the need for complicated computations. As decentralized execution engines become more powerful, we will transition the EA hosting platform to a decentralized execution platform as well.&#x20;
 
 #### 3.2 EA rewards and responsibilities
 
