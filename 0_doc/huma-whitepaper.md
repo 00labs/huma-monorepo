@@ -5,7 +5,7 @@
 ### Table of Content
 
 * 1.0 Introduction
-* 2.0 Income Portfolio Platform
+* 2.0 Decentralized Signal Portfolio (DSP)
 * 3.0 Evaluation Agent (EA)
 * 4.0 Lending Protocol
   * 4.1 Design Principles
@@ -38,71 +38,88 @@ We believe the future of DeFi is powered by automated underwriting supported by 
 * **Automated risk underwriting** (ARU): Most successful fintech players serve high volume of credit applications in an automated fashion, often utilizing a variety of data sources. Similarly, major DeFi protocols are all run by Automated Market Makers(AMMs). However, it is a lot more complicated to support ARU in a risk-on world than in a risk-off world. Naturally, ARUs will evolve as additional data points (e.g. income, credit worthiness) and better intelligent models are introduced.
 * **Income**: Income (cashflow) is the most vital signal in a wide array of underwriting scenarios, since it offers the best measure for **ability to pay**. The more comprehensive we can understand income, the better we can underwrite.
 * **Receivables**: Today, **collateral** in DeFi mainly represents a handful of digital assets. The majority of businesses and people in the world do not have tons of digital assets idling, but they do have **receivables** in the form of future invoices, transactions, subscription revenue, paychecks, royalties etc. In fact, in structured finance, such receivables are regularly used in the securitization of loans. Receivables are the best signal for **commitment to pay**, because once an entity transfers the ownership of their receivables to the lending platform, it acts as a payment guarantee. We actually think collaterals are just special forms of receivables.
-* **Credit worthiness**: Credit worthiness is the most valuable signal for **willingness to pay**. Traditional credit scores played an important role for a long time, however it’s known to be biased, and heavily centralized. We need alternative decentralized systems to carry these signals and to establish borrowing accountability.
+* **Credit worthiness**: Credit worthiness is the most valuable signal for **willingness to pay**. Traditional credit scores played an important role for a long time, however they are known to be biased, and heavily centralized. We need alternative decentralized systems to carry these signals and to establish borrowing accountability.
 
 **1.1 Protocol Overview**
 
-<figure><img src=".gitbook/assets/Figure1PNG.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/ProtocolArch.png" alt=""><figcaption></figcaption></figure>
 
 Figure 1 shows a high-level overview of Huma Protocol:
 
-* **Income Portfolio** - It is a comprehensive view of users’ Web3 and Web2 income. Income Portfolio Adapters (IPA) can be developed to capture income from Web3 income sources such as on-chain payments, staking, mining, NFT royalty, Web3 payroll, and Web2 sources. The Income Portfolio Platform is built in such a way that any developers in the community can contribute and share the upside of the IPAs. Please refer to IPA Developer Guide for more information.
+* **Decentralized Signal Portfolio** - This is an open platform that facilitates access to high quality signals about a borrower's income, assets and liabilities. These signals can be gathered from a verity of on-chain or off-chain sources. Any developer can add a new signal source to enchance underwriting. Please refer to DSP Developer Guide for more information.
 * **Receivables** - It is the infrastructure that manages receivables captured in the form of NFTs, which can be transferred, and used to secure debt.
 * **Evaluation Agent** - This is an open platform for developers to contribute various risk underwriting models. Please refer to Evaluation Agent Developer Guide for more information.
-* **Aura** - This is the layer for capturing, reporting, and leveraging credit trustworthiness. Aura is not in scope for our v1 protocol. In v2, we will either compose a decentralized credit system or work with a consortium of innovators to define the new credit standard for Web3.
+* **Aura** - This is the layer for capturing, reporting, and leveraging credit trustworthiness. Aura is not in scope for our v1 protocol. In v2, Huma will integrate with decentralized reputation systems that combine on-chain and off-chain data points.&#x20;
 * **Lending Protocol** - This is a generic lending pool. It is designed to suit a broad range of use cases from receivable refactoring to general purpose credit lines. Please refer to Huma Lending Protocol Technical Design for how to expand the protocol to launch more lending products.
 
-### 2.0 Income Portfolio Platform
+### 2.0 Decentralized Signal Portfolio (DSP)
 
-Income Portfolio Platform (IPP) provides a comprehensive view of users’ on-chain and off-chain income. It is an open framework for the community to easily contribute to Huma’s vision. Developers can participate in the effort by building Income Portfolio Adapters (IPAs) for various income sources. Each IPA shall understand the amount, frequency, and other objective quantities that describe the income associated with a wallet. This can include information about predicted future income from that source. The API interface of an IPA is covered in the technical design doc.
+High quality automated underwriting requires high quality signals. Decentralized Signal Portfolio (DSP) provides a comprehensive view of borrowers’ **income, assets and liabilities**, gathered from sources both on-chain and off-chain.&#x20;
 
-Example sources include;
+DSP supports authenticated signals where the borrower can voluntarily authenticate financial accounts to share specific information. These signals can be associated with on-chain or off-chain identity. DSP has a built in encrypted IPFS based storage to keep a snapshot of signals used in underwriting. This design gives the borrower the rights to their own data.&#x20;
+
+Income related signals help understand the amount, frequency, and other objective quantities that describe the income associated with a wallet. This can include information about predicted future income from that source as well.&#x20;
+
+Asset related signals help understand the quality and quantity of the assets the borrower is holding.
+
+Liabilities are signals about a borrower’s utilization of their assets as collateral and their future income.
+
+DSP defines a unified interface for the community to easily contribute to Huma’s vision. Developers can participate in the effort by defining specific signals that can improve underwriting decisions. Signals are open-sourced for full transparency. Please refer to the technical documentation to contribute.&#x20;
+
+DSP is agnostic to where such signals can be gathered. Examples include;
 
 * On-chain sources
   * Direct payments from treasuries, i.e. Gnosis SAFE’s, Circle Business Account
   * Payments/invoices like Request Network, Utopia Labs, Coinshift, Superfluid
-  * Yield farming income
+  * Positions in lending pools
+  * Yield farming
   * Staking, miner and validator income
   * Gaming income
   * NFT royalties
   * …
 * Off-chain
-  * Transactions and SaaS revenue like Plaid, Teller, Stripe, Quickbooks, Recurly
+  * Balances, transactions and revenue like Plaid, Teller, Stripe, Quickbooks, Recurly
   * Invoices like Stripe, PayPal, Invoice2Go, Square, Zoho
   * Income data aggregates like Pinwheel, Finicity, Argyle
   * Sales data like Shopify, Amazon,
   * Credit/debt data aggregates like Experian API
   * …
 
-#### 2.1 Life Cycle of an IPA
+#### 2.1 Life Cycle of a Signal
 
-1. Developers build the IPA, conforming to IPP API and documentation guidelines, and submit it to Huma DAO for review and approval
-2. Once accepted by Huma DAO, the Adapter will be deployed on IPP.
-3. All the accepted IPAs will be listed under the same directory, for the Evaluation Agents(EAs)to consume.
-4. Some performance stats about each IPA and share as metadata. This will be valuable to the EA developers. It will also serve as an input when Huma DAO decides how to distribute IP rewards to different IPA providers.
-5. Each IPA shall be maintained by the original developer, Huma DAO, or the community.
+1. Developers implement the Signal, conforming to interface and documentation guidelines, then submit it to Huma DAO for review
+2. Once accepted by Huma DAO, the Signal will be deployed on DSP with the appropriate open source license.
+3. All the accepted Signals will be listed under the same directory, for the Evaluation Agents (EAs) to consume.
+4. Performance stats about Signals will be gathered regularly and shared as metadata. This will be valuable to the EA developers. It will also serve as an input to rewards are distributed to different contributors.
+5. Each Signal shall be maintained by the original developer, Huma DAO, or the community.
 
 #### 2.2 Developer Participation and Rewards
 
-Developers can contribute to the initial development and ongoing maintenance of the IPAs.
+Developers can contribute to the initial development and ongoing maintenance of the Signals.
 
-To bootstrap the development of IPAs, Huma will offer bounty programs.&#x20;
+To bootstrap the development, Huma will offer bounty programs.&#x20;
 
-A portion of the protocol revenue will be carved out to reward IPA developers and maintainers. Huma DAO will review the contributions and determine how to split the total IPA rewards to different contributors.
+A portion of the protocol revenue will be carved out to reward Signal developers and maintainers. Huma DAO will review the contributions and determine how to split the total reward pool to different contributors.
 
 ### 3.0 Evaluation Agent (EA)
 
-Evaluation Agent developers build and plug in their context-aware risk management modules into Huma Protocol. Each EA implements a standard interface to interact with Huma SDK and Huma contracts.
+Evaluation Agent (EA) is the context-aware risk management module in the Huma Protocol. They are responsible for the underwriting decisions for the pools they are attached to. The goal for the EA platform is to build a secured, community-driven system to support accurate underwriting decisions at scale.&#x20;
+
+Each EA implements a standard interface to interact with Huma SDK and Huma contracts. They also have borrower authenticated read access to relevant signals in the DSP for their models.
 
 All the EAs are expected to run off-chain considering the computational complexity and the volume of data involved. As an anti-fraud measure, Huma does not require EAs to be open-sourced.
 
+<figure><img src=".gitbook/assets/EA-platform (1).png" alt=""><figcaption></figcaption></figure>
+
 #### 3.1 EA Listing and Hosting
 
-Each pool will select an EA to delegate its underwriting. EAs are expected to be highly specialized per use case initially, however it's also possible that more generic EAs are developed in the future.
+EA developers submit their models, EAs, to Huma DAO for review. Once approved, the EAs are deployed in a secure container provided by Huma. This hosting platform will be open-sourced, even though Huma does not require the EAs to open source their models.
 
-The EA developers will submit EAs to Huma DAO for review. Once approved, the EAs will be deployed to a cloud platform provided by Huma. The cloud platform will be open-sourced, even though Huma does not require the EAs to open source their models.
+Huma DAO generates an EA NFT with all the relevant metadata for the deployed EA and creates an entry in the EA Registry.&#x20;
 
-In future iterations, we plan to decentralize this platform further.
+Each pool selects an EA from this registry to delegate its underwriting. EAs can further specialize to serve the use cases of a specific pool, or stay more generic to support more pools.
+
+In future iterations, we plan to fully decentralize the EA platform.
 
 #### 3.2 EA rewards and responsibilities
 
@@ -290,15 +307,15 @@ We expect the core contracts to continue to evolve, thus upgradability is critic
 
 ### 5.0 Aura (Decentralized Credit Tracking)
 
-Aura is the layer capturing, reporting, and leveraging credit trustworthiness. This is not in scope for our v1 protocol, as decentralized solutions in this space are also in early development. In v2, we will either compose with a mature solution out of those or work with a consortium of innovators to define the new credit standard for Web3.
+This is the layer for capturing, reporting, and leveraging credit trustworthiness. Aura is not in scope for our v1 protocol, as decentralized solutions in this space are also in early development. In v2, Huma will integrate with decentralized reputation systems that combine on-chain and off-chain data points.&#x20;
 
 ### 6.0 Governance
 
 Huma’s governance is going to be managed by its community DAO which will maintain and update the protocol via decentralized voting. DAO will be responsible for tasks like :
 
 * Managing DAO treasury
-* Growing the community of IPA and EA builders
-* Securing and maintaining the IPA and EA platforms
+* Growing the community of Signal and EA builders
+* Securing and maintaining the DSP and EA platforms
 * Upgrading contracts
 * Responding to emergencies by pausing and unpausing the protocol
 * Launching new community pools and acting as PoolOwner where needed
