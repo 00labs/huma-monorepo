@@ -109,7 +109,7 @@ Each EA implements a standard interface to interact with Huma SDK and Huma contr
 
 All the EAs are expected to run off-chain considering the computational complexity and the volume of data involved. As an anti-fraud measure, Huma does not require EAs to be open-sourced.
 
-<figure><img src=".gitbook/assets/EA-platform (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/EA-DSP.png" alt=""><figcaption></figcaption></figure>
 
 #### 3.1 EA Listing and Hosting
 
