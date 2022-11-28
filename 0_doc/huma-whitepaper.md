@@ -211,7 +211,7 @@ A pool owner can set and change the following configurations for the pool.&#x20;
 
 **4.4.3 Approve / Reject exceptional transactions**
 
-For receivable factoring use case, the receivable payment is first made to the pool. The pool will subtract the borrowing amount and disperse the remainder to the borrower. When the receivable payment is far higher than the factored amount and a big dispersement is expected, for security consideration, the transaction will be flagged for the pool owner to review. The pool owner can approve or reject the transaction based on the review result.&#x20;
+For the receivable factoring use case, all future payments made for that receivable will be received by its new owner, the pool. The pool then will subtract the outstanding balance and disperse the remainder to the borrower. When the receivable payment is far higher than the factored amount and a big dispersement is expected, for security consideration, the transaction will be flagged for the pool owner to review. The pool owner can approve or reject the transaction based on the review result.&#x20;
 
 #### 4.5 LP Participation
 
@@ -285,11 +285,11 @@ In v2, the performance of each EA, including approval rate and risk loss rate, w
 
 **4.7.2 Default flow**
 
-Each pool can define a default grace period, which is a multiple of the pay periods. Once the grace period has passed, if the borrower still has not paid the amount due yet, the default process will be triggered. The entire balance including principal, interest, and fees, including the fees and interest accrued during the grace period, will be written off as losses. The losses will be distributed to the LPs per their shares of the liquidity pool.  The protocol, pool owner, and EA themselves do not share the losses.
+Each pool can define a default grace period, which is a multiple of the pay periods. Once the grace period has passed, if the borrower still has not paid the amount due yet, the default process will be triggered. The entire balance including principal, interest, and fees, including the fees and interest accrued during the grace period, will be written off as losses. The losses will be distributed to the LPs per their shares of the liquidity pool.&#x20;
 
 Once the default is triggered, the balance is written off and the accounting should follow accordingly.
 
-At the same time, the borrowing record will still be open and the borrower still has a chance to make payment towards the balance due although this is unlikely to happen. All the payments will be applied to offset the write-off first before used to pay additional fees accrued. The borrowing record will be in default state and the borrower is not allowed to make any additional borrowing until all the principal and accrued fees are paid off.&#x20;
+At the same time, the borrowing record will still be open and the borrower still has a chance to make payment towards the balance due, even though this is unlikely to happen. All the payments will be applied to offset the write-off first before used to pay additional fees accrued. The borrowing record will be in default state and the borrower is not allowed to borrow again until all the principal and accrued fees are paid off.&#x20;
 
 #### 4.8 Income and Loss Distribution
 
