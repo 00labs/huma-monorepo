@@ -1,8 +1,6 @@
-# Huma Whitepaper
+# Huma Protocol Whitepaper 1.0
 
-## Huma Protocol Whitepaper
-
-### Table of Content
+### Table of Contents
 
 * 1.0 Introduction
 * 2.0 Decentralized Signal Portfolio (DSP)
