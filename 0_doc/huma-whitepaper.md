@@ -161,7 +161,7 @@ There are various user roles in the protocol. Some are at protocol-level. The ot
 
 To drive accountability, similar to the Pool Owners, EAs are required to commit capital to the pools that they are supporting. Only after both the Pool Owner and EA have deposited the required capital, can a pool be enabled to accept capital from other Liquidity Providers. In rare occasions, Pool Owners are allowed to change the EA for the pool. The new EA needs to meet the deposit requirements before the change can happen. All the accrued EA rewards are paid to the old EA immediately after the change takes effect.
 
-**Liquidity Providers:** Liquidity Providers (a.k.a. Lenders) provide capital to the pool and earn a proportional share of the pool income. The can only deposit and withdraw capital from the pool.
+**Liquidity Providers:** Liquidity Providers (a.k.a. Lenders) provide capital to the pool and earn a proportional share of the pool income. They can only deposit and withdraw capital from the pool.
 
 **Borrowers:** Borrowers initiate credit requests with the pools and drawdown against it if approved by the designated EA. They are responsible for paying interest and minimal principal payment per pay period.
 
