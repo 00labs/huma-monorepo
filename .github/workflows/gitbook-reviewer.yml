@@ -1,0 +1,23 @@
+name: Huma-bot reviewer
+
+on: pull_request_target
+
+permissions:
+  pull-requests: write
+  contents: write
+
+jobs:
+  review-gitbook-pr:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.pull_request.user.login == 'Huma-bot' }}
+    steps:
+      - name: Enable auto-merge for Gitbook PRs
+        run: gh pr merge --auto --merge "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GITHUB_TOKEN: ${{secrets.REVIWER_TOKEN}}
+      - name: Approve
+        run: gh pr review $PR_URL --approve -b "I'm **approving** this pull request because **it is from gitbook updates**"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GITHUB_TOKEN: ${{secrets.REVIWER_TOKEN}}

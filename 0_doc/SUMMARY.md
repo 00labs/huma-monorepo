@@ -1,9 +1,8 @@
-# Table of Content​
+# Table of contents
 
-- [Huma Whitepaper](./0_doc/huma_protocol_whitepaper.md)
-
-- [Huma Technical Design](./0_doc/huma_protocol_technical_design.md)
-
-- [IPA Developer Guide](./0_doc/IPA_developer_guide.md)
-
-- [Evaluation Agent Developer Guide](./0_doc/evaluation_agent_developer_guide.md)
+* [README](README.md)
+* [Huma Whitepaper](huma-whitepaper.md)
+* [Huma Transparency Board - Key Addresses](key_addresses.md)
+* [Huma Technical Design](huma-technical-design.md)
+* [IPA Developer Guide](<IPA Developer Guide.md>)
+* [Evaluation Agent Developer Guide](<Evaluation Agent Developer Guide.md>)

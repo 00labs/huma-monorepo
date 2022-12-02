@@ -1,0 +1,38 @@
+name: Gitbook PR
+
+on:
+  push:
+    branches:
+      - gitbook
+
+  workflow_dispatch:
+
+permissions:
+  pull-requests: write
+  contents: write
+
+jobs:
+  creat-gitbook-pr:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Compare diff with main
+        id: check_diff
+        run: |
+          diff=$(git diff --name-only origin/main origin/gitbook)
+          echo "file_changed=$diff" >> $GITHUB_OUTPUT
+      - name: Create pull request
+        if: ${{ steps.check_diff.outputs.file_changed }}
+        id: cpr
+        run: gh pr create -B main -H gitbook --title 'Merge gitbook into main' --body 'Created by Github actions'
+      - name: Check outputs
+        if: ${{ steps.cpr.outputs.pull-request-number }}
+        run: |
+          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
+          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
+
