@@ -2,7 +2,7 @@
 description: Transparency principles and key addresses
 ---
 
-# Transparency Board - Key Addresses
+# Multisig and Timelock Addresses
 
 ## Transparency Principles
 
@@ -11,7 +11,7 @@ Huma Protocol strives to operate at the highest level of transparency. We commit
 * The ownership of Huma Config, which can change the protocol configurations, to be a timelock.
 * The ownership of each of the pool contracts in production to be a timelock.
 * The proposer of each of the timelocks to be a multisig with majority votes from at least 3 signees.
-* The duration between proposal approval and execution is at least 48 hours.
+* The duration between proposal approval and execution is at least 24 hours.
 * All the key addresses (timelock address, multisig address, and multisig signees) for the protocol and all pools in production are published on this page.
 
 ## Key Addresses for Huma Protocol Administration
