@@ -8,11 +8,10 @@ description: Transparency principles and key addresses
 
 Huma Protocol strives to operate at the highest level of transparency. We commit to abide by the following principles:
 
-* The ownership of Huma Config, which can change the protocol configurations, to be a timelock.
-* The ownership of each of the pool contracts in production to be a timelock.
-* The proposer of each of the timelocks to be a multisig with majority votes from at least 3 signees.
-* The duration between proposal approval and execution is at least 24 hours.
-* All the key addresses (timelock address, multisig address, and multisig signees) for the protocol and all pools in production are published on this page.
+* The ownership of Protocol Contracts, Huma Config, and Pool Contracts to be a timelock.
+* Timelocks to be operated by a majority vote of multisig wallets of minimum 3 signees.
+* Timelock delay is at least 24 hours.
+* All the key addresses (timelock address, multisig address, and multisig signees) for the protocol and all active pools are published on this page.
 
 ## Key Addresses for Huma Protocol Administration
 
@@ -24,15 +23,15 @@ Huma Protocol strives to operate at the highest level of transparency. We commit
 
 #### multisig signees:
 
-During Beta launch stage, all multisig signees are core founders of the Huma Finance team. Once the DAO is formed, more signees from the community will be added.&#x20;
+During Beta launch stage, all multisig signees are the founding team members of the Huma Protocol. Once the DAO is formed, more signees from the community will be added.&#x20;
 
-* 0xb6768AF8279CeeaeE4dB323396b1F185b0559439
-* 0x1DC412E9273786F2C02c40cc8140dB598871d64d
-* 0x079a31ADA15D9F90c82600D14Cf77b384ea8b2c7
+* [Richard](https://twitter.com/wisdant) : 0xb6768AF8279CeeaeE4dB323396b1F185b0559439
+* [Ji](https://twitter.com/P1ayJ0k3r) : 0x1DC412E9273786F2C02c40cc8140dB598871d64d
+* [Erbil](https://twitter.com/0xErbil) : 0x079a31ADA15D9F90c82600D14Cf77b384ea8b2c7
 
-## Key Addresses for Pools Live in Production&#x20;
+## Key Addresses for Active Pools&#x20;
 
-During Beta launch stage, there are two pools live in Polygon. 100% of the pool liquidities are from Huma Finance. Thus, Huma Finance is the pool owner. The multisig signees are core founders of the Huma Finance team.&#x20;
+During Beta launch, there are two pools active on Polygon with majority of pool funds bootstrapped by Huma Protocol founding team.&#x20;
 
 ### Credit Line Pool - Polygon
 

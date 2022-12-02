@@ -5,4 +5,4 @@
 * [Huma Technical Design](huma-technical-design.md)
 * [IPA Developer Guide](<IPA Developer Guide.md>)
 * [Evaluation Agent Developer Guide](<Evaluation Agent Developer Guide.md>)
-* [Multisig and Timelock Addresses](multisig-and-timelock-addresses.md)
+* [Multisig and Timelock Addresses](transparency-board-key-addresses.md)
