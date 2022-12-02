@@ -2,6 +2,7 @@
 
 * [README](README.md)
 * [Huma Whitepaper](huma-whitepaper.md)
+* [Huma Transparency Board - Key Addresses](key_addresses.md)
 * [Huma Technical Design](huma-technical-design.md)
 * [IPA Developer Guide](<IPA Developer Guide.md>)
 * [Evaluation Agent Developer Guide](<Evaluation Agent Developer Guide.md>)
