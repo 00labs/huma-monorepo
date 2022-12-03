@@ -23,7 +23,7 @@ Huma Protocol strives to operate at the highest level of transparency. We commit
 
 #### multisig signees:
 
-During Beta launch stage, all multisig signees are the founding team members of the Huma Protocol. Once the DAO is formed, more signees from the community will be added.&#x20;
+During Beta launch, all multisig signees are the founding team members of the Huma Protocol. Once the DAO is formed, more signees from the community will be added.&#x20;
 
 * [Richard](https://twitter.com/wisdant) : 0xb6768AF8279CeeaeE4dB323396b1F185b0559439
 * [Ji](https://twitter.com/P1ayJ0k3r) : 0x1DC412E9273786F2C02c40cc8140dB598871d64d
