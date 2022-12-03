@@ -1,3 +1,0 @@
-# IPA Developer Guide
-
-Coming soon...
