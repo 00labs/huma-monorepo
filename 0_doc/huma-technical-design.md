@@ -1,2 +1,0 @@
-# Huma Technical Design
-
