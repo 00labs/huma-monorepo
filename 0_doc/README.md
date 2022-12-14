@@ -10,20 +10,22 @@ Please use [this](https://discord.gg/uHwMKaGBYP) link to join our discord server
 
 ### Step 1: Please review key documents
 
-[Huma Protocol Whitepaper 1.0](https://www.notion.so/Huma-Protocol-Whitepaper-1-0-9890b9f8212b4246bc02a8d4c9844630) gives an overview of Huma Protocol. It is a great place to start. It is critical to read the introduction section to get a high-level picture about Huma Protocol before you proceed further.&#x20;
+[Huma Protocol Whitepaper 1.0](https://docs.huma.finance) gives an overview of Huma Protocol. It is a great place to start. It is critical to read the introduction section to get a high-level picture about Huma Protocol before you proceed further.&#x20;
 
-For those who are interested in the technical implementations and opportunities to contribute to the platform, please refer to [Huma Protocol Technical Design](https://www.notion.so/Huma-Protocol-Technical-Design-3f14b57e6a2844248e93c37bc5322552) and Huma Developer Guide.&#x20;
+For those who are interested in the technical implementations and opportunities to contribute to the platform, please refer to [Huma Protocol Technical Design](https://www.notion.so/Huma-Protocol-Technical-Design-3f14b57e6a2844248e93c37bc5322552) and [Huma Developer Guide](https://docs.huma.finance/developer-guidlines).&#x20;
 
 ### Step2: Test Huma DApp on Goerli
 
 On Ethereum testnet Goerli, we have launched two pools: one credit line pool, one invoice factoring pool. Please access [https://app.huma.finance](https://test.app.huma.finance) and select Goerli network to try them out.&#x20;
 
 * Make sure you are using a “Goerli Testnet Network” when you connect with the app. [Here](https://blog.cryptostars.is/goerli-g%C3%B6rli-testnet-network-to-metamask-and-receiving-test-ethereum-in-less-than-2-min-de13e6fe5677)’s a guide on how to enable it on MetaMask.
-* Grab some [Goerli ETH](https://goerlifaucet.com/) for testing. If you have need help to get test tokens, please post your wallet address in the test-token channel, we will transfer some tokens to you.
+* Grab some [Goerli ETH](https://goerlifaucet.com/) for testing. If you need help to get test ETH, please post your wallet address in the test-token channel, we will transfer some tokens to you.
 
-### Step 3: Be one of the first Huma users on Polygon
+### Step 3: Be one of the first Huma users on Polygon and Mainnet
 
-Huma is live on Polygon. You can access [https://app.huma.finance](https://test.app.huma.finance) and select Polygon as the network. At this moment, it is open to whitelisted users only. Once you have finished testing on Goerli, you will be notified with how to get whitelisted and become one of the first Huma users.&#x20;
+Huma is live on Polygon. You can access [https://app.huma.finance](https://test.app.huma.finance) and select Polygon as the network. At this moment, it is open to whitelisted users only. Once you have finished testing on Goerli, you will be notified with how to get whitelisted and become one of the first Huma users.
+
+After you are done testing on Polygon, you can go further to score bonus points by testing on Ethereum Mainnet. You will be using the same app, just choose Mainnet using the network selector. &#x20;
 
 ### Step 4: Contribute to Huma Protocol
 
@@ -33,7 +35,7 @@ As an engineer, there are several ways that you can contribute to Huma Protocol:
 * Become of one of the first batch of community developers to develop your own Signal Adapter and Evaluation Agent.&#x20;
 * Identify potential secure weaknesses and submit through a security bug bounty program to be launched soon.&#x20;
 
-Not only engineers can contribute to Huma Protocol, business leaders can enjoy the fun as well.&#x20;
+Not only engineers can contribute to Huma Protocol, business leaders can play a key role as well.&#x20;
 
 * Huma lending protocol is a generic protocol. We welcome business leaders to leverage the power of Huma Protocol and launch various pools. If If you have a business use case that is suitable for Huma Protocol, please drop us a note on Discord.&#x20;
 * We are looking to partner with DAOs who make payments to their DAO members. If you are close to some DAOs who might benefit from Huma protocol, please make the connection for us.&#x20;
