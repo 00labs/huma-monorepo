@@ -23,7 +23,7 @@ On Ethereum testnet Goerli, we have launched two pools: one credit line pool, on
 
 ### Step 3: Be one of the first Huma users on Polygon and Mainnet
 
-Huma is live on Polygon. You can access [https://app.huma.finance](https://test.app.huma.finance) and select Polygon as the network. At this moment, it is open to whitelisted users only. Once you have finished testing on Goerli, you will be notified with how to get whitelisted and become one of the first Huma users.
+Huma is live on Polygon. You can access [https://app.huma.finance](http://app.huma.finance) and select Polygon as the network. At this moment, it is open to whitelisted users only. Once you have finished testing on Goerli, you will be notified with how to get whitelisted and become one of the first Huma users.
 
 After you are done testing on Polygon, you can go further to score bonus points by testing on Ethereum Mainnet. You will be using the same app, just choose Mainnet using the network selector. &#x20;
 
