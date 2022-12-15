@@ -16,7 +16,7 @@ For those who are interested in the technical implementations and opportunities 
 
 ### Step2: Test Huma DApp on Goerli
 
-On Ethereum testnet Goerli, we have launched two pools: one credit line pool, one invoice factoring pool. Please access [https://app.huma.finance](https://test.app.huma.finance) and select Goerli network to try them out.&#x20;
+On Ethereum testnet Goerli, we have launched two pools: one credit line pool, one invoice factoring pool. Please access [https://app.huma.finance](http://app.huma.finance) and select Goerli network to try them out.&#x20;
 
 * Make sure you are using a “Goerli Testnet Network” when you connect with the app. [Here](https://blog.cryptostars.is/goerli-g%C3%B6rli-testnet-network-to-metamask-and-receiving-test-ethereum-in-less-than-2-min-de13e6fe5677)’s a guide on how to enable it on MetaMask.
 * Grab some [Goerli ETH](https://goerlifaucet.com/) for testing. If you need help to get test ETH, please post your wallet address in the test-token channel, we will transfer some tokens to you.
