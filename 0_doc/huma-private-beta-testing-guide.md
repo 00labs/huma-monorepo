@@ -19,7 +19,10 @@ For those who are interested in the technical implementations and opportunities 
 On Ethereum testnet Goerli, we have launched two pools: one credit line pool, one invoice factoring pool. Please access [https://app.huma.finance](http://app.huma.finance) and select Goerli network to try them out.&#x20;
 
 * Make sure you are using a “Goerli Testnet Network” when you connect with the app. [Here](https://blog.cryptostars.is/goerli-g%C3%B6rli-testnet-network-to-metamask-and-receiving-test-ethereum-in-less-than-2-min-de13e6fe5677)’s a guide on how to enable it on MetaMask.
-* Grab some [Goerli ETH](https://goerlifaucet.com/) for testing. If you need help to get test ETH, please post your wallet address in the test-token channel, we will transfer some tokens to you.
+* Add our "mock USDC token" for testing to your wallet.  Click "import token" on MetaMask, fill in the contract address `0xf17FF940864351631b1be3ac03702dEA085ba51c.`(see appendix)
+* Grab some [Goerli ETH](https://goerlifaucet.com/) to pay the gas fee when testing.&#x20;
+* Send some "mock USDC token" to yourself for testing from [Etherscan](https://goerli.etherscan.io/address/0xf17FF940864351631b1be3ac03702dEA085ba51c#writeContract). (see appendix)
+* If you need help to get test ETH or USDC, please post your test wallet address in the #beta-support channel, we will transfer some tokens to you.
 
 ### Step 3: Be one of the first Huma users on Polygon and Mainnet
 
@@ -48,3 +51,9 @@ We are open to feedback from all angles, from product, security, operations, and
 ### Step 6: Look out for a Huma Beta Tester NFT&#x20;
 
 Yes, it is real and on its way to your wallet, just waiting for you to complete a few actions listed above.&#x20;
+
+### Appendix
+
+![](.gitbook/assets/image.png)
+
+![](<.gitbook/assets/image (1).png>)
