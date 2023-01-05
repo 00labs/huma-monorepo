@@ -227,7 +227,7 @@ Once the withdrawalLockupPeriod is passed, the LP is free to withdraw a portion 
 
 In v2, we are planning to introduce an opportunity cost pricing as a form of exit fee to make pools more sustainable and fair to all lenders.
 
-Since the Pool Owner and EA are required to commit capital to enable the pool, they cannot pull out the amount required by the pool until the pool is set to retire. Consequently, they have to wait until all other LPs have withdrawn their investment before they can withdraw their own capital that are required by the pool.
+Since the Pool Owner and EA are required to commit capital to enable the pool, they cannot pull out the amount required by the pool until the pool is set to retire.&#x20;
 
 **4.5.4 Pool Liquidity Ownership**
 
