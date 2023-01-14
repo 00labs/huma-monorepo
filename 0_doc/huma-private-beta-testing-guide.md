@@ -1,8 +1,8 @@
 # Huma Private Beta Testing Guide
 
-GM! Welcome to HUMAnity, the community for Huma Finance.&#x20;
+GM! Welcome to HUMAnity, the community for the Huma Protocol.&#x20;
 
-After launching Huma Protocol on Polygon and Ethereum Mainnet, we are pleased to welcome you, our trusted friends, to our Private Beta testing program. This doc is a quick guide to help you understand Huma Protocol and how you can contribute to the Beta program.&#x20;
+Huma is now live on Goerli, Polygon and Ethereum Mainnet, and you are one of the OGs participating in the Private Beta program. This doc is a quick guide to help you understand Huma Protocol and how you can contribute.&#x20;
 
 ### Step 0: [Join Our Discord](https://discord.gg/uHwMKaGBYP)
 
@@ -16,17 +16,18 @@ For those who are interested in the technical implementations and opportunities 
 
 ### Step2: Test Huma DApp on Goerli
 
-On Ethereum testnet Goerli, we have launched two pools: one credit line pool, one invoice factoring pool. Please access [https://app.huma.finance](http://app.huma.finance) and select Goerli network to try them out.&#x20;
+On Goerli testnet, there are two pools: a credit line pool, and an invoice factoring pool. Please access [https://app.huma.finance](http://app.huma.finance) and select Goerli network to try them out.&#x20;
 
-* Make sure you are using a “Goerli Testnet Network” when you connect with the app. [Here](https://blog.cryptostars.is/goerli-g%C3%B6rli-testnet-network-to-metamask-and-receiving-test-ethereum-in-less-than-2-min-de13e6fe5677)’s a guide on how to enable it on MetaMask.
-* Add our "mock USDC token" for testing to your wallet.  Click "import token" on MetaMask, fill in the contract address `0xf17FF940864351631b1be3ac03702dEA085ba51c.`(see appendix 1)
+* Make sure you are using the “Goerli Testnet Network” when you connect with the dApp. [Here](https://blog.cryptostars.is/goerli-g%C3%B6rli-testnet-network-to-metamask-and-receiving-test-ethereum-in-less-than-2-min-de13e6fe5677)’s a guide on how to enable it on MetaMask.
+* Add Huma's "mock USDC token" for testing to your wallet.  Click "import token" on MetaMask, fill in the contract address `0xf17FF940864351631b1be3ac03702dEA085ba51c.`(see appendix 1)
 * Grab some [Goerli ETH](https://goerlifaucet.com/) to pay the gas fee when testing.&#x20;
-* Send some "mock USDC tokens" to yourself for testing from [Etherscan](https://goerli.etherscan.io/address/0xf17FF940864351631b1be3ac03702dEA085ba51c#writeContract). (see appendix 2)
-* If you need help getting test ETH or USDC, please post your test wallet address in the #beta-support channel, and we will transfer some tokens to you.
+* Send some "mock USDC tokens" to yourself for testing by clicking on "Get USDC Tokens" in the dApp
+* If you need help getting Goerli ETH for testing, please post your test wallet address in the #beta-support channel for someone to send you.
+* To be able to test invoice factoring pool, you need a mock invoice. Click on "Create Invoice" which takes you to an invoice creation flow on a test Request Network node. Fill out the details, create your invoice, and come back to the invoice factoring pool to borrow against your invoice. You just click on "Get Paid Now" that you will see next to your invoice. Easy!
 
 ### Step 3: Be one of the first Huma users on Polygon and Mainnet
 
-Huma is live on Polygon. You can access [https://app.huma.finance](http://app.huma.finance) and select Polygon as the network. At this moment, it is open to whitelisted users only. Once you have finished testing on Goerli, you will be notified with how to get whitelisted and become one of the first Huma users.
+Huma is also live on Polygon. You can access [https://app.huma.finance](http://app.huma.finance) and select Polygon as the network. At this moment, it is open to whitelisted users only. Once you have finished testing on Goerli, you will be notified with how to get whitelisted and become one of the first Huma users.
 
 After you are done testing on Polygon, you can go further to score bonus points by testing on Ethereum Mainnet. You will be using the same app, just choose Mainnet using the network selector. &#x20;
 
@@ -58,6 +59,3 @@ Yes, it is real and on its way to your wallet, just waiting for you to complete 
 
 ![](.gitbook/assets/image.png)
 
-2\. Use [Etherscan](https://goerli.etherscan.io/address/0xf17FF940864351631b1be3ac03702dEA085ba51c#writeContract) to send mock USDC to your wallet.&#x20;
-
-![](<.gitbook/assets/image (1).png>)
