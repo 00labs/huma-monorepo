@@ -4,9 +4,9 @@ GM! Welcome to HUMAnity, the community for the Huma Protocol.&#x20;
 
 Huma is now live on Goerli, Polygon and Ethereum Mainnet, and you are one of the OGs participating in the Private Beta program. This doc is a quick guide to help you understand Huma Protocol and how you can contribute.&#x20;
 
-### Step 0: [Join Our Discord](https://discord.gg/uHwMKaGBYP)
+### Step 0: [Join Our Discord](https://discord.com/invite/6HVkGfvMJh)
 
-Please use [this](https://discord.gg/uHwMKaGBYP) link to join our discord server. We will be there to talk about anything.
+Please use [this link](https://discord.com/invite/6HVkGfvMJh) to join our discord server. We will be there to talk about anything.
 
 ### Step 1: Please review key documents
 
