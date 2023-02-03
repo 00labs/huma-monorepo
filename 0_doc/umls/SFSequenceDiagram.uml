@@ -1,0 +1,35 @@
+@startuml
+header Stream Factoring Sequence Diagram
+actor payer
+actor borrower
+participant TradableNFT
+participant SFDashboard
+participant SFSentinel
+participant HumaSDK
+participant HumaEvaluationAgent as HumaEA
+participant HumaLendingProtocol as HumaLP
+
+autonumber 10 10
+payer -> TradableNFT : sign to approve
+
+autonumber 100 10
+SFDashboard -> HumaEA : query factoring eligibility
+borrower -> SFDashboard : select GetPaidNow
+SFDashboard -> HumaSDK : getPaidNow()
+HumaSDK -> HumaEA : get terms
+HumaEA -> HumaLP : record approvals
+HumaEA -> HumaSDK : factoring terms
+HumaSDK -> borrower : factoring terms
+
+autonumber 200 10
+borrower -> HumaSDK : select factoring amount
+HumaSDK -> TradableNFT : mint()
+borrower -> HumaLP: approve NFT transfer and factoring
+HumaSDK -> HumaLP : drawdownWithReceivable()
+HumaLP -> TradableNFT : transfer(), transfer NFT, update flow rate
+HumaLP -> borrower : factored amount
+
+autonumber 200 10
+SFSentinel -> TradableNFT : burn(), update flow rate
+
+@enduml
