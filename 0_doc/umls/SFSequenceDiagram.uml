@@ -29,7 +29,7 @@ HumaSDK -> HumaLP : drawdownWithReceivable()
 HumaLP -> TradableNFT : transfer(), transfer NFT, update flow rate
 HumaLP -> borrower : factored amount
 
-autonumber 200 10
+autonumber 300 10
 SFSentinel -> TradableNFT : burn(), update flow rate
 
 @enduml
