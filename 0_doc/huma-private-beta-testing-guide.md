@@ -20,7 +20,7 @@ On Goerli testnet, there are two pools: a credit line pool, and an invoice facto
 
 * Make sure you are using the “Goerli Testnet Network” when you connect with the dApp. [Here](https://blog.cryptostars.is/goerli-g%C3%B6rli-testnet-network-to-metamask-and-receiving-test-ethereum-in-less-than-2-min-de13e6fe5677)’s a guide on how to enable it on MetaMask.
 * Add Huma's "mock USDC token" for testing to your wallet.  Click "import token" on MetaMask, fill in the contract address `0xf17FF940864351631b1be3ac03702dEA085ba51c.`(see appendix 1)
-* Grab some [Goerli ETH](https://goerlifaucet.com/) to pay the gas fee when testing.&#x20;
+* Grab some [Goerli ETH](https://goerlifaucet.com/) ([alternative link](https://goerli-faucet.pk910.de/)) to pay the gas fee when testing.&#x20;
 * Send some "mock USDC tokens" to yourself for testing by clicking on "Get USDC Tokens" in the dApp
 * If you need help getting Goerli ETH for testing, please post your test wallet address in the #beta-support channel for someone to send you.
 * To be able to test invoice factoring pool, you need a mock invoice. Click on "Create Invoice" which takes you to an invoice creation flow on a test Request Network node. Fill out the details, create your invoice, and come back to the invoice factoring pool to borrow against your invoice. You just click on "Get Paid Now" that you will see next to your invoice. Easy!
