@@ -318,7 +318,7 @@ Huma’s governance is going to be managed by its community DAO which will maint
 * Responding to emergencies by pausing and unpausing the protocol
 * Launching new community pools and acting as PoolOwner where needed
 * Updating protocol configurations
-* Planning tokenomics for HUMA tokens, as well as rewards and distributions
+* Managing protocol treasury, payments, as well as rewards and distributions
 
 ### 6.1 Governance Council
 
