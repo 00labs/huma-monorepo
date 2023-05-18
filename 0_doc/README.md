@@ -23,7 +23,7 @@
 
 **Huma is an open protocol for building next-gen decentralized risk and lending solutions backed by income and receivables.**
 
-Smart contracts’ transparency and automatic execution played a critical role in DeFi’s success and will continue to do so. At the same time, the current DeFi ecosystem falls short when it comes to lending for real world use cases, where real users and yields are. First of all, it lacks the most critical input that all modern risk underwriting depends on, income (cashflow). Moreover, it relies solely on over-collateralization of a few digital assets, making adoption by new entrants really difficult. As such limitations become obvious to many in the industry, under-collateralized lending for real world use cases emerges as the next frontier.
+Smart contracts’ transparency and automated execution played a critical role in DeFi’s success and will continue to do so. At the same time, the current DeFi ecosystem falls short when it comes to lending for real world use cases, where real users and yields are. First of all, it lacks the most critical input that all modern risk underwriting depends on, income (cashflow). Moreover, it relies solely on over-collateralization of a few digital assets, making adoption by new entrants really difficult. As such limitations become obvious to many in the industry, under-collateralized lending for real world use cases emerges as the next frontier.
 
 **Our Belief**
 
@@ -47,22 +47,22 @@ Huma intends to level up DeFi infrastructure so that more signals can be capture
 * **Decentralized Signal Portfolio** - This is an open platform that facilitates access to high quality signals about a borrower's income, assets and liabilities. These signals can be gathered from a variety of on-chain or off-chain sources. Any developer can add a new Signal Adapter for a particular signal source to enhance underwriting. Please refer to DSP Developer Guide for more information.
 * **Receivables** - It is the infrastructure that manages receivables captured in the form of NFTs, which can be transferred, and used to secure debt.
 * **Evaluation Agent** - This is an open platform for developers to contribute various risk underwriting models. Please refer to Evaluation Agent Developer Guide for more information.
-* **Aura** - This is the layer for capturing, reporting, and leveraging credit trustworthiness. Aura is not in scope for our v1 protocol. In v2, Huma will integrate with decentralized reputation systems that combine on-chain and off-chain data points.&#x20;
+* **Aura** - This is the layer for capturing, reporting, and leveraging credit trustworthiness. Aura is not in scope for our v1 protocol. In v2, Huma will integrate with decentralized reputation systems that combine on-chain and off-chain data points.
 * **Lending Protocol** - This is a generic lending pool. It is designed to suit a broad range of use cases from receivable refactoring to general purpose credit lines. Please refer to Huma Lending Protocol Technical Design for how to expand the protocol to launch more lending products.
 
 ### 2.0 Decentralized Signal Portfolio (DSP)
 
-High quality automated underwriting requires high quality signals. Decentralized Signal Portfolio (DSP) provides a comprehensive view of borrowers’ **income, assets and liabilities**, gathered from sources both on-chain and off-chain.&#x20;
+High quality automated underwriting requires high quality signals. Decentralized Signal Portfolio (DSP) provides a comprehensive view of borrowers’ **income, assets and liabilities**, gathered from sources both on-chain and off-chain.
 
-DSP supports authenticated signals where the borrower can voluntarily authenticate financial accounts to share specific information. These signals can be associated with on-chain or off-chain identity. DSP has a built in encrypted IPFS based storage to keep a snapshot of signals used in underwriting. This design gives the borrower the rights to their own data.&#x20;
+DSP supports authenticated signals where the borrower can voluntarily authenticate financial accounts to share specific information. These signals can be associated with on-chain or off-chain identity. DSP has a built in encrypted IPFS based storage to keep a snapshot of signals used in underwriting. This design gives the borrower the rights to their own data.
 
-Income related signals help understand the amount, frequency, and other objective quantities that describe the income associated with a wallet. This can include information about predicted future income from that source as well.&#x20;
+Income related signals help understand the amount, frequency, and other objective quantities that describe the income associated with a wallet. This can include information about predicted future income from that source as well.
 
 Asset related signals help understand the quality and quantity of the assets the borrower is holding.
 
 Liabilities are signals about a borrower’s payment obligations from their assets and future income.
 
-DSP defines a unified interface for the community to easily contribute to Huma’s vision. Developers can participate in the effort by developing Signal Adapters for specific signals that can improve underwriting decisions. Signal Adapters are open-sourced for full transparency. Please refer to the DSP Developer Guide on how to contribute.&#x20;
+DSP defines a unified interface for the community to easily contribute to Huma’s vision. Developers can participate in the effort by developing Signal Adapters for specific signals that can improve underwriting decisions. Signal Adapters are open-sourced for full transparency. Please refer to the DSP Developer Guide on how to contribute.
 
 There are a wide range of sources that a Signal Adapter can be developed. Examples include;
 
@@ -95,13 +95,13 @@ There are a wide range of sources that a Signal Adapter can be developed. Exampl
 
 Developers can contribute to the initial development and ongoing maintenance of the Signal Adapters.
 
-To bootstrap the development, Huma will offer bounty programs.&#x20;
+To bootstrap the development, Huma will offer bounty programs.
 
 A portion of the protocol revenue will be carved out to reward Signal Adapter developers and maintainers. Huma DAO will review the contributions and determine how to split the total reward pool to different contributors.
 
 ### 3.0 Evaluation Agent (EA)
 
-Evaluation Agent (EA) is the risk management layer in the Huma Protocol. They are responsible for the underwriting decisions for the pools they are associated with. The goal for the EA platform is to build a secured, community-driven system to support accurate underwriting decisions at scale.&#x20;
+Evaluation Agent (EA) is the risk management layer in the Huma Protocol. They are responsible for the underwriting decisions for the pools they are associated with. The goal for the EA platform is to build a secured, community-driven system to support accurate underwriting decisions at scale.
 
 Each EA implements a standard interface to interact with Huma SDK and Huma contracts. They also have borrower authenticated read access to relevant signals in the DSP for their models.
 
@@ -109,15 +109,15 @@ Each EA implements a standard interface to interact with Huma SDK and Huma contr
 
 #### 3.1 EA Listing and Hosting
 
-EA developers submit their models, EAs, to Huma DAO for review. Once approved, the EAs are deployed in a secure container provided by Huma.&#x20;
+EA developers submit their models, EAs, to Huma DAO for review. Once approved, the EAs are deployed in a secure container provided by Huma.
 
-An NFT is minted to represent each EA. Although any developer can mint an EA NFT, only Huma DAO can update the relevant metadata (e.g. status, performance) for each EA NFT and creates an entry in the EA Registry so that it is discoverable by pool owners.&#x20;
+An NFT is minted to represent each EA. Although any developer can mint an EA NFT, only Huma DAO can update the relevant metadata (e.g. status, performance) for each EA NFT and creates an entry in the EA Registry so that it is discoverable by pool owners.
 
 Each pool selects an EA from this registry to delegate its underwriting. EAs can further specialize to serve the use cases of a specific pool, or stay more generic to support more pools.
 
 The EAs are fully decentralized. For anti-fraud consideration, Huma does not require the EAs to open source their models. Both Huma and the Pool Owner will inspect and validate the EA before selecting it to underwrite for a pool.
 
-This hosting platform will be open-sourced. It is centralized at this moment due to the need for complicated computations. As decentralized execution engines become more powerful, we will transition the EA hosting platform to a decentralized execution platform as well.&#x20;
+This hosting platform will be open-sourced. It is centralized at this moment due to the need for complicated computations. As decentralized execution engines become more powerful, we will transition the EA hosting platform to a decentralized execution platform as well.
 
 #### 3.2 EA rewards and responsibilities
 
@@ -135,7 +135,7 @@ On top of the Decentralized Signal Portfolio and Evaluation Agent, Huma Lending 
 
 Transparency is critical to building community confidence. We will operate Huma Protocol at the highest level of transparency.
 
-For wallets representing administrative roles, both at the protocol-level and for every pool, we will require multi-sig with a diverse group of signees. Timelock will be used so that the community has time to react to the proposed changes to the protocol. In addition, the timelock contract addresses and multi-signers addresses will be published in a blog for full transparency.&#x20;
+For wallets representing administrative roles, both at the protocol-level and for every pool, we will require multi-sig with a diverse group of signees. Timelock will be used so that the community has time to react to the proposed changes to the protocol. In addition, the timelock contract addresses and multi-signers addresses will be published in a blog for full transparency.
 
 **4.1.2 Extensibility**
 
@@ -153,9 +153,9 @@ There are various user roles in the protocol. Some are at protocol-level. The ot
 
 **4.2.2 Pool-level User Roles**
 
-**Pool Owners**: Pool owners are a list of addresses that are approved by the Protocol Owner to create and manage pools. They configure the key parameters for the pool, choose the Evaluation Agent and set the fee structure through Fee Manager. They earn a percentage of the pool income as a reward.&#x20;
+**Pool Owners**: Pool owners are a list of addresses that are approved by the Protocol Owner to create and manage pools. They configure the key parameters for the pool, choose the Evaluation Agent and set the fee structure through Fee Manager. They earn a percentage of the pool income as a reward.
 
-**Evaluation Agent:** The Evaluation Agent (EA) makes underwriting decisions, approve or disapprove credit requests for a pool. Each pool can only have one Evaluation Agent. We envision most of the EAs to be automated, but the protocol also allows EAs to have human supervision. They earn a percentage of the pool income for their contribution as a reward.&#x20;
+**Evaluation Agent:** The Evaluation Agent (EA) makes underwriting decisions, approve or disapprove credit requests for a pool. Each pool can only have one Evaluation Agent. We envision most of the EAs to be automated, but the protocol also allows EAs to have human supervision. They earn a percentage of the pool income for their contribution as a reward.
 
 To drive accountability, similar to the Pool Owners, EAs are required to commit capital to the pools that they are supporting. Only after both the Pool Owner and EA have deposited the required capital, can a pool be enabled to accept capital from other Liquidity Providers. In rare occasions, Pool Owners are allowed to change the EA for the pool. The new EA needs to meet the deposit requirements before the change can happen. All the accrued EA rewards are paid to the old EA immediately after the change takes effect.
 
@@ -171,11 +171,11 @@ To drive accountability, similar to the Pool Owners, EAs are required to commit 
 
 **Add / Remove liquidity assets allowed:** This is the list of assets to be allowed as the underlying assets for pools in the protocol. We will only support stablecoins in the foreseeable future, starting with USDC.
 
-**Change Protocol-level Grace Period for Defaults:** This is the protocol-level preset value for the grace period after which an overdue debt is considered a default. Individual pools can overwrite this protocol-level setting to suit the needs of their pools. &#x20;
+**Change Protocol-level Grace Period for Defaults:** This is the protocol-level preset value for the grace period after which an overdue debt is considered a default. Individual pools can overwrite this protocol-level setting to suit the needs of their pools.
 
 **Change Protocol Treasury:** This is the protocol treasury wallet address. Only protocol owner (a multisig) can make this change.
 
-**Change Protocol Fee:** Since Huma is a risk-on protocol with many participants and reward structures, it takes a share of all the fees and interest generated in the protocol. To keep it simple, the protocol fee is a percentage of all the fees and interest generated in the protocol.&#x20;
+**Change Protocol Fee:** Since Huma is a risk-on protocol with many participants and reward structures, it takes a share of all the fees and interest generated in the protocol. To keep it simple, the protocol fee is a percentage of all the fees and interest generated in the protocol.
 
 **Add or remove pool owners:** Add or remove a pool owner.
 
@@ -191,7 +191,7 @@ Both Pool Owner and Evaluation Agent commit to provide a certain percentage of t
 
 **4.4.2 Pool Configurations**
 
-A pool owner can set and change the following configurations for the pool.&#x20;
+A pool owner can set and change the following configurations for the pool.
 
 * Pool Liquidity Cap
 * Pool Owner Capital Commitment
@@ -209,13 +209,13 @@ A pool owner can set and change the following configurations for the pool.&#x20;
 
 **4.4.3 Approve / Reject exceptional transactions**
 
-For the receivable factoring use case, all future payments made for that receivable will be received by its new owner, the pool. The pool then will subtract the outstanding balance and disperse the remainder to the borrower. When the receivable payment is far higher than the factored amount and a big dispersement is expected, for security consideration, the transaction will be flagged for the pool owner to review. The pool owner can approve or reject the transaction based on the review result.&#x20;
+For the receivable factoring use case, all future payments made for that receivable will be received by its new owner, the pool. The pool then will subtract the outstanding balance and disperse the remainder to the borrower. When the receivable payment is far higher than the factored amount and a big dispersement is expected, for security consideration, the transaction will be flagged for the pool owner to review. The pool owner can approve or reject the transaction based on the review result.
 
 #### 4.5 LP Participation
 
 **4.5.1 Qualification**
 
-When required by the pool, LPs go through a KYC/KYB/AML process to participate in the pool. The process will be managed off-chain in v1 through partner services. Once qualified, the pool owner will add LP to the pool's allowed lenders list.&#x20;
+When required by the pool, LPs go through a KYC/KYB/AML process to participate in the pool. The process will be managed off-chain in v1 through partner services. Once qualified, the pool owner will add LP to the pool's allowed lenders list.
 
 **4.5.2 Deposits**
 
@@ -227,7 +227,7 @@ Once the withdrawalLockupPeriod is passed, the LP is free to withdraw a portion 
 
 In v2, we are planning to introduce an opportunity cost pricing as a form of exit fee to make pools more sustainable and fair to all lenders.
 
-Since the Pool Owner and EA are required to commit capital to enable the pool, they cannot pull out the amount required by the pool until the pool is set to retire. Consequently, they have to wait until all other LPs have withdrawn their investment before they can withdraw their own capital that are required by the pool.  &#x20;
+Since the Pool Owner and EA are required to commit capital to enable the pool, they cannot pull out the amount required by the pool until the pool is set to retire.&#x20;
 
 **4.5.4 Pool Liquidity Ownership**
 
@@ -283,15 +283,15 @@ In v2, the performance of each EA, including approval rate and risk loss rate, w
 
 **4.7.2 Default flow**
 
-Each pool can define a default grace period, which is a multiple of the pay periods. Once the grace period has passed, if the borrower still has not paid the amount due yet, the default process will be triggered. The entire balance including principal, interest, and fees, including the fees and interest accrued during the grace period, will be written off as losses. The losses will be distributed to the LPs per their shares of the liquidity pool.&#x20;
+Each pool can define a default grace period, which is a multiple of the pay periods. Once the grace period has passed, if the borrower still has not paid the amount due yet, the default process will be triggered. The entire balance including principal, interest, and fees, including the fees and interest accrued during the grace period, will be written off as losses. The losses will be distributed to the LPs per their shares of the liquidity pool.
 
 Once the default is triggered, the balance is written off and the accounting should follow accordingly.
 
-At the same time, the borrowing record will still be open and the borrower still has a chance to make payment towards the balance due, even though this is unlikely to happen. All the payments will be applied to offset the write-off first before used to pay additional fees accrued. The borrowing record will be in default state and the borrower is not allowed to borrow again until all the principal and accrued fees are paid off.&#x20;
+At the same time, the borrowing record will still be open and the borrower still has a chance to make payment towards the balance due, even though this is unlikely to happen. All the payments will be applied to offset the write-off first before used to pay additional fees accrued. The borrowing record will be in default state and the borrower is not allowed to borrow again until all the principal and accrued fees are paid off.
 
 #### 4.8 Income and Loss Distribution
 
-The protocol defines a percentage of all pool income that goes to the protocol treasury. Huma DAO periodically decides how to distribute the income to various participants.&#x20;
+The protocol defines a percentage of all pool income that goes to the protocol treasury. Huma DAO periodically decides how to distribute the income to various participants.
 
 Pool income, is distributed to the pool participants after protocol income is deducted. Out of all pool participants, EAs commission is distributed first. The remainder is distributed to the LPs per their share of ownership of the pool.
 
@@ -305,7 +305,7 @@ We expect the core contracts to continue to evolve, thus upgradability is critic
 
 ### 5.0 Aura (Decentralized Credit Tracking)
 
-This is the layer for capturing, reporting, and leveraging credit trustworthiness. Aura is not in scope for our v1 protocol, as decentralized solutions in this space are also in early development. In v2, Huma will integrate with decentralized reputation systems that combine on-chain and off-chain data points.&#x20;
+This is the layer for capturing, reporting, and leveraging credit trustworthiness. Aura is not in scope for our v1 protocol, as decentralized solutions in this space are also in early development. In v2, Huma will integrate with decentralized reputation systems that combine on-chain and off-chain data points.
 
 ### 6.0 Governance
 
@@ -318,7 +318,7 @@ Huma’s governance is going to be managed by its community DAO which will maint
 * Responding to emergencies by pausing and unpausing the protocol
 * Launching new community pools and acting as PoolOwner where needed
 * Updating protocol configurations
-* Planning tokenomics for HUMA tokens, as well as rewards and distributions
+* Managing protocol treasury, payments, as well as rewards and distributions
 
 ### 6.1 Governance Council
 
