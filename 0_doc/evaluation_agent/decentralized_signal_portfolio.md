@@ -31,11 +31,11 @@ There is a wide range of sources that a Signal Adapter can be developed to fetch
 
 ## Example of a Signal Adapter
 
-See the [Ethereum Wallet Adapter](../huma_signals/adapters/ethereum_wallet) for a working example.
+See the [Ethereum Wallet Adapter](https://github.com/00labs/huma-signals/blob/develop/huma_signals/adapters/ethereum_wallet/adapter.py) for a working example.
 
 ## Contributing new Signal Adapter
 
-All signal adapters' code can be located under the [`huma_signals` directory](../huma_signals/).
+All signal adapters' code can be located under the [`huma_signals` directory](https://github.com/00labs/huma-signals/tree/develop/huma_signals).
 
 ### Adding signal definition
 
@@ -98,7 +98,7 @@ class EthereumWalletAdapter(adapter_models.SignalAdapterBase):
 
 ### Testing
 
-Please include extensive tests under [tests](../tests). Below are the things to keep in mind:
+Please include extensive tests under [tests](https://github.com/00labs/huma-signals/tree/develop/tests). Below are the things to keep in mind:
 
 - Use `pytest` for test framework.
 - Use `pytest-describe` to organize tests.
