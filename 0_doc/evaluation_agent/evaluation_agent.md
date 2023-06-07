@@ -16,7 +16,7 @@ The EA hosting platform is open-sourced (as in this repo). It is centralized at 
 
 To create a new EA. Developers submit their models, EAs, to Huma DAO for review. Once approved, the EAs are deployed in a secure container provided by Huma.
 
-See a [sample Evaluation [Agent](https://github.com/00labs/huma-underwriter-eth-txns) that underwrites loans using simple rules based on wallet transaction history.
+See a [sample Evaluation Agent](https://github.com/00labs/huma-example-underwriter) that underwrites loans using simple rules based on wallet transaction history.
 
 An NFT is minted to represent each EA. Although any developer can mint an EA NFT, only Huma DAO can update the relevant metadata (e.g. status, performance) for each EA NFT and creates an entry in the EA Registry so that it is discoverable by pool owners.
 
