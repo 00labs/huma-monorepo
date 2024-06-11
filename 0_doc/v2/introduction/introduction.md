@@ -4,7 +4,7 @@ Huma V1 is an income-backed lending protocol. It allows businesses and individua
 
 The Huma V2 protocol builds upon the foundation of the V1 protocol. In addition to the revolving credit line and receivable factoring, it added the support of receivable-backed credit lines. The primary goal of V2 is to support institutional investors with a rich set of features:
 
-- **Structured finance.** This includes tranches, first loss coverage, 30/160 calendar, and day boundary yield calculations.
+- **Structured finance.** This includes tranches, first loss coverage, 30/360 calendar, and day boundary yield calculations.
 - **Tokenization.** Allows real-world assets to be tokenized through SPV structures.
 - **Transparency.** Clearly present the lifecycle of real-world receivables on-chain so that the investors can easily monitor the performance of these receivables.
 
