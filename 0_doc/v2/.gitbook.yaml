@@ -1,4 +1,4 @@
-root: ./0_doc/v2
+root: ./
 
 structure:
   readme: ./introduction/introduction.md
