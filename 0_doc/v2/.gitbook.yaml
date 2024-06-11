@@ -1,0 +1,5 @@
+root: ./0_doc/v2
+
+structure:
+  readme: ./introduction/introduction.md
+  summary: ./SUMMARY.md
