@@ -9,4 +9,4 @@ Since all pools on the Huma protocol are permissioned, all lenders must get appr
 
 Pool Operators have the discretion to remove a lender. If removed, the lender can no longer supply additional liquidity to the pool. However, the lender’s existing funds will stay in the pool, continuing to generate yield, and can be requested to redeem at any time.
 
-For a detailed walkthrough of the process, refer to the [Step-by-step Guides](https://www.notion.so/Invoice-Financing-by-Request-Huma-72adb4cca5b042128395230b28dab668?pvs=21) section.
+For a detailed walkthrough of the process, refer to the [Step-by-step Guides](./step-by-step-guides.md) section.

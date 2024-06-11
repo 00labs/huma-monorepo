@@ -37,7 +37,7 @@ Once your credit request is approved, you can begin the drawdown process, either
 
 For the last two types of pools, you'll give up your ownership of the receivable during drawdown. Ensure that you have authorized the `ReceivableBackedCreditLine` or the `ReceivableFactoringCredit` contract to perform the transfer from you.
 
-You may also use the SDK to draw down. See the [Using the SDK](https://www.notion.so/Huma-V2-Gitbook-f63276eed2c346f99a4689ebd2873737?pvs=21) section for more details.
+You may also use the SDK to draw down. See the [Using the SDK](#using-the-sdk) section for more details.
 
 ### Making Payment
 
@@ -78,7 +78,7 @@ Alternatively, you can call contract functions directly to execute payments. The
 
 If you specify a payment amount that exceeds the payoff amount on the receivable, the contract will only collect the due amount and the remaining funds will be left untouched. Keep in mind that the pool will maintain ownership of the receivable NFT, even after it's paid off.
 
-You can also utilize the SDK to make repayments. Refer to the [Using the SDK](https://www.notion.so/Huma-V2-Gitbook-f63276eed2c346f99a4689ebd2873737?pvs=21) section for more information.
+You can also utilize the SDK to make repayments. Refer to the [Using the SDK](#using-the-sdk) section for more information.
 
 ### Credit Closure
 
@@ -91,4 +91,4 @@ Your credit will automatically be closed once it's paid off and has passed its m
 
 The Huma SDK provides utilities for interacting with protocol contracts, along with various on-chain and off-chain data storage. It enables you to programmatically perform the borrowing-related actions described above.
 
-Download the SDK as an NPM package from [https://www.npmjs.com/package/@huma-finance/sdk](https://www.npmjs.com/package/@huma-finance/sdk**). You can find the SDK's code at https://github.com/00labs/huma-js/tree/develop/packages/huma-sdk.
+Download the SDK as an NPM package from [https://www.npmjs.com/package/@huma-finance/sdk](https://www.npmjs.com/package/@huma-finance/sdk**). You can find the SDK's code at [https://github.com/00labs/huma-js/tree/develop/packages/huma-sdk].
