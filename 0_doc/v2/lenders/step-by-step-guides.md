@@ -68,6 +68,3 @@
 2. You should see the following screen if your redemption request is canceled successfully.
 
    ![Transaction Completed](../images/lenders/redemption-cancellation-tx-completed.png)
-
-
-[comment]: # TODO add "### Withdrawing Funds Redeemed" and "### Withdrawing After Pool Closure"

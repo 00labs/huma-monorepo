@@ -28,7 +28,7 @@ Similar to the above, the borrower may wish to make a payment to show they have 
 
 If an account is late (after the late payment grace period), a late payment fee will be charged. This fee is in addition to the regular interest due for all the outstanding principal. The additional charge is calculated using:
 
-$\frac{Pincipal \times LateFeeInBps \times NumberOfDaysBeingLate}{360}$.
+$$\frac{Principal \times LateFeeInBps \times NumberOfDaysBeingLate}{360}$$
 
 For instance, if an account with an outstanding principal of $10,000 and an APR of 12% has a `lateFeeInBps` of 18%, the actual charge on the borrower is an annualized 30% for the days when the account is late. It is charged daily to encourage the borrower to pay back as soon as possible.
 
@@ -36,4 +36,4 @@ For instance, if an account with an outstanding principal of $10,000 and an APR 
 
 At the origination of a loan, the borrower may be charged a front-loading fee, also known as an origination fee. This fee is usually a combination of a percentage of the principal amount and a fixed fee. The `frontLoadingFeeFlat` parameter defines the fixed fee, and the `frontLoadingFeeBps` parameter defines the percentage of the principal to be charged. For example, if `frontLoadingFeeFlat = $2,000`, and `frontLoadingFeeBps = 100`. For a loan of $100K, the front-loading fee will be:
 
-$\$2,000 + \$100K \times 100/10,000 = \$2,000 + \$1,000 = \$3,000$.
+$$\$2,000 + \$100K \times 100/10,000 = \$2,000 + \$1,000 = \$3,000$$

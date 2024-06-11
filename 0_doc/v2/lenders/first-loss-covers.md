@@ -30,5 +30,6 @@ Since the first loss cover capital is not deployed, it is unproductive. Typical 
 
 A pool cannot be enabled until the minimum coverage for all first loss covers is met. Afterward, the Huma protocol requires the yield produced by the first loss covers to be reinvested into the cover. Also, until the coverage reaches its maximum, all fees generated for the admins (Huma Protocol, Pool Owner, EA) are automatically deposited into the first loss cover. This strategy aligns the admins' interests with the success of the pool.
 
-Below is a diagram showing the order of PnL distribution:
+Below is a diagram showing the order of P&L distribution:
+
 ![Order of P&L Distribution](../images/lenders/order-of-pnl-distribution.jpg)
