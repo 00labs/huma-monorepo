@@ -22,4 +22,6 @@
 * [Pool Admins](pool-admins/pool-admins.md)
   * [Pool Owner and Pool Operators](pool-admins/pool-owner-operators.md)
   * [Evaluation Agent](pool-admins/evaluation-agent.md)
+* [Technical Architecture]
+  * [Autotasks](technical-architecture/autotasks.md)
 * [Multisig and Timelock Addresses](addresses/addresses.md)
