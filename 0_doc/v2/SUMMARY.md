@@ -20,7 +20,7 @@
 * [Borrowers](borrowers/borrowers.md)
   * [Yield, Fees, and Principal Payment](borrowers/payment.md)
   * [Loan Management](borrowers/loan-management.md)
-  * [Frequently Asked Questions](borrowers/faq.md)
+  * [Frequently Asked Questions](borrowers/faqs.md)
 * [Pool](pools/pools.md)
   * [Admins Roles](pools/admin-roles.md)
   * [Pool Owner and Pool Operators](pools/pool-owner-operators.md)
