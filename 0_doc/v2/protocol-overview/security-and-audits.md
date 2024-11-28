@@ -9,7 +9,7 @@ Security is our top priority, and we take extensive measures to ensure the safet
 
 ### Audits
 - EVM: Audited by Spearbit, live on multiple EVM chains for over 6 months - [V2.0.0](https://github.com/00labs/huma-contracts-v2/blob/develop/audit/spearbit.pdf), [V2.1.0](https://github.com/00labs/huma-contracts-v2/blob/develop/audit/spearbit-incremental-Nov-2024.pdf).
-- Stellar: Audited by Certora - [V2.0.0 and V2.1.0](https://certora.cdn.prismic.io/certora/Zq2zzkaF0TcGIqZP_HumaCertoraAuditReport.pdf).
+- Stellar: Audited by Certora - [V2.0.0 and V2.1.0](https://certora.cdn.prismic.io/certora/Z0dE1pbqstJ971DG_HumaCertoraAuditReport.pdf).
 - Solana: Audited by Halborn - [V2.0.0](https://www.halborn.com/audits/huma/huma-protocol).
 
 - Additionally, our bug bounty program is live with Cantina (Spearbit), offering continuous security monitoring. [link]
