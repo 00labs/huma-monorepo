@@ -20,4 +20,9 @@ The Huma protocol employs OpenZepplin’s Autotasks to perform certain routine p
 - Fetch all credit lines where credit state is `Approved`, committed amount is greater than 0, and the designated credit start date is in the past.
 - Call `startCommittedCredit` on the credit manager contract for that credit.
 
-Unless otherwise noted, all Autotasks run every 5 minutes. For access control, Autotasks will call contracts using the sentinel service account wallet.
+### Submit Redemption Request Autotask
+- Fetch all pools that has the `autoRedmeptionAfterLockUp` setting enabled.
+- For each pool, fetch all lenders whose deposit lockup period has expired.
+- Call `addRedemptionRequest` on the contract to submit redemption requests for all the shares owned by the lender.
+
+Unless otherwise noted, all Autotasks run every 5 minutes. For access control, Autotasks will call contracts using the Sentinel service account wallet.

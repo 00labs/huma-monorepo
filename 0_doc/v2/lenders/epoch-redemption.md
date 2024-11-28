@@ -4,7 +4,7 @@ With both senior and junior tranches, we must protect seniors’ interests. We c
 
 ### Redemption Requests and Cancellation
 
-All lenders can submit redemption requests at no cost, but only those meeting the lockout period requirements will be accepted. Redemption requests can be canceled at no cost before the epoch starts to process them.
+All lenders can submit redemption requests at no cost, but only those meeting the lockup period requirements will be accepted. Redemption requests can be canceled at no cost before the epoch starts to process them.
 
 ### Epoch Processing Logic
 
