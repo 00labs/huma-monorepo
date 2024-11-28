@@ -32,7 +32,7 @@ Arf Pools are backed by bonds issued by Arf Capital Ltd. and is structured in th
 
 - Senior : The senior tranche is generally seen as a lower-risk investment. It offers a lower yield compared to junior but carries less risk. If there's a default, senior tranche lenders receive payment first.
 - Junior : The junior tranche, on the other hand, assumes a higher risk and earns a higher yield when things go smoothly. If there's a default, junior tranche lenders are paid after those in the senior tranche. Arf pools typically have a min 10% junior requirement, to protect senior investors.
-- First-loss Cover : Typically 2% of the pool and is provided by Arf Capital itself to protect junior and senior investors against small defaults.
+- First Loss Cover : Typically 2% of the pool and is provided by Arf Capital itself to protect junior and senior investors against small defaults.
 
 Arf manages default risk in multiple ways :
 
@@ -50,12 +50,12 @@ In finance, the term "tranche" refers to portions or segments of pooled financia
 
 Arf's Senior Tranche:
 - Offers lower, fixed yields.
-- When a loss occurs, impacted only if losses exceed both the first-loss cover and the Junior tranche.
+- When a loss occurs, impacted only if losses exceed both the first loss cover and the Junior tranche.
 - The Junior tranche must always be at least 10% of the pool, enforced by smart contracts.
 
 Arf's Junior Tranche:
 - Carries higher risk but offers a higher, floating yield.
-- When a loss occurs, first-loss cover absorbs initial losses; beyond this, the Junior tranche bears the losses.
+- When a loss occurs, first loss cover absorbs initial losses; beyond this, the Junior tranche bears the losses.
 
 **Yield calculation**: The Junior tranche yield is floating, which means it depends on the Senior-to-Junior ratio in the pool. For example, if Arf borrows from the pool at 12%, and the Senior tranche yield is fixed at 11%:
 - With a 90% Senior / 10% Junior ratio, Junior yield is 21% (12% + (12% - 11%) * (90% / 10%)).
@@ -63,12 +63,12 @@ Arf's Junior Tranche:
 
 The yield for junior tranche in a Huma pool proceeds with an "up to" label. The yield is calculated by keeping senior-to-junior ratio at the maximum allowed value. As more deposits go to the junior tranche, it can no longer maintain the maximum senior-to-junior ratio even if the remaining room in the pool is filled with senior tranche. When this happens, the "up to" yield for a junior tranche will reduce.
 
-### How does First-loss Cover work? How does it protect the investors?
+### How does First Loss Cover work? How does it protect the investors?
 
-First-loss Cover acts as a protective buffer by absorbing initial losses in the event of a default.
+First Loss Cover acts as a protective buffer by absorbing initial losses in the event of a default.
 
-- If a loss occurs, the First-loss Cover is used first, shielding both Junior and Senior tranche investors.
-- After the First-loss Cover is exhausted, Junior tranche investors bear any remaining losses, with Senior tranche investors affected only if both the First-loss Cover and Junior tranche are depleted.
+- If a loss occurs, the First Loss Cover is used first, shielding both Junior and Senior tranche investors.
+- After the First Loss Cover is exhausted, Junior tranche investors bear any remaining losses, with Senior tranche investors affected only if both the First Loss Cover and Junior tranche are depleted.
 
 This structure provides extra protection to Senior tranche investors, making their investment safer, while Junior tranche investors take on more risk in exchange for higher returns.
 
@@ -112,7 +112,7 @@ Although these institutions typically return funds to Arf within a few days, agr
 
 The interest for the campaigns is typically auto-reinvested in the pool. It will be paid out when you withdraw your funds from the pool, after your investment reaches maturity.
 
-On EVM, depending on the pool configuration, investors can receive interest payments on a regular basis, either monthly or quarterly. This capability is not available on Solana or Stellar at the initial launch. It will be added later.
+On EVM, depending on the pool configuration, investors can receive interest payments at the end of each epoch. This capability is not available on Solana or Stellar at the initial launch. It will be added later.
 
 ### What happens when a pool matures?
 

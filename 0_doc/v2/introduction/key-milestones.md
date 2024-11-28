@@ -7,7 +7,7 @@
 ### 2023
 - **Launched Public Beta:** Opened up our platform to the public, allowing users to utilize Huma’s DeFi solutions.
 - **20+ teams building on Huma:** Gained traction within the developer community with multiple teams integrating Huma's technology.
-- **Surpassed $100 million in on-chain liquidity volume:** Achieved our first significant milestone with our initial use-cases.
+- **Surpassed $100 million in on-chain liquidity volume:** Achieved our first significant milestone with our initial use cases.
 
 ### 2024
 - **Surpassed $1 billion in on-chain liquidity volume:** Achieved a significant milestone in transaction volume, demonstrating the growing adoption of Huma Protocol.

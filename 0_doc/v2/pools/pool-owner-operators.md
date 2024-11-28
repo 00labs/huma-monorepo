@@ -44,7 +44,7 @@ The following configurations govern the tranches in a pool:
 - `maxSeniorJuniorRatio`: This is the maximum senior-to-junior asset ratio allowed. The senior assets cannot be more than the product of the junior assets and this ratio. A ratio of zero suggests a uni-tranche setup where only the junior tranche is enabled.
 - `fixedSeniorYieldInBps`: This is the fixed yield rate for the senior tranche. Pools using the `FixedSeniorYieldTranchesPolicy` must set this value and leave the risk adjustment rate setting at 0.
 - `tranchesRiskAdjustmentInBps`: This rate dictates how much profit will be shifted from the senior tranche to the junior tranche. Pools using the `RiskAdjustedTranchesPolicy` must set this value and leave the fixed senior yield rate setting at 0.
-- `withdrawalLockoutPeriodInDays`: This is the lockout period for lender withdrawal. Lenders cannot withdraw until this lockout period has passed after their most recent deposit.
+- `withdrawalLockoutPeriodInDays`: This is the lockup period for lender withdrawal. Lenders cannot withdraw until this lockup period has passed after their most recent deposit.
 
 **First Loss Cover Configuration**
 

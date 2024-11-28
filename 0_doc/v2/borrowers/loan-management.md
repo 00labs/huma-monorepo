@@ -91,4 +91,4 @@ Your credit will automatically be closed once it's paid off and has passed its m
 
 The Huma SDK provides utilities for interacting with protocol contracts, along with various on-chain and off-chain data storage. It enables you to programmatically perform the borrowing-related actions described above.
 
-Download the SDK as an NPM package from [https://www.npmjs.com/package/@huma-finance/sdk](https://www.npmjs.com/package/@huma-finance/sdk**). You can find the SDK's code at [https://github.com/00labs/huma-js/tree/develop/packages/huma-sdk].
+Download the SDK as an NPM package [here](https://www.npmjs.com/package/@huma-finance/sdk). You can find the SDK's code in [this Github repo](https://github.com/00labs/huma-js/tree/develop/packages/huma-sdk).

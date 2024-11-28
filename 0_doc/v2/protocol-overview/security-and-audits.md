@@ -12,4 +12,4 @@ Security is our top priority, and we take extensive measures to ensure the safet
 - Stellar: Audited by Certora - [V2.0.0 and V2.1.0](https://certora.cdn.prismic.io/certora/Z0dE1pbqstJ971DG_HumaCertoraAuditReport.pdf).
 - Solana: Audited by Halborn - [V2.0.0](https://www.halborn.com/audits/huma/huma-protocol).
 
-- Additionally, our bug bounty program is live with Cantina (Spearbit), offering continuous security monitoring. [link]
+- Additionally, our bug bounty program is live with Cantina (Spearbit), offering continuous security monitoring. The bug boundty can be found [here](https://cantina.xyz/bounties/82ca5850-abbe-473d-9210-70c9a6c4a6a4).

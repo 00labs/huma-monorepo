@@ -1,7 +1,7 @@
 # Table of Contents
 
 * [About Huma Finance](introduction/about-huma-finance.md)
-  * [Overview of Huma finance](introduction/overview.md)
+  * [Overview of Huma Finance](introduction/overview.md)
   * [Introduction to PayFi](introduction/introduction-to-payfi.md)
   * [Huma's Key Milestones](introduction/key-milestones.md)
 * [Protocol Overview](protocol-overview/protocol-overview.md)
@@ -11,7 +11,7 @@
   * [Tranches](lenders/tranches.md)
   * [First Loss Covers](lenders/first-loss-covers.md)
   * [Lender Approval and Removal](lenders/lender-approval-removal.md)
-  * [Deposit and the Lockout Period](lenders/deposit-lockout-period.md)
+  * [Deposit and the Lockup Period](lenders/deposit-lockup-period.md)
   * [Epoch and Redemption](lenders/epoch-redemption.md)
   * [Automatic Yield Payout and Reinvestment](lenders/automatic-payout-reinvestment.md)
   * [Default Handling](lenders/default-handling.md)
@@ -28,7 +28,7 @@
 * [Technical Architecture](technical-architecture/technical-architecture.md)
   * [Autotasks](technical-architecture/autotasks.md)
 * [FAQs](faqs/faqs.md)
-  * [General FAQs](faqs/general.md)
-  * [Investor FAQs](faqs/investor.md)
-  * [Community FAQs](faqs/community.md)
+  * [General](faqs/general.md)
+  * [Investors](faqs/investor.md)
+  * [Community](faqs/community.md)
 * [Multisig and Timelock Addresses](addresses/addresses.md)

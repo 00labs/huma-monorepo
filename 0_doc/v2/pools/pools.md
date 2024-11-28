@@ -1,5 +1,4 @@
 # Pools
-
 ## Active Pools
 
 Currently, Huma offers a diverse range of pools, including:
