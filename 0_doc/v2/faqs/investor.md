@@ -114,11 +114,29 @@ The interest for the campaigns is typically auto-reinvested in the pool. It will
 
 On EVM, depending on the pool configuration, investors can receive interest payments at the end of each epoch. This capability is not available on Solana or Stellar at the initial launch. It will be added later.
 
+### Why are my shares transferred away when requesting redemption?
+
+Your shares are transferred to the Huma contract to process your redemption requests at the start of the next month. After processing, you can withdraw your principal and interest.
+
+### I’ve never requested redemption. Why are there pending redemption requests?
+
+As explained in this [FAQ entry](https://docs.huma.finance/faqs/investor#what-happens-when-a-pool-matures), all positions must be withdrawn when the bond matures for bond-structured pools. To streamline this, an "auto redemption" feature requests the redemption of your shares in the final month of your lock-up period.
+
+For example, if you deposited in September 2024 with a 3-month lock-up, your shares would automatically be requested for redemption in December 2024. You could then withdraw your redeemed USDC on January 1, 2025.
+
+### Will I continue earning interest and points while my redemption requests are pending?
+
+Yes, you will keep earning interest and Huma points at the same rates until the redemption requests are processed.
+
+### Why can’t I cancel redemption requests?
+
+For bond-structured pools, withdrawing all positions is mandatory when the bond matures. Therefore, once submitted, redemption requests cannot be canceled.
+
 ### What happens when a pool matures?
 
 Currently, all assets in Arf pools are set up as bonds. Once a bond matures, you will need to withdraw both the principal and interest. It's highly likely that Arf will have new pools for you to invest in. You can deposit into any of the open pools immediately.
 
-### How does the referral work?
+### How does referral work?
 
 When you refer friends to join Huma, you can be rewarded with 10% of the points your friends earn when they deposit into pools. You will also earn 5% of the points earned by every person your friends refer to Huma.
 
@@ -130,10 +148,10 @@ Please make sure you are using "on-chain signatures" as the signing method. You 
 
 ![Safe Wallet Settings](../images/faqs/safe-wallet.png)
 
-### Do I need to KYC/KYB again on Solana if I have done it on EVM?
+### Do I need to do KYC/KYB again on Solana if I have done it on EVM?
 
 No, you don’t have to. First, you need to connect to the EVM wallet that you used for KYC/KYB via one of the Scroll pool pages. After that, you can return to the Solana pool and connect to your Solana wallet to bypass KYC/KYB.
 
 ### What wallets are supported?
 
-We support Metamask, Phantom, Solflare, Coinbase, Ledger, Trezor, Backpack and WalletConnect for our Solana Campaign.
+We support Metamask, Phantom, Solflare, Coinbase, Ledger, Trezor, Backpack and WalletConnect for our Solana campaigns.
