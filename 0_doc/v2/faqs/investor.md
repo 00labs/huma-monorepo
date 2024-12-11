@@ -82,7 +82,7 @@ Arf requires professional/accredited investors. To qualify, investors must confi
 2. Your financial instrument portfolio, defined as including cash deposits and financial instruments exceeds EUR 500,000.
 3. You worked in the financial sector for at least one year in a professional position requiring knowledge of the transactions or services envisaged.
 
-Only after declaring their professional investor status can potential investors access more detailed information about Arf’s investment opportunities.
+Only after declaring their professional investor status can potential investors access more detailed information about Arf's investment opportunities.
 Additionally, potential investors must complete KYC or KYB processes. Only those residing outside restricted countries or regions are permitted to participate in the Arf pool. You can find the restricted country/region list [here](https://campaigns.app.huma.finance/#/restricted-countries?poolName=ArfCreditPool6Months&chainId=534352).
 Innovative securities are subject to significant risks, including loss of principal. Any investment decision should only be made after reading the Private Placement Memorandum (the "PPM") associated with the products, as well as the associated subscription documents. The PPM and such associated documents will be made available to qualified investors only. In particular, any investment decision should be based on an assessment of the Risk Factors set forth in the PPM.
 
@@ -90,7 +90,7 @@ Innovative securities are subject to significant risks, including loss of princi
 
 Arf uses Persona to handle KYC/KYB processes. Most KYC checks are completed in 2-3 minutes without human intervention from Arf's compliance team. However, all KYB applications require manual review, which can take a few days depending on the completeness of the submitted documents. Please allow time for this turnaround.
 
-You don’t need to wait for a campaign to launch to begin the KYC/KYB process. You can start by clicking any existing campaign (e.g., the Scroll campaign) to complete KYC/KYB. Completing this process doesn’t commit you to an investment, but it ensures you can deposit immediately when a new pool opens, giving you maximum opportunity to participate in the campaign.
+You don't need to wait for a campaign to launch to begin the KYC/KYB process. You can start by clicking any existing campaign (e.g., the Scroll campaign) to complete KYC/KYB. Completing this process doesn't commit you to an investment, but it ensures you can deposit immediately when a new pool opens, giving you maximum opportunity to participate in the campaign.
 
 ### What is the required minimum investment amount?
 
@@ -100,7 +100,7 @@ The required minimum investment amount for Arf pools is **1,000 USDC**.
 
 There is no individual investment limit, but each pool has an overall cap. You can only invest if there is still room available in the pool.
 
-In some cases, the pool might have an investment cap, after which Huma Points won’t accumulate. Those cases will be clearly stated on the pool page.
+In some cases, the pool might have an investment cap, after which Huma Points won't accumulate. Those cases will be clearly stated on the pool page.
 
 ### Why are there lockup periods?
 
@@ -118,7 +118,7 @@ On EVM, depending on the pool configuration, investors can receive interest paym
 
 Your shares are transferred to the Huma contract to process your redemption requests at the start of the next month. After processing, you can withdraw your principal and interest.
 
-### I’ve never requested redemption. Why are there pending redemption requests?
+### I've never requested redemption. Why are there pending redemption requests?
 
 As explained in this [FAQ entry](https://docs.huma.finance/faqs/investor#what-happens-when-a-pool-matures), all positions must be withdrawn when the bond matures for bond-structured pools. To streamline this, an "auto redemption" feature requests the redemption of your shares in the final month of your lock-up period.
 
@@ -128,7 +128,7 @@ For example, if you deposited in September 2024 with a 3-month lock-up, your sha
 
 Yes, you will keep earning interest and Huma points at the same rates until the redemption requests are processed.
 
-### Why can’t I cancel redemption requests?
+### Why can't I cancel redemption requests?
 
 For bond-structured pools, withdrawing all positions is mandatory when the bond matures. Therefore, once submitted, redemption requests cannot be canceled.
 
@@ -150,7 +150,7 @@ Please make sure you are using "on-chain signatures" as the signing method. You 
 
 ### Do I need to do KYC/KYB again on Solana if I have done it on EVM?
 
-No, you don’t have to. First, you need to connect to the EVM wallet that you used for KYC/KYB via one of the Scroll pool pages. After that, you can return to the Solana pool and connect to your Solana wallet to bypass KYC/KYB.
+No, you don't have to. First, you need to connect to the EVM wallet that you used for KYC/KYB via one of the Scroll pool pages. After that, you can return to the Solana pool and connect to your Solana wallet to bypass KYC/KYB.
 
 ### What wallets are supported?
 
