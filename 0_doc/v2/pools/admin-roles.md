@@ -8,7 +8,7 @@
 ### Pool Admin Roles
 
 - **Pool Owners:** Pool Owners are addresses approved by the Protocol Owner to create and manage pools. They set key parameters, choose the Evaluation Agent, and establish the fee structure through the Fee Manager. Additionally, they earn a portion of the pool income as a reward.
-- **Pool Owner Treasury:** The Protocol Owner Treasury account contains the pool owner fees collected from the pools owned by the pool owner. It is kept separate from the Pool Owner account to avoid concentrating too much power in one account and to enhance security.
+- **Pool Owner Treasury:** The Pool Owner Treasury account contains the pool owner fees collected from the pools owned by the pool owner. It is kept separate from the Pool Owner account to avoid concentrating too much power in one account and to enhance security.
 - **Pool Operators:** Pool Operators act as operational staff supporting the Pool Owner. They review the results of KYC/KYB and accreditation, and they approve lenders. Pool Operator accounts do not need to be multi-sigs.
 - **Evaluation Agents:** Evaluation Agents (EA) are responsible for approving or disapproving credit requests. Each pool is managed by a single EA. While we expect most EAs to operate automatically, the protocol also allows for human supervision. EAs earn a portion of the pool's income as a reward for their services.
 
