@@ -1,0 +1,2 @@
+# Tranches
+Tranche support is vital for institutions participating in the Huma protocol.  As mentioned before, there are two types of tranches: senior and junior. The senior tranche is generally seen as a lower-risk investment. It offers a modest yield but carries less risk. If there's a default, senior tranche lenders receive payment first. The junior tranche, on the other hand, assumes a higher risk and earns a higher yield when things go smoothly. If there's a default, junior tranche lenders are paid after those in the senior tranche.
