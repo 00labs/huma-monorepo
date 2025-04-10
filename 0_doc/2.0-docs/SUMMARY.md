@@ -46,6 +46,8 @@
         * [Evaluation Agent](products/huma-institutional/user-manuals/pool-admins/evaluation-agent.md)
 * ECOSYSTEM RESOURCES
   * [Technical Docs](ecosystem-resources/technical-docs)
+    * [Huma (2.0)](ecosystem-resources/technical-docs/huma.md)
+    * [Huma Institutional](ecosystem-resources/technical-docs/huma-institutional.md)
   * [Smart Contracts](ecosystem-resources/smart-contracts.md)
   * [Security & Audits](ecosystem-resources/security-audits.md)
   * [Legal](ecosystem-resources/legal.md)
