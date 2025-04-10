@@ -21,7 +21,7 @@
       * [Switching Modes](products/huma/user-manuals/switching-modes.md)
       * [Portfolio](products/huma/user-manuals/portfolio.md)
       * [Feathers](products/huma/user-manuals/feathers.md)
-      * [$PST](products/huma/user-manuals/pst)
+      * [$PST](products/huma/user-manuals/pst.md)
       * [Data Room](products/huma/user-manuals/data-room.md)
       * [FAQs](products/huma/faqs.md)
   * Huma Institutional
