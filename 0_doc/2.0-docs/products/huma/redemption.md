@@ -16,7 +16,8 @@ Redeeming your position on Huma is straightforward, subject to committed lockup 
 
 ## **Daily Redemption Cap**
 
-To maintain protocol stability, Huma enforces a **global daily redemption cap** of **5% of total active liquidity**. This cap is configurable and resets daily at **00:00 UTC**.
+To maintain protocol stability, Huma enforces a **global daily redemption cap**. This cap is configurable and resets daily at **00:00 UTC**.
 
 - Once the cap is reached, additional redemption requests for that day will be **rejected**.
 - A future update will introduce the ability to **submit capped redemptions with a fee**, allowing users to bypass the daily limit if needed.
+- **LPs can redeem instantly by swapping via the PST-USDC pool on Jupiter / Meteora**, as long as sufficient liquidity is available. These redemptions are not subject to Huma's Daily Redemption Cap.

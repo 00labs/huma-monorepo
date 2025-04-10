@@ -1,7 +1,7 @@
 # Huma Institutional
 
 ## Autotasks
-The Huma protocol employs OpenZepplin’s Autotasks to perform certain routine processes. There are four types of Autotasks, with each of them supporting a different aspect of the pool operation:
+The Huma protocol employs OpenZepplin's Autotasks to perform certain routine processes. There are four types of Autotasks, with each of them supporting a different aspect of the pool operation:
 
 ### AutoPay Autotask
 - Fetch all credits with a due date in the next 2 days and the credit state is in `GoodStanding` or `Delayed`.

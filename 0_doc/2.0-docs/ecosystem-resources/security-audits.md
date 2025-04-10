@@ -29,7 +29,7 @@ We also maintain an active **bug bounty program** in collaboration with **Spearb
 
 ## **Infrastructure & Operational Security**
 
-Security doesn't stop at smart contracts. We’ve implemented strong protection across our infrastructure and team operations:
+Security doesn't stop at smart contracts. We've implemented strong protection across our infrastructure and team operations:
 
 - **End-to-end penetration testing** of backend systems
 - **Device-level monitoring and endpoint protection** (EDR + DM) for all team members
