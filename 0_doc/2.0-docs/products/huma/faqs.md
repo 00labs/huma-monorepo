@@ -118,6 +118,19 @@ However, please note:
 
 ---
 
+## **Why is the $mPST price above $1?**
+
+Although Maxi mode doesn’t generate a stable yield and the price is intended to remain at $1, we’ve discovered that some users accidentally burned their $mPST while leaving their USDC in the pool. This imbalance — more USDC held than $mPST outstanding — has driven the price above $1.
+
+**Implications:**
+
+- **Early depositors** (before any burning occurred) will receive slightly more USDC upon redemption than they originally deposited.
+- **Later depositors** (after the last burning incident) will now receive **fewer $mPST tokens** per USDC deposited, since $mPST is priced above $1. But when you redeem, you’ll still get back exactly the amount of USDC they deposited.
+
+Warning: Token burning is **irreversible**. Please double‑check before you proceed — **lost tokens cannot be recovered.**
+
+---
+
 ## **Why choose a lockup over no lockup?**
 
 Locking your position boosts your **Feather reward multiplier** while still giving you full access to your capital once the lockup ends.
