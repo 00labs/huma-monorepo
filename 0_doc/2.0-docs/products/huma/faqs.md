@@ -8,8 +8,8 @@ The existing permissioned service continues under the **Huma Institutional** bra
 
 The **Launch App** button on [huma.finance](https://huma.finance/) provides access to both:
 
-- **Huma (permissionless)** – launched in April 2025
-- **Huma Institutional (permissioned)** – the original product prior to April 2025
+- **Huma (permissionless)**: Launched in April 2025
+- **Huma Institutional (permissioned)**: The original product prior to April 2025
 
 ---
 
@@ -44,8 +44,8 @@ Any user from a non-sanctioned or non-restricted country can participate, provid
 
 Yes. Huma has a **dynamic pool cap** based on real-world capital demand from PayFi partners to ensure high utilization rates. When the cap is reached:
 
-- New deposits are paused
-- Deposits reopen only when new demand is added or existing LPs withdraw
+- New deposits are paused.
+- Deposits reopen only when new demand is added or existing LPs withdraw.
 
 This protects yield quality for all participants and keeps capital highly efficient.
 
@@ -67,7 +67,7 @@ Users can switch the mode of their existing positions to swap between $PST and $
 Huma offers two modes to match different LP strategies. You can switch between them **anytime, as often as you like**.
 
 - **Classic Mode** provides **stable yield** with **moderate Huma Feather rewards**. The current APY is **10.5%**, updated monthly based on market conditions. This mode is ideal for LPs who prioritize **consistent income**.
-- **Maxi Mode** offers **maximum Feather rewards** by **trading away stable yield**. LPs in this mode earn only Huma Feathers, making it the go-to choice for **Feather-maximizing believers**—aka the Huma maxis
+- **Maxi Mode** offers **maximum Feather rewards** by **trading away stable yield**. LPs in this mode earn only Huma Feathers, making it the go-to choice for **Feather-maximizing believers**—aka the Huma maxis.
 
 ---
 
@@ -84,9 +84,9 @@ PST stands for PayFi Strategy Token
 
 When switching modes:
 
-- Your current token (**$PST** or **$mPST**) is **burned**, and the corresponding token is **minted**
-- **Switching to Maxi**: Forgoes APY for higher amount of Huma Feathers
-- **Switching to Classic**: Captures APY with lower amount of Huma Feathers
+- Your current token (**$PST** or **$mPST**) is **burned**, and the corresponding token is **minted**.
+- **Switching to Maxi**: Forgoes APY for higher amount of Huma Feathers.
+- **Switching to Classic**: Captures APY with lower amount of Huma Feathers.
 
 **Lockup status remains unchanged.**
 
@@ -114,9 +114,9 @@ Yes. Both tokens are standard SPL tokens and can be transferred to any supported
 However, please note:
 
 - **Transferred tokens lose their lockup status**
-- The transferred position will be treated as **unlocked** in the receiving wallet
-- Any **extra Feathers earned from lockups** will be **reverted** in the original wallet
-- An exception applies only if the transfer is to protocols where Huma has officially stated that lockup status and rewards will be preserved (currently none)
+- The transferred position will be treated as **unlocked** in the receiving wallet.
+- Any **extra Feathers earned from lockups** will be **reverted** in the original wallet.
+- An exception applies only if the transfer is to protocols where Huma has officially stated that lockup status and rewards will be preserved (currently none).
 
 ---
 
@@ -163,8 +163,8 @@ You can stack multiple multipliers for even higher rewards:
 
 ### How does redemption work?
 
-- **No Lockup**: Redeem anytime
-- **Locked Positions**: Redeem after the lockup period ends
+- **No Lockup**: Redeem anytime.
+- **Locked Positions**: Redeem after the lockup period ends.
 
 Redemptions are processed on a **first-come, first-served** basis. Most are completed within **1 business day**, though some may take up to **7 days** .
 
@@ -176,8 +176,8 @@ A **PST-USDC pool** on **Jupiter** (via Meteora) enables instant swaps.
 
 Even if your position is locked, you can exit early by swapping on Jupiter. However, in that case
 
-- The position is treated as **unlocked**
-- Any **extra Feathers** earned from the lockup will be **reverted**
+- The position is treated as **unlocked**.
+- Any **extra Feathers** earned from the lockup will be **reverted**.
 
 ---
 
@@ -197,8 +197,8 @@ Huma primarily generates yield from **PayFi**—real-world payment financing act
 
 Businesses pay a **daily fee** to borrow capital (typically 1–5 days), allowing:
 
-- **Capital recycling up to 100x/year**
-- **Compounding effect** that drives stable, double-digit returns
+- **Capital recycling up to 100x/year**.
+- **Compounding effect** that drives stable, double-digit returns.
 
 Unlike DeFi yield, which relies on token incentives, PayFi yield is **rooted in the real economy**.
 
@@ -211,8 +211,8 @@ Huma also generates yield from **market-neutral digital asset deployments**.
 Huma follows industry best practices for security:
 
 - **Minimized Admin Rights** – All admin actions require multisig. Even if keys are compromised, contracts prevent LP fund theft.
-- **Top-Tier Audits** – Audited by Spearbit, Halborn, and Certora. Huma 2.0 was audited by Halborn. [[View audit report here.](https://www.halborn.com/audits/huma-finance/solana-programs-060022)]
-- **Infrastructure Security** – Penetration-tested backend, real-time malware monitoring, and employee security protections
+- **Top-Tier Audits** – Audited by Spearbit, Halborn, and Certora. Huma 2.0 was audited by Halborn. [[View audit report here.](https://www.halborn.com/audits/huma-finance/solana-programs-060022)].
+- **Infrastructure Security** – Penetration-tested backend, real-time malware monitoring, and employee security protections.
 
 ---
 
@@ -252,11 +252,11 @@ However, Huma **reserves the right to revoke rewards** if a wallet engages in **
 
 While Huma prioritizes safety, DeFi participation carries risks, including:
 
-- **Smart Contract Risk** – Even with audits, vulnerabilities may exist
-- **Slippage / Impermanent Loss** – May occur when using $PST in external DeFi
-- **Liquidity Risk** – Redemptions may be delayed during peak activity
-- **Regulatory Risk** – Legal changes may affect your ability to participate
-- **Credit Risk** – While historically very low, PayFi borrowers may default
+- **Smart Contract Risk**: Even with audits, vulnerabilities may exist.
+- **Slippage / Impermanent Loss*: May occur when using $PST in external DeFi.
+- **Liquidity Risk**: Redemptions may be delayed during peak activity.
+- **Regulatory Risk**: Legal changes may affect your ability to participate.
+- **Credit Risk**: While historically very low, PayFi borrowers may default.
 
 Huma mitigates these through:
 
