@@ -94,6 +94,8 @@ You can switch at any time, as often as you'd like.
 
 There is **currently no fee** for switching (gas fees apply), but this may change in the future.
 
+---
+
 ## **Can $PST be used in other DeFi protocols?**
 
 Yes. Huma integrates with major Solana protocols:

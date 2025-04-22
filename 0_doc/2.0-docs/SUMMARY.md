@@ -23,7 +23,7 @@
       * [Feathers](products/huma/user-manuals/feathers.md)
       * [$PST](products/huma/user-manuals/pst.md)
       * [Data Room](products/huma/user-manuals/data-room.md)
-      * [FAQs](products/huma/faqs.md)
+    * [FAQs](products/huma/faqs.md)
   * Huma Institutional
     * Introduction
       * [Overview](products/huma-institutional/introduction/overview.md)
