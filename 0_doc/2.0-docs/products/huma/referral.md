@@ -13,6 +13,6 @@ When you refer someone to Huma, you'll receive **10% of the Feathers they earn**
 
 ## Example
 
-If your friend earns 1,000,000 Feathers over their first year, you'll receive **500,000 Feathers** as a reward—at no cost to them.
+If your friend earns 1,000,000 Feathers over their first year, you'll receive **100,000 Feathers** as a reward—at no cost to them.
 
 Start building your Feather stream by sharing your referral link today!
