@@ -7,6 +7,12 @@
 | Huma | HumaXepHnjaRCpjYTokxY4UtaJcmx41prQ8cxGmFC5fn |
 | Huma Institutional | EVQ4s1b6N1vmWFDv8PRNc77kufBP8HcrSNWXQAhRsJq9 |
 
+### Account Addresses
+| Account   | Address |
+|-----------| --- |
+| PST Mint  | 59obFNBzyTBGowrkif5uK7ojS58vsuWz3ZCvg6tfZAGw |
+| mPST Mint | HUPfpnsaJtJGpJxAPNX1vXah7BgYiQYt1c2JMgMumvPs |
+
 ## EVM
 ### GitHub Repo
 [Codebase](https://www.notion.so/Huma-2-0-Gitbook-f63276eed2c346f99a4689ebd2873737?pvs=21)
