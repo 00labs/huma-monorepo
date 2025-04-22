@@ -126,8 +126,8 @@ Although Maxi mode doesn’t generate a stable yield and the price is intended t
 
 **Implications:**
 
-- **Early depositors** (before any burning occurred) will receive slightly more USDC upon redemption than they originally deposited.
-- **Later depositors** (after the last burning incident) will now receive **fewer $mPST tokens** per USDC deposited, since $mPST is priced above $1. But when you redeem, you’ll still get back exactly the amount of USDC they deposited.
+- **Early depositors** (before any burning occurred) will receive slightly more USDC upon redemption than originally deposited.
+- **Later depositors** (after the last burning incident) will now receive **fewer $mPST tokens** per USDC deposited, since $mPST is priced above $1. But when you redeem, you’ll still get back exactly the amount of USDC deposited.
 
 **Warning:** Token burning is **irreversible**. Please double‑check before you proceed — **lost tokens cannot be recovered.**
 
