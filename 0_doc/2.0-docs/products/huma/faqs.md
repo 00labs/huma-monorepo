@@ -264,6 +264,6 @@ Huma mitigates these through:
 - Conservative protocol design
 - Real-world yield generation
 - Transparent governance
-- Rigorous underwriting and risk management.
+- Rigorous underwriting and risk management
 
 **Disclaimer:** These FAQs are provided for user convenience. Accordingly, they do not fully describe the legal structure or operations of the issuer of $PST and $mPST, nor do they fully describe certain risk factors. Detailed information about the foregoing is set forth in the issuer's PayFi Strategy Memorandum (PSM), which will be provided to users as part of the deposit process.
