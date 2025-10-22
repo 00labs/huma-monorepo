@@ -1,8 +1,8 @@
 # What is Huma?
 
-Huma is the first **PayFi network** and a pioneer in the rapidly growing PayFi ecosystem. It enables global payment institutions to **settle payments 24/7 using stablecoins and on-chain liquidity**, bringing speed, transparency, and efficiency to traditionally slow financial infrastructure. Backed by strategic partners, including **Solana, Circle, Stellar Development Foundation (SDF), Galaxy Digital**, and others, Huma has processed over **$3.8 billion** in transaction volume and delivered **double-digit real-world yield** to its LPs.
+Huma is the first **PayFi network** - powering real-world payment financing with T+0 on-chain settlement. Huma connects global capital to high-quality real-world payment assets such as cross-border settlements, card payments, and payroll advances. Backed by strategic partners, including **Solana, Circle, Stellar Development Foundation (SDF), Galaxy Digital**, and others - with over **$7 billion** in on-chain transactions, Huma delivers institutional-grade credit infrastructure to DeFi, making real yield instant, transparent, and permissionless.
 
 The Huma Protocol is offered in two forms:
 
 - **Huma (Permissionless)** – Launched in **April 2025**, this version is open to all, allowing **retail investors** to participate in Huma pools and join the broader PayFi movement.
-- **Huma Institutional** – A **permissioned** service tailored for **institutional investors**, offering access to curated, receivables-backed credit opportunities within a regulated framework.
+- **Huma Institutional** – A **permissioned** protocol designed for **institutional investors** to access curated payment financing and RWA opportunities. This enables licensed financial institutions to scale responsibly while meeting the surging demand for flexible, compliant financial infrastructure.
