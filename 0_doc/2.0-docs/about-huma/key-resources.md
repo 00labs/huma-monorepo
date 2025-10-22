@@ -10,6 +10,6 @@ Docs: [docs.huma.finance](https://docs.huma.finance)
 
 X: [x.com/humafinance](https://x.com/humafinance)
 
-Discord: https://discord.gg/29zVxZ6kCN
+Discord: https://discord.com/invite/humafinance
 
 Dune: https://dune.com/huma-finance/huma-overview

@@ -9,7 +9,7 @@ Both modes operate on the same underlying pool mechanics and LP token structure 
 
 | **Mode** | **Stable Yield** | **Huma Feathers** | **Target Users** | **Token** |
 | --- | --- | --- | --- | --- |
-| Classic | 10.5% APY* | $ | Yield maxis | PST |
+| Classic | 9% APY* | $ | Yield maxis | PST |
 | Maxi | 0% APY | $$$$$ | Huma maxis | mPST |
 
 *Subject to monthly adjustments based on market conditions.
