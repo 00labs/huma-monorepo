@@ -11,10 +11,10 @@ To enable instant liquidity, a **PST-USDC pool** has gone live on **Jupiter and 
 
 Users can provide liquidity in the **PST-USDC** and **mPST-USDC** vaults, or engage in the Huma Market in the following ways:
 
-- Supplying USDC or USDS
-- Depositing PST
+- Supplying USDC or USDS.
+- Depositing PST.
 - Borrowing USDC or USDS against their deposited PST.
-* Each wallet can either Supply or Borrow, but cannot do both. 
+- ****Note:**** Each wallet can either supply or borrow, but cannot do both. 
 
 A **weekly $HUMA reward budget** is allocated to both the vaults and the Huma Market. Kamino calculates rewards and distributes them directly to participants.
 
