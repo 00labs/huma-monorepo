@@ -1,6 +1,6 @@
 # What is Huma?
 
-Huma is the first **PayFi network** - powering real-world payment financing with T+0 on-chain settlement. Huma connects global capital to high-quality real-world payment assets such as cross-border settlements, card payments, and payroll advances. Backed by strategic partners, including **Solana, Circle, Stellar Development Foundation (SDF), Galaxy Digital**, and others - with over **$7 Billion** in on-chain transactions, Huma delivers institutional-grade credit infrastructure to DeFi, making real yield instant, transparent, and permissionless.
+Huma is the first **PayFi network** - powering real-world payment financing with T+0 on-chain settlement. Huma connects global capital to high-quality real-world payment assets such as cross-border settlements, card payments, and payroll advances. Backed by strategic partners, including **Solana, Circle, Stellar Development Foundation (SDF), Galaxy Digital**, and others - with over **$7 billion** in on-chain transactions, Huma delivers institutional-grade credit infrastructure to DeFi, making real yield instant, transparent, and permissionless.
 
 The Huma Protocol is offered in two forms:
 
