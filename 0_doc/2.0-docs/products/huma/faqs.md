@@ -273,18 +273,18 @@ Those who staked before June 30th can keep their 0-day unstaking cooldown. Start
 
 The staking reward applies retroactively to those who have staked before the staking rewards launch on June 30th, 2025.
 
-## How to earn badges?
-### OG LP Badge 
+## How do I earn badges?
+### OG LP badge 
 Designed to reward early believers of Huma and PayFi’s vision.
 
 If you provided liquidity to the Huma protocol before Apr. 2025, you would have earned the OG LP badge. As long as you continue to provide at least 100 USDC liquidity, you keep the OG LP badge and enjoy the benefits. 
 
-### Vanguard Badge 
+### Vanguard badge 
 Designed to encourage and reward long-term $HUMA stakers.
 
 You can earn a Vanguard badge by staking $HUMA. Users must meet qualification criteria following ONE of the two paths, airdrop and non-airdrop, while **maintaining their staking position for at least 6 months**.
 
-#### Airdrop Route
+#### Airdrop route
 - **< 100,000 $HUMA** → Stake **100%**
 - **100,000–200,000 $HUMA** → Stake **100,000 $HUMA**
 - **> 200,000 $HUMA** → Stake **50%**
@@ -293,16 +293,17 @@ You can earn a Vanguard badge by staking $HUMA. Users must meet qualification cr
 - *Staking the required amount across **2 seasons** within a **6-month** window qualifies you for **Vanguard**.*
 - *Includes **$HUMA presale** for **Huma OGs** and **Jup** stakers.*
 
-#### Non-airdrop Route
+#### Non-airdrop route
 - If you did not receive an airdrop, qualify by staking **at least 100,000 $HUMA**.
 - *Includes **Kaito**.*
 
 For both routes, the badge will be awarded after you have staked for six months, and you can maintain it thereafter by continuing to stake at least 10,000 $HUMA.
 
-### Anchor Badge 
+### Anchor badge 
 Designed for LPs to gain the ability to contribute more capital.
 
 To qualify: An LP must deposit at least 1,000 USDC with a six-month lockup into any Huma product. Once the deposit matures, they will have three months to redeposit for another six-month lockup. The new deposit limit will be the greater of 2x the original deposit or the per-wallet cap, and as long as the final deposit amount is at least 1,000 USDC, the LP will earn the Anchor badge.
 
+---
 
 **Disclaimer:** These FAQs are provided for user convenience. Accordingly, they do not fully describe the legal structure or operations of the issuer of $PST and $mPST, nor do they fully describe certain risk factors. Detailed information about the foregoing is set forth in the issuer's PayFi Strategy Memorandum (PSM), which will be provided to users as part of the deposit process.
