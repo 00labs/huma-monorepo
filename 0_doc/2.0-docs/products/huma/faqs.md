@@ -11,6 +11,7 @@ The **Launch App** button on [huma.finance](https://huma.finance/) provides acce
 - **Huma (permissionless)**: Launched in April 2025
 - **Huma Institutional (permissioned)**: The original product prior to April 2025
 
+
 ## What are Huma rewards? How are they related to Huma Feathers?
 
 Starting October 2025, to provide greater certainty and clarity on HUMA token rewards, the system will **continuously allocate token rewards** to the community and distribute them at the end of each airdrop season.
@@ -97,10 +98,10 @@ Yes. Huma integrates with major Solana DeFi protocols:
 - **Jupiter** – PST-USDC swaps for instant liquidity
 - **Orca** - mPST-USDC swaps, underlying pool powering Jupiter
 - **Kamino** – Provide liquidity to the PST-USDC and mPST-USDC liquidity vault or engage in the Huma Market in the following ways:
-  - Supplying USDC or USDS
-  - Depositing PST
+  - Supplying USDC or USDS.
+  - Depositing PST.
   - Borrowing USDC or USDS against their deposited PST.
-  - Note: each wallet can either supply or borrow, but cannot do both. 
+  - **Note:** Each wallet can either supply or borrow, but cannot do both. 
 - **RateX** – Enables Huma LPs to transform their $PST into structured DeFi positions (PT/YT), enabling leverage, hedging, and more tailored yield strategies.
 
 
@@ -166,6 +167,7 @@ Users could swap on Jupiter leveraging the PST-USDC pool and mPST-USDC pool (via
 - The position is treated as **unlocked**.
 - Any **extra $HUMA token rewards** earned from the lockup will be **reverted**.
 - You may face slippage.
+
 
 ## How will the capital in the pool be used?
 
@@ -260,6 +262,7 @@ If the PST/mPST you deposit is currently under a lockup period, any extra Huma r
 - Eligibility for Huma Yapper rewards 
 - Eligible for promotions and airdrops from ecosystem partners
 
+
 ## What is the staking policy? 
 
 Stakers can request to unstake at any time, and can withdraw after a 14-day cooldown. Staking Factor plays a critical role in determining the staking reward. The initial promotional value of the Staking Factor is 10x. Staking rewards are distributed in the form of Huma rewards, similar to LP rewards.
@@ -267,6 +270,7 @@ Stakers can request to unstake at any time, and can withdraw after a 14-day cool
 Those who staked before June 30th can keep their 0-day unstaking cooldown. Starting Aug 26, 2025 they will stop earning Huma rewards unless they opt into the new policy: est. 10% APY with a 14-day cooldown in the Huma App. 
 
 The staking reward applies retroactively to those who have staked before the staking rewards launch on June 30th, 2025.
+
 
 ## How do I earn badges?
 ### OG LP badge 

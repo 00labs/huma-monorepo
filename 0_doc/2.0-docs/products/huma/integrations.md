@@ -14,7 +14,7 @@ Users can provide liquidity in the **PST-USDC** and **mPST-USDC** vaults, or eng
 - Supplying USDC or USDS.
 - Depositing PST.
 - Borrowing USDC or USDS against their deposited PST.
-- ****Note:**** Each wallet can either supply or borrow, but cannot do both. 
+- **Note:** Each wallet can either supply or borrow, but cannot do both. 
 
 A **weekly $HUMA reward budget** is allocated to both the vaults and the Huma Market. Kamino calculates rewards and distributes them directly to participants.
 
