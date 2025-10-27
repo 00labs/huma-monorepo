@@ -107,9 +107,7 @@ Yes. Huma integrates with major Solana DeFi protocols:
 
 ## Can I transfer $PST or $mPST to another wallet?
 
-Yes. Both tokens are standard SPL tokens and can be transferred to any supported wallet.
-
-However, please note:
+Yes. Both tokens are standard SPL tokens and can be transferred to any supported wallet. However, please note:
 
 - **Transferred tokens lose their lockup status**
 - The transferred position will be treated as **unlocked** in the receiving wallet.
@@ -267,7 +265,7 @@ If the PST/mPST you deposit is currently under a lockup period, any extra Huma r
 
 Stakers can request to unstake at any time, and can withdraw after a 14-day cooldown. Staking Factor plays a critical role in determining the staking reward. The initial promotional value of the Staking Factor is 10x. Staking rewards are distributed in the form of Huma rewards, similar to LP rewards.
 
-Those who staked before June 30th can keep their 0-day unstaking cooldown. Starting Aug 26, 2025 they will stop earning Huma rewards unless they opt into the new policy: est. 10% APY with a 14-day cooldown in the Huma App. 
+Those who staked before June 30th, 2025 can keep their 0-day unstaking cooldown. Starting Aug 26, 2025 they will stop earning Huma rewards unless they opt into the new policy: est. 10% APY with a 14-day cooldown in the Huma App. 
 
 The staking reward applies retroactively to those who have staked before the staking rewards launch on June 30th, 2025.
 
