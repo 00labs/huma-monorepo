@@ -7,5 +7,4 @@ Defensive Looping is a protected leverage strategy designed to augment yields on
 - Primary-market redemptions to substantially reduce liquidations driven by potential depegs in secondary markets.
 - Isolated reserve mechanisms (coming soon) to buffer against asset impairments.
 
-The DeFi industry needs better risk management products, to create better yield markets.
-Huma Prime is one of the many innovative products we plan to launch in this category.
+The DeFi industry needs better risk management products, to create better yield markets. Huma Prime is one of the many innovative products we plan to launch in this category.
