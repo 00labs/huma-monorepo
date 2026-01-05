@@ -10,6 +10,7 @@ All administrative functions are secured with multisigs, so no single party can 
 Before any major update goes live on mainnet, it undergoes a comprehensive audit. Our contracts are rigorously reviewed by leading security firms across multiple ecosystems:
 
 - **Solana** programs audited by **Halborn** and **Sec3**
+  
   ↳ *[[Huma Prime Audit Report](https://drive.google.com/file/d/1gcS2tyoh1U5X7dYh18NcL00uJ6Qol8aH/view?usp=sharing)]*
   
   ↳ *[[Huma 2.0 Audit Report](https://www.halborn.com/audits/huma-finance/solana-programs-060022)]*
