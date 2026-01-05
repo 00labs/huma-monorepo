@@ -1,5 +1,3 @@
-# FAQ
-
 # General
 
 ## What is Huma 2.0? What happens to the existing permissioned product?

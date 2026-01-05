@@ -1,7 +1,11 @@
 # Announcements
 
-**We're excited to announce the launch of Huma 2.0**—our next leap forward in making decentralized finance truly accessible. Huma 2.0 introduces a **permissionless model** that allows **anyone** to tap into **institutional-grade PayFi yields**—opportunities that were previously reserved for professional investors. By integrating with leading DeFi protocols on **Solana**, Huma 2.0 unlocks the full power of **PayFi and DeFi combined**.
+We're excited to announce the launch of Huma Prime - an innovative looping strategy vault - leveraging the yield from Huma Classic, $PST. It’s built on Huma’s Defensive Looping technology.
 
-**Huma 2.0** is now the flagship product of Huma Finance, branded simply as **Huma**.
+Defensive Looping is a protected leverage strategy designed to augment yields on yield-bearing assets while mitigating the "death spiral" risks inherent in conventional looping in DeFi. It combines recursive borrowing with three primary layers of protection:
+- Automated leverage or deleverage based on supply and borrow rates in DeFi markets.
+- Primary-market redemptions to substantially reduce liquidations driven by potential depegs in secondary markets.
+- Isolated reserve mechanisms (coming soon) to buffer against asset impairments.
 
-The existing permissioned service continues under the **Huma Institutional** brand, providing curated access for institutional partners with tailored requirements.
+The DeFi industry needs better risk management products, to create better yield markets.
+Huma Prime is one of the many innovative products we plan to launch in this category.
