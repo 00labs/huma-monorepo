@@ -11,7 +11,8 @@ Before any major update goes live on mainnet, it undergoes a comprehensive audit
 
 - **Solana** programs audited by **Halborn** and **Sec3**
   
-  ↳ *[[Huma Prime Audit Report](https://drive.google.com/file/d/1gcS2tyoh1U5X7dYh18NcL00uJ6Qol8aH/view?usp=sharing)]*
+  ↳ *[[Huma Prime Audit Report](https://github.com/sec3-service/reports/blob/master/reports/sec3_huma_vault.pdf)]*
+    ↳ *[[Incremental Audit Report 1](https://github.com/sec3-service/reports/blob/master/reports/sec3_huma_vault_incremental_20260131.pdf)]*
   
   ↳ *[[Huma 2.0 Audit Report](https://www.halborn.com/audits/huma-finance/solana-programs-060022)]*
     ↳ *[[Incremental Audit Report 1](https://www.halborn.com/portal/engagements/huma-solana-programs-687cbd)]*
