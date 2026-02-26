@@ -15,9 +15,10 @@ Before any major update goes live on mainnet, it undergoes a comprehensive audit
     ↳ *[[Incremental Audit Report 1](https://github.com/sec3-service/reports/blob/master/reports/sec3_huma_vault_incremental_20260131.pdf)]*
   
   ↳ *[[Huma 2.0 Audit Report](https://www.halborn.com/audits/huma-finance/solana-programs-060022)]*
-    ↳ *[[Incremental Audit Report 1](https://www.halborn.com/portal/engagements/huma-solana-programs-687cbd)]*
-  
-  ↳ *[[Huma Institutional Audit Report](https://www.halborn.com/audits/huma/huma-protocol)]*
+    ↳ *[[Incremental Audit Report 1](https://www.halborn.com/audits/huma-finance/huma-solana-programs-687cbd)]*
+
+  ↳ *[[Huma Institutional Audit Report](https://www.halborn.com/audits/huma-finance/huma---pr-124-d3c7e8)]*
+    ↳ *[[Incremental Audit Report 1](https://www.halborn.com/audits/huma-finance/huma---solana-program-audit-pr-113-2b46cf)]*
 
 - **EVM** smart contracts audited by **Spearbit**
 
