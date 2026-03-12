@@ -297,12 +297,7 @@ Starting October 2025, to provide greater certainty and clarity on HUMA token re
 
 While the reward mechanism remains powered by Huma Feathers, users will now see their accrued $HUMA token rewards directly, and the impact on APY will be reflected in the Huma App. The estimated rewards APY will be calculated based on Huma's tokenomics and the 7-day average price of $HUMA token.
 
-Feathers are converted to $HUMA tokens based on a Feather-to-$HUMA ratio, which can be adjusted periodically to keep rewards attractive to the community. 
-The historical Feather-to-$HUMA ratios are:
-
-- Season 0: 8.3
-- Season 1: 23.5
-- Season 2: 30 (subject to adjustment if needed)
+Feathers are converted to $HUMA tokens based on a Feather-to-$HUMA ratio, which can be adjusted periodically to keep rewards attractive to the community.
 
 **Huma rewards and Feathers are non-transferable and non-tradable.** They are **tied to your wallet** and reflect your individual participation and loyalty. **Neither can be sold, transferred, or shared.**
 
