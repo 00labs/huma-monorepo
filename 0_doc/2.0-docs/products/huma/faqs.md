@@ -352,14 +352,25 @@ You can earn a Vanguard badge by staking $HUMA. Users must meet qualification cr
 
 For both routes, the badge will be awarded after you have staked for six months, and you can maintain it thereafter by continuing to stake at least 10,000 $HUMA.
 ### Anchor badge 
-Designed for LPs to gain the ability to contribute more capital.
+The Anchor badge is for LPs who commit capital long-term.
 
-To qualify: An LP must deposit at least 1,000 USDC with a six-month lockup into any Huma product. Once the deposit matures, they will have three months to redeposit for another six-month lockup. The new deposit limit will be the greater of 2x the original deposit or the per-wallet cap, and as long as the final deposit amount is at least 1,000 USDC, the LP will earn the Anchor badge.
+#### Earning the badge
+Auto renew (recommended):
+- Minimum 1,000 USDC deposit with 6-months lockup
+- Turn on auto renew in the app
+- Badge granted once your position auto-extends for 6-months
 
----
+Manual Extension:
+- Minimum 1,000 USDC deposit with 6-months lockup
+- Within 3 months of maturity, manually extend for another 6 months
+- Badge granted after you extend
 
-**Disclaimer:** These FAQs are provided for user convenience. Accordingly, they do not fully describe the legal structure or operations of the issuer of $PST and $mPST, nor do they fully describe certain risk factors. Detailed information about the foregoing is set forth in the issuer's PayFi Strategy Memorandum (PSM), which will be provided to users as part of the deposit process.
+#### Maintaining the badge
+You must maintain a minimum deposit of 1,000 USDC across all Huma products. Your badge will be forfeited if your deposit drops below this threshold.
 
+#### What Anchor badge unlocks
+- 2x standard deposit cap
+- Early access for Prime, alongside OG and Vanguard badge holders
 
 # Staking
 
@@ -382,3 +393,7 @@ Stakers can request to unstake at any time, and can withdraw after a 14-day cool
 Those who staked before June 30th, 2025 can keep their 0-day unstaking cooldown. Starting Aug 26, 2025 they will stop earning Huma rewards unless they opt into the new policy: est. 10% APY with a 14-day cooldown in the Huma App. 
 
 The staking reward applies retroactively to those who have staked before the staking rewards launch on June 30th, 2025.
+
+---
+
+**Disclaimer:** These FAQs are provided for user convenience. Accordingly, they do not fully describe the legal structure or operations of the issuer of $PST and $mPST, nor do they fully describe certain risk factors. Detailed information about the foregoing is set forth in the issuer's PayFi Strategy Memorandum (PSM), which will be provided to users as part of the deposit process.
